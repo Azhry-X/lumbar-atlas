@@ -1,0 +1,9 @@
+{
+  "name": "lumbar-atlas",
+  "version": "1.0.0",
+  "description": "Lumbar Spine dossier build tooling (Tailwind CLI)",
+  "dependencies": {
+    "tailwindcss": "^3.4.17"
+  },
+  "private": true
+}

@@ -1,0 +1,1665 @@
+- id: ces-triage
+  type: info
+  title: Cauda Equina Syndrome (CES) Emergency Triage & Bladder Scan Rule
+  page: 1
+  summary: Same-day emergency neurological triage for suspected cauda equina compression, integrating urinary retention, saddle
+    anaesthesia, bilateral sciatica, post-void residual (PVR) bladder scanning, and surgical timing.
+  steps:
+  - Screen for new-onset urinary retention, difficulty initiating micturition, impaired urethral sensation, or overflow incontinence.
+  - Screen for new faecal incontinence or loss of anal sphincter tone, and test perianal/perineal saddle sensation.
+  - Assess for bilateral radicular leg pain, progressive lower-limb motor deficit (e.g. foot drop), or gait disturbance.
+  - Perform bladder ultrasound scan to measure post-void residual (PVR) volume alongside clinical neurological assessment.
+  - Activate same-day emergency pathway for urgent MRI and surgical decompression when red flags are present.
+  positive: Urinary retention (Sn 0.90, Sp 0.99) or PVR > 200 mL (MRI-confirmed CES in 43%), saddle sensory deficit, bowel
+    dysfunction, or progressive bilateral motor deficit -> same-day emergency MRI and surgical referral (decompression < 48
+    h associated with better outcomes).
+  interpretation: Bladder status at the time of surgery is the dominant factor for bladder recovery; decompression < 48 h
+    is associated with better outcomes.
+  metrics: 'Bladder scan: PVR > 200 mL → MRI-confirmed CES in 43%; PVR < 200 mL without objective signs → MRI+ rare (Ann R
+    Coll Surg Engl 2024). Urinary retention: Sn 0.90, Sp 0.99 (classic estimate, Deyo 1992 JAMA). Timing: decompression <
+    48 h associated with better outcomes (Ahn 2000 meta-analysis). Prognosis: bladder status at the time of surgery is the
+    dominant factor for bladder recovery (Qureshi & Sell 2007).'
+  evidence: L
+  sources:
+  - text: Ann R Coll Surg Engl 2024
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10757877/
+    free_full_text: true
+  - text: Qureshi & Sell 2007
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2140120/
+    free_full_text: true
+  - text: Ahn 2000 meta-analysis
+    url: https://doi.org/10.1097/00007632-200006150-00010
+    free_full_text: false
+  - text: Deyo 1992 JAMA
+    url: https://doi.org/10.1001/jama.1992.03490060092030
+    free_full_text: false
+  review_status: approved
+- id: vertebral-fracture-red-flags
+  type: info
+  title: Vertebral Fracture Red Flags & Post-Test Probability
+  page: 1
+  summary: Evidence-based red-flag combination screening for thoracolumbar vertebral fracture in low back pain presentations.
+  steps:
+  - Assess patient age, history of prolonged systemic corticosteroid use, and mechanism of severe trauma.
+  - Inspect the thoracolumbar spine and trunk for contusion or abrasion after trauma.
+  - Combine multiple red flags rather than relying on any single isolated sign.
+  positive: older age 9% (3–25); prolonged corticosteroid use 33% (10–67); severe trauma 11% (8–16); contusion/abrasion 62%
+    (49–74); multiple red flags 90% (34–99).
+  interpretation: most single red flags uninformative; use in combination.
+  metrics: 'Downie 2013 BMJ (post-test probability): older age 9% (3–25); prolonged corticosteroid use 33% (10–67); severe
+    trauma 11% (8–16); contusion/abrasion 62% (49–74); multiple red flags 90% (34–99). Han 2023 Cochrane: most single red
+    flags uninformative; use in combination.'
+  evidence: M
+  sources:
+  - text: Downie 2013 BMJ
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3898572/
+    free_full_text: true
+  - text: Han 2023 Cochrane
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10448864/
+    free_full_text: true
+  review_status: approved
+- id: spinal-malignancy-red-flags
+  type: info
+  title: Spinal Malignancy Red Flags & Post-Test Probability
+  page: 1
+  summary: Triage screening for vertebral metastasis or primary spinal malignancy in primary and emergency care settings.
+  steps:
+  - Ask specifically about any personal history of cancer.
+  - Evaluate the clinical setting (primary care vs emergency care) and screen for constitutional symptoms such as unexplained
+    weight loss or unremitting non-mechanical pain.
+  - Refer for urgent diagnostic imaging when history of cancer or combined malignancy indicators are present.
+  positive: history of cancer 7% (3–16) in primary care; 33% (22–46) in emergency care.
+  interpretation: History of cancer is the strongest clinical predictor of spinal malignancy; interpret post-test probability
+    in the context of the care setting.
+  metrics: 'Downie 2013 BMJ: history of cancer 7% (3–16) in primary care; 33% (22–46) in emergency care.'
+  evidence: M
+  sources:
+  - text: Downie 2013 BMJ
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3898572/
+    free_full_text: true
+  review_status: approved
+- id: aaa-abdominal-palpation
+  type: test
+  title: Abdominal Aortic Aneurysm (AAA) Palpation
+  page: 1
+  summary: Bimanual deep abdominal palpation screening for an expansile retroperitoneal aortic pulsation mimicking mechanical
+    low back or flank pain.
+  steps:
+  - Position the patient supine with knees flexed to relax the anterior abdominal wall musculature.
+  - Place both hands flat on the epigastrium/umbilical region slightly left of midline above the aortic bifurcation.
+  - Palpate deeply to detect the lateral borders of the aortic pulsation and distinguish an expansile mass from a transmitted
+    pulse.
+  - Account for abdominal girth (< 100 cm vs ≥ 100 cm) when interpreting palpation sensitivity.
+  positive: Palpable widened, laterally expansile pulsatile abdominal mass -> urgent vascular ultrasound; if symptomatic with
+    tearing back/abdominal pain or hypotension -> same-day emergency department transfer.
+  interpretation: Sensitivity rises with larger aneurysm diameter (≥ 5.0 cm) and waist girth < 100 cm.
+  metrics: 'Fink 2000 Arch Intern Med: Sn 68% (60–76), Sp 75% (68–82), LR+ 2.7, LR− 0.43; Sn 82% for AAA ≥ 5.0 cm; Sn 91%
+    if girth < 100 cm vs 53% if ≥ 100 cm.'
+  evidence: M
+  sources:
+  - text: Fink 2000 Arch Intern Med
+    url: https://doi.org/10.1001/archinte.160.6.833
+    free_full_text: false
+  review_status: approved
+- id: axial-spa-asas
+  type: info
+  title: Axial Spondyloarthritis (ASAS Classification Criteria)
+  page: 1
+  summary: Screening and classification criteria for axial spondyloarthritis (axSpA) in patients with chronic back pain.
+  steps:
+  - 'Screen inflammatory back pain features: insidious onset, morning stiffness improving with exercise, no improvement with
+    rest, and awakening in the second half of the night.'
+  - 'Assess imaging arm (sacroiliitis on MRI or radiographs plus SpA feature) and clinical arm (HLA serology positive plus
+    SpA features: enthesitis, uveitis, dactylitis, psoriasis, IBD, family history, good NSAID response, elevated CRP).'
+  - Refer suspected axial spondyloarthritis to rheumatology for diagnostic confirmation.
+  positive: Fulfilment of ASAS imaging or clinical arm criteria in chronic back pain -> rheumatology referral.
+  interpretation: Differentiates inflammatory axial spondyloarthritis from non-specific mechanical low back pain.
+  metrics: 'Rudwaleit 2011: Sn 79.5%, Sp 83.3%.'
+  evidence: M
+  sources:
+  - text: Rudwaleit 2011
+    url: https://doi.org/10.1136/ard.2010.133645
+    free_full_text: false
+  review_status: approved
+- id: spinal-infection-screen
+  type: info
+  title: Spinal Infection Triage (Discitis / Osteomyelitis / Epidural Abscess)
+  page: 1
+  summary: Clinical triage for pyogenic or granulomatous spinal infection presenting with relentless back pain.
+  steps:
+  - 'Screen for systemic infection risk factors: fever, rigors, night sweats, intravenous drug use, immunosuppression, diabetes,
+    recent spinal injection/surgery, or systemic infection.'
+  - Assess for constant, severe, non-mechanical spinal pain unrelieved by rest and focal percussion tenderness over spinous
+    processes.
+  - Monitor neurological status closely for signs of spinal epidural abscess progression.
+  positive: Unremitting spinal pain with fever, infection risk factors, or elevated inflammatory markers -> urgent medical
+    / emergency workup (blood cultures, inflammatory markers, contrast MRI).
+  interpretation: Absence of fever does not exclude spinal infection; maintain high suspicion in immunocompromised patients
+    or after invasive procedures.
+  metrics: Clinical red-flag synthesis — no verified number in source file.
+  evidence: E
+  sources: []
+  review_status: approved
+- id: nice-ng59-imaging
+  type: info
+  title: Lumbar Imaging Decision Rule (NICE NG59)
+  page: 1
+  summary: Guideline recommendations against routine lumbar imaging in non-specific low back pain without serious underlying
+    pathology.
+  steps:
+  - Complete red-flag triage to exclude fracture, malignancy, infection, cauda equina syndrome, or inflammatory spondyloarthritis.
+  - Explain to the patient that routine imaging is not needed when serious pathology is not suspected and that incidental
+    age-related imaging findings are common.
+  - In specialist settings, consider imaging only if the result is likely to change clinical management.
+  positive: '"Do not routinely offer imaging in a non-specialist setting" (1.1.4); consider imaging in specialist settings
+    "only if the result is likely to change management" (1.1.6).'
+  interpretation: Routine imaging in non-specific low back pain does not improve clinical outcomes.
+  metrics: 'Level: Guideline. NICE NG59: "Do not routinely offer imaging in a non-specialist setting" (1.1.4); consider imaging
+    in specialist settings "only if the result is likely to change management" (1.1.6). Imaging review (reference only, no
+    numbers): Jarvik & Deyo 2002.'
+  evidence: Guideline
+  sources:
+  - text: NICE NG59
+    url: https://www.nice.org.uk/guidance/ng59/chapter/Recommendations
+    free_full_text: false
+  - text: Jarvik & Deyo 2002
+    url: https://doi.org/10.7326/0003-4819-137-7-200210010-00010
+    free_full_text: false
+  review_status: approved
+- id: start-back-tool
+  type: info
+  title: STarT Back Screening Tool & Stratified Care
+  page: 2
+  summary: 9-item prognostic screening tool stratifying low back pain patients into low, medium, and high risk of persistent
+    disability to match targeted care pathways.
+  steps:
+  - Administer all 9 items (physical/functional items and psychosocial subscale items 5–9).
+  - Calculate the total score (0–9) and the psychosocial subscale score (items 5–9).
+  - 'Classify risk group: total 0–3 = low risk; psychosocial subscale (items 5–9) 4–5 = high risk; rest = medium.'
+  - 'Match treatment pathway: supported self-management for low risk; evidence-based physiotherapy for medium risk; psychologically
+    informed physiotherapy for high risk.'
+  positive: 9 items; total 0–3 = low risk; psychosocial subscale (items 5–9) 4–5 = high risk; rest = medium.
+  interpretation: 'NICE NG59 (1.1.2): "Consider using risk stratification (for example, the STarT Back risk assessment tool)
+    at first point of contact". In older adults, predictive validity is poor (AUC 0.65–0.67).'
+  metrics: 'Hill 2008: 9 items; total 0–3 = low risk; psychosocial subscale (items 5–9) 4–5 = high risk; rest = medium. Hill
+    2011 Lancet (STarT Back trial, RCT, n = 851): RMDQ between-group difference 1.81 (1.06–2.57) at 4 months; 1.06 (0.25–1.86)
+    at 12 months. Vigdal 2024 (older adults): predictive validity poor; AUC 0.65–0.67.'
+  evidence: H
+  calculator:
+    kind: formula
+    inputs:
+    - heading: Physical & functional items
+    - key: i1
+      label: Back pain has spread down my leg(s) recently
+      type: check
+    - key: i2
+      label: Pain in the shoulder or neck at some time recently
+      type: check
+    - key: i3
+      label: Only walked short distances because of my back pain
+      type: check
+    - key: i4
+      label: Dressed more slowly than usual because of back pain
+      type: check
+    - heading: Psychosocial subscale (items 5–9)
+    - key: i5
+      label: It is not really safe for a person with a condition like mine to be physically active
+      type: check
+    - key: i6
+      label: Worrying thoughts have been going through my mind a lot of the time
+      type: check
+    - key: i7
+      label: I feel that my back pain is terrible and is never going to get any better
+      type: check
+    - key: i8
+      label: In general I have not enjoyed all the things I used to enjoy
+      type: check
+    - key: i9
+      label: Overall, how bothersome has your back pain been?
+      type: select
+      options:
+      - - 0
+        - 0 · Not at all / Slightly / Moderately
+      - - 1
+        - 1 · Very much / Extremely
+    expr: i1+i2+i3+i4+i5+i6+i7+i8+i9
+    value_label: STarT Back total (0–9)
+    decimals: 0
+    outputs:
+    - when: v<=3
+      text: Total {v|0}/9 · Psychosocial subscale (items 5–9) {i5+i6+i7+i8+i9|0}/5 → Low risk (total 0–3)
+      tone: good
+    - when: (i5+i6+i7+i8+i9)>=4
+      text: Total {v|0}/9 · Psychosocial subscale (items 5–9) {i5+i6+i7+i8+i9|0}/5 → High risk (psychosocial subscale 4–5)
+      tone: bad
+    - when: v>=4
+      text: Total {v|0}/9 · Psychosocial subscale (items 5–9) {i5+i6+i7+i8+i9|0}/5 → Medium risk
+      tone: warn
+  sources:
+  - text: Hill 2008
+    url: https://doi.org/10.1002/art.23563
+    free_full_text: false
+  - text: Hill 2011 Lancet (STarT Back trial)
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3208163/
+    free_full_text: true
+  - text: Vigdal 2024
+    url: https://doi.org/10.1002/ejp.2281
+    free_full_text: false
+  - text: NICE NG59
+    url: https://www.nice.org.uk/guidance/ng59/chapter/Recommendations
+    free_full_text: false
+  review_status: approved
+- id: ompsq-10
+  type: info
+  title: Örebro Musculoskeletal Pain Screening Questionnaire Short Form (ÖMPSQ-10)
+  page: 2
+  summary: Short-form yellow-flag screening questionnaire identifying patients at risk of long-term work disability due to
+    musculoskeletal pain.
+  steps:
+  - Administer the short-form questionnaire covering pain duration, pain rating, physical function, distress, fear-avoidance,
+    and return-to-work expectations.
+  - Sum the item scores (reverse-scoring functional and recovery expectation items per standard scoring).
+  - Apply the validated cut-off 50 to identify elevated risk of future work disability.
+  positive: Cut-off 50 identified 85% (occupational) / 83% (primary care) of those who developed disability.
+  interpretation: Guides early occupational and cognitive-behavioural intervention for yellow flags.
+  metrics: 'Linton 2011: correlation with long form 0.91; cut-off 50 identified 85% (occupational) / 83% (primary care) of
+    those who developed disability.'
+  evidence: M
+  sources:
+  - text: Linton 2011
+    url: https://doi.org/10.1097/BRS.0b013e3181f8f775
+    free_full_text: false
+  review_status: approved
+- id: lumbar-stenosis-cluster
+  type: test
+  title: Lumbar Spinal Stenosis Clinical Cluster (Cook)
+  page: 2
+  summary: 5-item clinical diagnosis support cluster identifying symptomatic lumbar spinal stenosis and neurogenic claudication.
+  steps:
+  - Assess for bilateral lower-extremity symptoms.
+  - Determine whether leg pain is more severe than back pain.
+  - Ask if pain occurs during walking or standing.
+  - Ask if pain is relieved upon sitting (flexion relief / shopping-cart sign).
+  - Record patient age category (older age criterion).
+  positive: ≥ 4 of 5 findings → post-test probability 76%.
+  interpretation: Distinguishes neurogenic claudication (postural/extension-dependent) from vascular claudication (exertion-dependent,
+    relieved by standing still).
+  metrics: 'Cook 2011: ≥ 4 of 5 findings → post-test probability 76%.'
+  evidence: L
+  sources:
+  - text: Cook 2011
+    url: https://doi.org/10.1002/pri.500
+    free_full_text: false
+  review_status: approved
+- id: sij-laslett-cluster
+  type: test
+  title: Sacroiliac Joint (SIJ) Provocation Cluster (Laslett)
+  page: 2
+  summary: 6-test manual pain provocation composite for ruling in or ruling out the sacroiliac joint as the primary pain generator
+    (after excluding centralisation).
+  steps:
+  - First screen lumbar repeated movements to exclude discogenic centralisation.
+  - Perform Distraction test (supine, posterior-lateral pressure on bilateral ASIS).
+  - Perform Thigh Thrust test (supine, hip flexed with posterior shearing force along femur).
+  - Perform Compression test (side-lying, downward pressure over uppermost iliac crest).
+  - Perform Sacral Thrust test (prone, anterior-directed force over mid-sacrum).
+  - Perform Gaenslen test bilaterally (supine, maximal hip flexion on one side with contralateral hip extension over plinth
+    edge).
+  positive: '≥ 3 of 6 tests: Sn 94%, Sp 78%; any 2 of the best 4 tests: AUC 0.842; all 6 negative → SIJ ruled out.'
+  interpretation: When all 6 provocation tests are negative, symptomatic SIJ dysfunction is ruled out.
+  metrics: 'Laslett 2005: ≥ 3 of 6 tests: Sn 94%, Sp 78%; any 2 of the best 4 tests: AUC 0.842; all 6 negative → SIJ ruled
+    out.'
+  evidence: M
+  sources:
+  - text: Laslett 2005
+    url: https://doi.org/10.1016/j.math.2005.01.003
+    free_full_text: false
+  review_status: approved
+- id: one-legged-hyperextension-test
+  type: test
+  title: One-Legged Hyperextension Test (Stork Test) — Spondylolysis
+  page: 2
+  summary: Single-leg standing lumbar extension maneuver historically used for pars interarticularis stress injury, shown
+    to lack diagnostic accuracy.
+  steps:
+  - Patient stands on one leg while lifting the opposite foot off the floor.
+  - Instruct the patient to extend the lumbar spine slowly while balancing on the single stance leg.
+  - Repeat standing on the contralateral leg and note pain reproduction.
+  positive: '"neither sensitive nor specific" for active spondylolysis.'
+  interpretation: Do not rely on the one-legged hyperextension test to diagnose or rule out active spondylolysis; rely on
+    adolescent clinical history and appropriate imaging when indicated.
+  metrics: 'Masci 2006 BJSM: "neither sensitive nor specific" for active spondylolysis — no numbers.'
+  evidence: L
+  sources:
+  - text: Masci 2006 BJSM
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2465027/
+    free_full_text: true
+  review_status: approved
+- id: waddell-signs
+  type: info
+  title: Waddell Non-Organic Signs — Clinical Interpretation & Caution
+  page: 2
+  summary: Behavioural physical examination responses (tenderness, simulation, distraction, regional disturbances, overreaction)
+    and evidence-based cautions against misuse.
+  steps:
+  - 'Observe behavioural responses during physical examination: superficial/non-anatomical tenderness, axial loading/pelvic
+    rotation simulation, seated vs supine SLR distraction, non-neuroanatomical sensory/motor changes, and disproportionate
+    verbal/facial reaction.'
+  - Interpret positive signs as markers of severe pain, fear, or lower functional status rather than malingering.
+  - Never use Waddell signs to dismiss organic pathology or infer secondary gain.
+  positive: Associated with lower function, poorer non-surgical outcome and more pain; NOT evidence of secondary gain or psychological
+    distress; cannot separate organic from non-organic.
+  interpretation: Use as a clinical cue to address pain severity and fear-avoidance rather than questioning symptom validity.
+  metrics: 'Fishbain 2003 review: associated with lower function, poorer non-surgical outcome and more pain; NOT evidence
+    of secondary gain or psychological distress; cannot separate organic from non-organic — no numbers.'
+  evidence: M
+  sources:
+  - text: Fishbain 2003 review
+    url: https://doi.org/10.1046/j.1526-4637.2003.03015.x
+    free_full_text: false
+  review_status: approved
+- id: tbc-classification
+  type: info
+  title: Treatment-Based Classification (TBC)
+  page: 2
+  summary: Subgrouping system matching acute/subacute low back pain presentations to directional preference/specific exercise,
+    manipulation, stabilisation, or traction.
+  steps:
+  - Evaluate baseline symptoms, symptom distribution, repeated movement response (centralisation / directional preference),
+    segmental mobility, and instability signs.
+  - Assign the patient to the matching primary rehabilitation subgroup (specific exercise / directional preference, manipulation,
+    or stabilisation).
+  - Re-assess subgroup classification as symptoms and functional status evolve.
+  positive: 'TBC group: greater Oswestry change at 4 weeks (P = 0.023) and better return to full duty (P = 0.017) vs guideline-based
+    care.'
+  interpretation: Provides a structured clinical reasoning framework linking objective examination findings directly to initial
+    treatment selection.
+  metrics: 'Fritz 2003: TBC group: greater Oswestry change at 4 weeks (P = 0.023) and better return to full duty (P = 0.017)
+    vs guideline-based care.'
+  evidence: M
+  sources:
+  - text: Fritz 2003
+    url: https://doi.org/10.1097/01.BRS.0000067115.61673.ff
+    free_full_text: false
+  review_status: approved
+- id: mckenzie-directional-preference
+  type: test
+  title: McKenzie Directional Preference (DP) & Centralisation
+  page: 2
+  summary: Repeated end-range spinal movement testing identifying a specific movement direction that centralises distal pain
+    or decreases symptom intensity.
+  steps:
+  - Record baseline pain location (most distal extent) and intensity prior to movement testing.
+  - Perform repeated end-range lumbar movements in standing and lying (extension, flexion, and lateral shift/side-glide as
+    indicated).
+  - Monitor whether distal leg/buttock symptoms progressively retreat toward the lumbar midline (centralisation) or whether
+    pain abates and ROM improves (directional preference).
+  - Prescribe exercises matching the identified directional preference.
+  positive: DP elicited in 74% (230) of subjects; exercises matching the DP improved every outcome vs opposite / non-directional.
+  interpretation: Peripheralisation (proximal-to-distal spread of pain into the limb) during repeated movements indicates
+    an avoided direction.
+  metrics: 'Long 2004: DP elicited in 74% (230) of subjects; exercises matching the DP improved every outcome vs opposite
+    / non-directional.'
+  evidence: M
+  sources:
+  - text: Long 2004
+    url: https://doi.org/10.1097/01.brs.0000146464.23007.2a
+    free_full_text: false
+  review_status: approved
+- id: lumbar-rom-assessment
+  type: test
+  title: Lumbar Range of Motion & Repeated Movement Assessment
+  page: 3
+  summary: Inclinometer or tape-measure assessment of active lumbar flexion, extension, lateral flexion, and rotation, alongside
+    symptom response.
+  steps:
+  - Stand the patient barefoot with feet shoulder-width apart and expose the lumbosacral spine.
+  - Measure active flexion, extension, and left/right lateral flexion using an inclinometer or fingertip-to-floor / modified
+    Schober method.
+  - Record the patient's individual baseline values, symptom reproduction, and whether repeated movements centralise or peripheralise
+    pain.
+  positive: lumbar flexion ≥ 53° OR no hypomobility on segmental testing → LR+ 4.3 (1.8–10.6) for radiographic instability.
+  interpretation: Compare against the patient's own baseline across sessions (no normative cut-offs applied).
+  metrics: 'Fritz 2005 Eur Spine J: lumbar flexion ≥ 53° OR no hypomobility on segmental testing → LR+ 4.3 (1.8–10.6).'
+  evidence: L
+  sources:
+  - text: Fritz 2005 Eur Spine J
+    url: https://doi.org/10.1007/s00586-004-0803-4
+    free_full_text: false
+  review_status: approved
+- id: lower-limb-neuro-screen
+  type: test
+  title: Lower-Limb Neurological Examination (L2–S1 Grid)
+  page: 3
+  summary: Systematic root-level neurological examination of L2–S1 dermatomes, myotomes, and deep tendon reflexes.
+  steps:
+  - 'Sensory (dermatomes): test light touch and pinprick bilaterally across L2 (anteromedial thigh), L3 (medial femoral condyle),
+    L4 (medial malleolus), L5 (dorsum of foot / great toe web space), and S1 (lateral heel / lateral foot), plus perineal
+    saddle area when indicated.'
+  - 'Motor (myotomes): test isometric strength and functional heel/toe walking across L2 (hip flexion — iliopsoas), L3 (knee
+    extension — quadriceps), L4 (ankle dorsiflexion — tibialis anterior), L5 (great toe extension — extensor hallucis longus),
+    and S1 (ankle plantarflexion — gastrocnemius/soleus).'
+  - 'Reflexes: grade patellar tendon reflex (L3–L4) and Achilles tendon reflex (S1), and screen plantar response (Babinski)
+    / clonus for upper motor neuron signs.'
+  positive: Dermatomal hypoesthesia/anaesthesia, myotomal paresis, or diminished/absent deep tendon reflex concordant with
+    a spinal nerve root level.
+  interpretation: Combine sensory, motor, and reflex findings with neurodynamic tests; monitor serial motor strength closely
+    for progressive deficit.
+  metrics: Standard neurological examination grid — for mid-lumbar and low-lumbar reflex/stretch accuracy values see Suri
+    2011 Spine cards on Page 4.
+  evidence: E
+  sources: []
+  review_status: approved
+- id: segmental-mobility-testing
+  type: test
+  title: Segmental Mobility Testing & Interspinous Gap Change
+  page: 3
+  summary: Passive accessory posteroanterior (PA) spring testing and passive physiological intervertebral motion (PPIVM) interspinous
+    gap palpation across the lumbar spine.
+  steps:
+  - 'PA spring test: with patient prone, apply graded posteroanterior pressure over each lumbar spinous process using the
+    pisiform/hypothenar eminence; note pain provocation and perceived stiffness.'
+  - 'Interspinous gap change test: with patient side-lying facing the examiner, flex hips and knees and palpate the interspinous
+    spaces while passively flexing and extending the lower limbs through the lumbar segments.'
+  - Compare segmental pain provocation (more reliable) against perceived segmental motion (poor inter-rater reliability).
+  positive: Segmental pain provocation reproduces familiar pain; absence of hypomobility on segmental testing contributes
+    to the Fritz radiographic instability rule.
+  interpretation: Judgements of segmental mobility are not reliable (κ −0.02 to 0.26) — rely primarily on pain provocation
+    (κ 0.25–0.55) and combine with clinical prediction rules.
+  metrics: 'Hicks 2003: κ −0.02 to 0.26 (not reliable); pain provocation κ 0.25–0.55. Fritz 2005 Eur Spine J: lumbar flexion
+    ≥ 53° OR no hypomobility on segmental testing → LR+ 4.3 (1.8–10.6).'
+  evidence: L
+  video_url: https://www.youtube.com/watch?v=Jk1MxlQ98Us
+  video_title: Interspinous Gap Change Test (Physiotutors)
+  sources:
+  - text: Hicks 2003
+    url: https://doi.org/10.1016/S0003-9993(03)00365-4
+    free_full_text: false
+  - text: Fritz 2005 Eur Spine J
+    url: https://doi.org/10.1007/s00586-004-0803-4
+    free_full_text: false
+  review_status: approved
+- id: prone-instability-test
+  type: test
+  title: Prone Instability Test (PIT)
+  page: 3
+  summary: Active extensor recruitment provocation test evaluating whether lumbar segmental pain on posteroanterior pressure
+    subsides when the posterior musculature is contracted.
+  steps:
+  - Patient lies prone with the trunk on the examination plinth and legs over the edge, feet resting on the floor.
+  - Apply posteroanterior (PA) pressure to each lumbar spinous process and identify any painful segment.
+  - At the painful level, ask the patient to lift both feet slightly off the floor (holding the table edges) to activate the
+    spinal extensors.
+  - Re-apply the same PA pressure while the extensors are actively contracted.
+  positive: Familiar lumbar pain provoked with resting PA pressure (feet on floor) that substantially subsides or disappears
+    when the feet are lifted off the floor.
+  interpretation: Included in the Hicks stabilisation CPR, but inter-rater reliability is inconsistent between studies — interpret
+    alongside other instability findings.
+  metrics: 'Reliability: κ = 0.87 (Hicks 2003) BUT κ = 0.10 (−0.27 to 0.47) in a later study (Ravenna 2011) — reliability
+    inconsistent.'
+  evidence: L
+  video_url: https://www.youtube.com/watch?v=OrgoC3mKhXQ
+  video_title: Prone Instability Test (Physiotutors)
+  sources:
+  - text: Hicks 2003
+    url: https://doi.org/10.1016/S0003-9993(03)00365-4
+    free_full_text: false
+  - text: Ravenna 2011
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3104326/
+    free_full_text: true
+  review_status: approved
+- id: passive-lumbar-extension-test
+  type: test
+  title: Passive Lumbar Extension Test (PLET)
+  page: 3
+  summary: Clinical test for structural lumbar segmental instability performed by passively elevating both extended lower
+    extremities in prone.
+  steps:
+  - Position the patient prone on the plinth with both lower extremities extended.
+  - Examiner grasps both ankles/distal lower legs and passively elevates both legs simultaneously to extend the lumbar spine
+    while applying gentle caudal traction.
+  - Maintain passive elevation briefly, then return the legs to the plinth and query symptom response.
+  positive: Sn 84.2%, Sp 90.4%, LR+ 8.84 (4.51–17.33) — reproduction of severe, heavy lumbar pain during passive bilateral
+    leg elevation that disappears when returned to the starting position.
+  interpretation: Confirmed by systematic review (Alqarni 2011) as the most accurate clinical test for radiographic lumbar
+    segmental instability.
+  metrics: 'Kasai 2006: Sn 84.2%, Sp 90.4%, LR+ 8.84 (4.51–17.33). Review confirming it as most accurate: Alqarni 2011.'
+  evidence: L
+  video_url: https://www.youtube.com/watch?v=2OyQGH9vzok
+  video_title: Passive Lumbar Extension Test (PLET) (Physiotutors)
+  sources:
+  - text: Kasai 2006
+    url: https://doi.org/10.2522/ptj.20050281
+    free_full_text: false
+  - text: Alqarni 2011
+    url: https://doi.org/10.2519/jospt.2011.3457
+    free_full_text: false
+  review_status: approved
+- id: fritz-instability-predictors
+  type: info
+  title: Radiographic Lumbar Instability Predictors (Fritz)
+  page: 3
+  summary: Clinical rule predicting radiographic lumbar segmental instability on flexion-extension radiographs.
+  steps:
+  - Measure total lumbar flexion range of motion using an inclinometer.
+  - Perform prone posteroanterior segmental mobility testing across the lumbar spine to determine if any segment is hypomobile.
+  - Check whether lumbar flexion is ≥ 53° OR there is no hypomobility on segmental testing.
+  positive: lumbar flexion ≥ 53° OR no hypomobility on segmental testing → LR+ 4.3 (1.8–10.6).
+  interpretation: Increases the likelihood of radiographic lumbar instability and supports motor control / stabilisation selection.
+  metrics: 'Fritz 2005 Eur Spine J: lumbar flexion ≥ 53° OR no hypomobility on segmental testing → LR+ 4.3 (1.8–10.6).'
+  evidence: L
+  sources:
+  - text: Fritz 2005 Eur Spine J
+    url: https://doi.org/10.1007/s00586-004-0803-4
+    free_full_text: false
+  review_status: approved
+- id: mcgill-endurance-battery
+  type: test
+  title: McGill Trunk Muscular Endurance Battery (Ratios)
+  page: 3
+  summary: Isometric trunk endurance battery comparing flexor, lateral musculature (right/left side bridge), and back extensor
+    hold times via balance ratios rather than raw seconds.
+  steps:
+  - 'Trunk flexor test: patient sits with trunk supported on an angled wedge, knees flexed and feet secured; remove wedge
+    and time isometric hold until posture deviates.'
+  - 'Side bridge test (left and right): patient in side-lying propped on elbow and feet; lift pelvis into a straight line
+    and time isometric hold on each side.'
+  - 'Back extensor test (Biering-Sørensen position): upper body cantilevered over plinth edge with pelvis/legs strapped; hold
+    horizontal and time until loss of horizontal position.'
+  - 'Compute endurance ratios: side bridge / extensor, flexor / extensor, and right / left side bridge.'
+  positive: men side bridge = 65% of extensor time, 99% of flexor time; women 39% and 79% — ratios only, no second norms.
+  interpretation: Evaluate balance ratios between muscle groups rather than absolute hold times in seconds.
+  metrics: 'McGill 1999: reliability > 0.97; men side bridge = 65% of extensor time, 99% of flexor time; women 39% and 79%
+    — ratios only, no second norms.'
+  evidence: L
+  video_url: https://www.youtube.com/watch?v=grKVX0EozmQ
+  video_title: McGill Torso Muscular Endurance Test Battery (Robert Brown III)
+  sources:
+  - text: McGill 1999
+    url: https://doi.org/10.1016/S0003-9993(99)90087-4
+    free_full_text: false
+  review_status: approved
+- id: biering-sorensen-test
+  type: test
+  title: Biering-Sørensen Isometric Back-Extensor Endurance Test
+  page: 3
+  summary: Prone cantilevered isometric hold assessing posterior trunk and hip extensor muscular endurance.
+  steps:
+  - Position the patient prone with the upper border of the iliac crests aligned with the edge of the examination plinth.
+  - Secure the pelvis, knees, and ankles to the plinth with straps while the trunk is supported on a chair/stool.
+  - Ask the patient to fold arms across the chest, hold the trunk horizontal, and maintain the isometric position until fatigue
+    or symptom limit.
+  positive: good isometric back-extensor endurance may prevent first-time LBP in men — no second norms.
+  interpretation: Track change against the patient's own baseline without applying a fixed seconds cut-off.
+  metrics: 'Biering-Sørensen 1984: good isometric back-extensor endurance may prevent first-time LBP in men — no second norms.'
+  evidence: L
+  sources:
+  - text: Biering-Sørensen 1984
+    url: https://doi.org/10.1097/00007632-198403000-00002
+    free_full_text: false
+  review_status: approved
+- id: aberrant-movement-patterns
+  type: test
+  title: Aberrant Lumbar Movement Patterns Checklist
+  page: 3
+  summary: Observation of qualitative movement control faults during active standing lumbar flexion and return to upright
+    posture.
+  steps:
+  - Ask the patient to bend forward as far as comfortable and return to upright standing.
+  - Observe for Painful Arc in Flexion (symptoms felt at mid-range that disappear at end-range) or Painful Arc on Return.
+  - Observe for Instability Catch (sudden acceleration/deceleration, shudder, or lateral deviation from the sagittal plane).
+  - Observe for Gower Sign / Thigh Climbing (pushing hands on thighs to assist return to upright) and Reversal of Lumbopelvic
+    Rhythm (flexing knees and shifting pelvis anteriorly before extending spine).
+  positive: Presence of aberrant movement patterns during flexion or return from flexion.
+  interpretation: Key clinical predictor in the Hicks stabilisation clinical prediction rule indicating impaired dynamic lumbopelvic
+    motor control.
+  metrics: 'Hicks 2005: aberrant motions are a key variable in the stabilisation CPR (success LR+ 4.0; failure LR− 0.18).'
+  evidence: L
+  sources:
+  - text: Hicks 2005
+    url: https://doi.org/10.1016/j.apmr.2005.03.033
+    free_full_text: false
+  review_status: approved
+- id: slr-test
+  type: test
+  title: Straight Leg Raise (SLR) Test
+  page: 4
+  summary: Passive supine lower-limb elevation testing mechanosensitivity and radicular tension of the lower lumbar / sacral
+    nerve roots (sciatic nerve).
+  steps:
+  - Position the patient supine in neutral alignment without a pillow if tolerated.
+  - Grasp the patient's heel with one hand while maintaining full knee extension with the other hand.
+  - Passively flex the hip slowly while keeping the knee extended until radicular leg symptoms are reproduced.
+  - Confirm neural involvement with structural differentiation (ankle dorsiflexion or neck flexion sensitises; slight hip
+    lowering relieves).
+  positive: 'Cochrane (mostly surgical samples): Sn 0.92 (0.87–0.95), Sp 0.28 (0.18–0.40). Slump vs SLR (Majlesi 2008): Slump
+    Sn 0.84, Sp 0.83; SLR Sn 0.52, Sp 0.89.'
+  interpretation: High sensitivity in surgical cohorts makes a negative SLR useful for reducing likelihood of disc-related
+    radiculopathy, while specificity is low; in Majlesi 2008, Slump was more sensitive than SLR.
+  metrics: 'van der Windt 2010 (Cochrane, mostly surgical samples): Sn 0.92 (0.87–0.95), Sp 0.28 (0.18–0.40). Majlesi 2008
+    (Slump vs SLR): Slump Sn 0.84, Sp 0.83; SLR Sn 0.52, Sp 0.89.'
+  evidence: M
+  video_url: https://www.youtube.com/watch?v=LdAD9GNv8FI
+  video_title: Straight Leg Raise (SLR) / Lasègue Test (Physiotutors)
+  sources:
+  - text: van der Windt 2010
+    url: https://doi.org/10.1002/14651858.CD007431.pub2
+    free_full_text: false
+  - text: Majlesi 2008
+    url: https://doi.org/10.1097/RHU.0b013e31816b2f99
+    free_full_text: false
+  review_status: approved
+- id: crossed-slr-test
+  type: test
+  title: Crossed Straight Leg Raise (Well-Leg Raise) Test
+  page: 4
+  summary: Passive straight leg raise of the asymptomatic limb testing for central / large lumbar disc herniation.
+  steps:
+  - Position the patient supine with legs extended.
+  - Perform a passive straight leg raise on the ASYMPTOMATIC (contralateral) lower extremity.
+  - Ask the patient if symptoms are reproduced in the SYMPTOMATIC leg.
+  positive: Sp 0.90 (0.85–0.94), Sn 0.28 (0.22–0.35) — elevating the asymptomatic leg reproduces concordant radicular pain
+    down the symptomatic contralateral leg.
+  interpretation: High specificity (Sp 0.90) but low sensitivity — a positive crossed SLR supports disc herniation with nerve-root
+    involvement; a negative test does not rule it out. Data come mostly from surgical samples.
+  metrics: 'van der Windt 2010: Sp 0.90 (0.85–0.94), Sn 0.28 (0.22–0.35).'
+  evidence: M
+  video_url: https://www.youtube.com/watch?v=Yp7es4deo0Q
+  video_title: Crossed Straight Leg Raise Test (Physiotutors)
+  sources:
+  - text: van der Windt 2010
+    url: https://doi.org/10.1002/14651858.CD007431.pub2
+    free_full_text: false
+  review_status: approved
+- id: slump-test
+  type: test
+  title: Slump Test
+  page: 4
+  summary: Seated sequential neurodynamic tension test combining thoracolumbar slump, cervical flexion, knee extension, and
+    ankle dorsiflexion.
+  steps:
+  - Patient sits upright at the plinth edge with thighs fully supported and hands behind the back.
+  - Instruct the patient to slump the thoracic and lumbar spine into flexion while keeping the head neutral.
+  - Ask the patient to flex the chin to the chest; examiner maintains gentle overpressure.
+  - Passively or actively extend the tested knee and add ankle dorsiflexion.
+  - 'Structural differentiation: ask the patient to extend the neck — alteration of distal leg symptoms confirms neural mechanosensitivity.'
+  positive: Slump Sn 0.84, Sp 0.83; SLR Sn 0.52, Sp 0.89 (Majlesi 2008).
+  interpretation: More sensitive than the supine Straight Leg Raise in patients with lumbar disc herniation (Majlesi 2008).
+  metrics: 'Majlesi 2008 (Slump vs SLR): Slump Sn 0.84, Sp 0.83; SLR Sn 0.52, Sp 0.89.'
+  evidence: L
+  video_url: https://www.youtube.com/watch?v=KPwQNiqg_38
+  video_title: Slump Test (Mark Sleeper)
+  sources:
+  - text: Majlesi 2008
+    url: https://doi.org/10.1097/RHU.0b013e31816b2f99
+    free_full_text: false
+  review_status: approved
+- id: femoral-stretch-pkb
+  type: test
+  title: Femoral Stretch Test (Prone Knee Bend / PKB)
+  page: 4
+  summary: Prone or side-lying neurodynamic provocation test for mid-lumbar nerve root impingement (femoral nerve).
+  steps:
+  - Position the patient prone (or side-lying) with the pelvis stabilised against the plinth to prevent anterior pelvic tilt.
+  - Passively flex the patient's knee toward the buttock; add gentle hip extension if needed.
+  - Differentiate anterior thigh rectus femoris muscle stretch from sharp radicular anterior thigh/leg pain, and combine with
+    patellar tendon reflex testing.
+  positive: 'mid-lumbar impingement: FST + patellar reflex LR 7.0 (2.3–21); FST at L3 LR 5.7.'
+  interpretation: High positive likelihood ratio for mid-lumbar (especially L3) nerve root impingement, particularly when
+    combined with an impaired patellar reflex.
+  metrics: 'Suri 2011 Spine: mid-lumbar impingement: FST + patellar reflex LR 7.0 (2.3–21); FST at L3 LR 5.7.'
+  evidence: L
+  video_url: https://www.youtube.com/watch?v=4VxKyPRq6HA
+  video_title: Prone Knee Bend / Reversed Lasègue Test (Physiotutors)
+  sources:
+  - text: Suri 2011 Spine
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2978791/
+    free_full_text: true
+  review_status: approved
+- id: achilles-reflex-test
+  type: test
+  title: Achilles Tendon Reflex (Ankle Jerk)
+  page: 4
+  summary: Deep tendon reflex assessment of the S1 nerve root for low-lumbar nerve root impingement.
+  steps:
+  - Position the patient seated, supine, or kneeling with the ankle relaxed and held in slight passive dorsiflexion.
+  - Strike the Achilles tendon briskly with a reflex hammer and observe/palpate gastrocnemius-soleus plantarflexion response.
+  - Compare amplitude and symmetry directly against the contralateral ankle (use Jendrassik reinforcement if bilaterally diminished).
+  positive: low-lumbar impingement LR 7.1 (0.96–53) when asymmetrically diminished or absent.
+  interpretation: Point estimate favours low-lumbar nerve root impingement, but the confidence interval is wide (0.96–53) —
+    interpret together with myotomes, dermatomes and neurodynamic tests.
+  metrics: 'Suri 2011 Spine: low-lumbar impingement LR 7.1 (0.96–53).'
+  evidence: L
+  sources:
+  - text: Suri 2011 Spine
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2978791/
+    free_full_text: true
+  review_status: approved
+- id: manipulation-cpr-flynn-childs
+  type: info
+  title: Lumbar Manipulation Clinical Prediction Rule (Flynn / Childs)
+  page: 4
+  summary: 5-criterion clinical prediction rule identifying patients with non-radicular low back pain most likely to achieve
+    rapid improvement from lumbopelvic thrust manipulation plus exercise.
+  steps:
+  - Acute / recent onset of current low back pain episode.
+  - No symptoms extending distal to the knee.
+  - Low fear-avoidance beliefs on the FABQ-work subscale.
+  - At least one hypomobile lumbar motion segment on posteroanterior spring testing.
+  - Adequate hip internal rotation range of motion in at least one hip.
+  positive: '5 criteria; ≥ 4/5 → LR+ 24.38; probability of success 45% → 95% (Flynn 2002). Rule-positive + manipulation: OR
+    60.8 (5.2–704.7); 92% chance of success; NNT 1.9 (1.4–3.5) at 4 weeks (Childs 2004).'
+  interpretation: Per NICE NG59 (1.2.7, amended 2026), offer spinal manipulation only as part of a treatment package that
+    includes exercise.
+  metrics: 'Flynn 2002 (derivation): 5 criteria; ≥ 4/5 → LR+ 24.38; probability of success 45% → 95%. Childs 2004 (validation):
+    rule-positive + manipulation: OR 60.8 (5.2–704.7); 92% chance of success; NNT 1.9 (1.4–3.5) at 4 weeks.'
+  evidence: M
+  sources:
+  - text: Flynn 2002
+    url: https://doi.org/10.1097/00007632-200212150-00021
+    free_full_text: false
+  - text: Childs 2004
+    url: https://doi.org/10.7326/0003-4819-141-12-200412210-00008
+    free_full_text: false
+  review_status: approved
+- id: stabilisation-cpr-hicks
+  type: info
+  title: Lumbar Stabilisation Clinical Prediction Rule (Hicks)
+  page: 4
+  summary: Clinical prediction rule identifying patients with low back pain who respond favourably (or fail to respond) to
+    a lumbar stabilisation exercise programme.
+  steps:
+  - Assess patient age (younger age variable).
+  - Measure passive Straight Leg Raise (SLR) range of motion.
+  - Perform the Prone Instability Test (PIT).
+  - Observe active trunk flexion/return for aberrant motions (instability catch, painful arc, thigh climbing, reversal of
+    lumbopelvic rhythm).
+  - Evaluate lumbar segmental hypermobility and fear-avoidance beliefs.
+  positive: 'success LR+ 4.0; failure LR− 0.18; key variables: age, SLR, prone instability test, aberrant motions, hypermobility,
+    fear-avoidance.'
+  interpretation: Helps target motor control and trunk stabilisation programmes toward patients with clinical features of
+    segmental instability.
+  metrics: 'Hicks 2005: success LR+ 4.0; failure LR− 0.18; key variables: age, SLR, prone instability test, aberrant motions,
+    hypermobility, fear-avoidance.'
+  evidence: L
+  sources:
+  - text: Hicks 2005
+    url: https://doi.org/10.1016/j.apmr.2005.03.033
+    free_full_text: false
+  review_status: approved
+- id: odi
+  type: info
+  title: Oswestry Disability Index (ODI) / Modified Oswestry
+  page: 4
+  summary: 10-section condition-specific disability questionnaire for low back pain, scored 0–5 per item and multiplied by
+    2 to yield a percentage disability score.
+  steps:
+  - Patient completes the 10 sections (pain intensity, personal care, lifting, walking, sitting, standing, sleeping, homemaking
+    / sex life, social life, travelling).
+  - Each section is scored from 0 (no disability) to 5 (maximal disability).
+  - When all 10 sections are answered, sum the item scores and multiply by 2 to obtain the percentage disability score.
+  positive: 'MIC consensus (Ostelo 2008): ODI 10 or 30% improvement from baseline. Modified Oswestry (Fritz 2001): MCID ≈
+    6 points.'
+  interpretation: Primary functional outcome measure across non-surgical and post-surgical lumbar spine rehabilitation.
+  metrics: 'Ostelo 2008 (MIC consensus): VAS 15; NRS 2; RMDQ 5; ODI 10; or 30% improvement from baseline. Fritz 2001 (Modified
+    Oswestry): MCID ≈ 6 points.'
+  evidence: M
+  calculator:
+    kind: formula
+    inputs:
+    - heading: Oswestry 10 sections (0 = no disability … 5 = maximal disability; total × 2 = %)
+    - key: i1
+      label: Pain intensity
+      type: select
+      options:
+      - - 0
+        - 0 · No pain at the moment
+      - - 1
+        - 1 · Very mild pain at the moment
+      - - 2
+        - 2 · Moderate pain at the moment
+      - - 3
+        - 3 · Fairly severe pain at the moment
+      - - 4
+        - 4 · Very severe pain at the moment
+      - - 5
+        - 5 · Worst imaginable pain at the moment
+    - key: i2
+      label: Personal care (washing, dressing)
+      type: select
+      options:
+      - - 0
+        - 0 · Look after myself normally without extra pain
+      - - 1
+        - 1 · Look after myself normally but it causes extra pain
+      - - 2
+        - 2 · Painful to look after myself; slow and careful
+      - - 3
+        - 3 · Need some help but manage most personal care
+      - - 4
+        - 4 · Need help every day in most aspects of self-care
+      - - 5
+        - 5 · Do not get dressed, wash with difficulty and stay in bed
+    - key: i3
+      label: Lifting
+      type: select
+      options:
+      - - 0
+        - 0 · Can lift heavy weights without extra pain
+      - - 1
+        - 1 · Can lift heavy weights but it gives extra pain
+      - - 2
+        - 2 · Pain prevents lifting heavy weights off the floor (can if convenient)
+      - - 3
+        - 3 · Pain prevents lifting heavy weights, can manage light-to-medium weights
+      - - 4
+        - 4 · Can lift very light weights only
+      - - 5
+        - 5 · Cannot lift or carry anything at all
+    - key: i4
+      label: Walking
+      type: select
+      options:
+      - - 0
+        - 0 · Pain does not prevent walking any distance
+      - - 1
+        - 1 · Pain prevents walking long distances
+      - - 2
+        - 2 · Pain restricts walking to moderate distance
+      - - 3
+        - 3 · Pain restricts walking to short distance
+      - - 4
+        - 4 · Can only walk using a stick or crutches
+      - - 5
+        - 5 · In bed most of the time and have to crawl to the toilet
+    - key: i5
+      label: Sitting
+      type: select
+      options:
+      - - 0
+        - 0 · Can sit in any chair as long as I like
+      - - 1
+        - 1 · Can only sit in my favourite chair as long as I like
+      - - 2
+        - 2 · Pain prevents sitting for prolonged periods
+      - - 3
+        - 3 · Pain prevents sitting for moderate periods
+      - - 4
+        - 4 · Pain prevents sitting for more than a brief period
+      - - 5
+        - 5 · Pain prevents sitting at all
+    - key: i6
+      label: Standing
+      type: select
+      options:
+      - - 0
+        - 0 · Can stand as long as I want without extra pain
+      - - 1
+        - 1 · Can stand as long as I want but it gives extra pain
+      - - 2
+        - 2 · Pain prevents standing for prolonged periods
+      - - 3
+        - 3 · Pain prevents standing for moderate periods
+      - - 4
+        - 4 · Pain prevents standing for more than a brief period
+      - - 5
+        - 5 · Pain prevents standing at all
+    - key: i7
+      label: Sleeping
+      type: select
+      options:
+      - - 0
+        - 0 · Sleep is never disturbed by pain
+      - - 1
+        - 1 · Sleep is occasionally disturbed by pain
+      - - 2
+        - 2 · Because of pain I have less than normal sleep
+      - - 3
+        - 3 · Because of pain I have moderately reduced sleep
+      - - 4
+        - 4 · Because of pain I have greatly reduced sleep
+      - - 5
+        - 5 · Pain prevents me from sleeping at all
+    - key: i8
+      label: Homemaking / Employment (or Sex life)
+      type: select
+      options:
+      - - 0
+        - 0 · Normal activity causes no extra pain
+      - - 1
+        - 1 · Normal activity causes some extra pain
+      - - 2
+        - 2 · Normal activity is nearly normal but very painful
+      - - 3
+        - 3 · Normal activity is severely restricted by pain
+      - - 4
+        - 4 · Normal activity is nearly absent because of pain
+      - - 5
+        - 5 · Pain prevents any activity at all
+    - key: i9
+      label: Social life
+      type: select
+      options:
+      - - 0
+        - 0 · Social life is normal and gives no extra pain
+      - - 1
+        - 1 · Social life is normal but increases degree of pain
+      - - 2
+        - 2 · Pain has no significant effect apart from limiting energetic interests
+      - - 3
+        - 3 · Pain has restricted social life and I do not go out as often
+      - - 4
+        - 4 · Pain has restricted social life to my home
+      - - 5
+        - 5 · Have no social life because of pain
+    - key: i10
+      label: Travelling
+      type: select
+      options:
+      - - 0
+        - 0 · Can travel anywhere without pain
+      - - 1
+        - 1 · Can travel anywhere but it gives extra pain
+      - - 2
+        - 2 · Pain is bad but I manage journeys
+      - - 3
+        - 3 · Pain restricts me to short necessary journeys
+      - - 4
+        - 4 · Pain restricts me to trips for medical treatment
+      - - 5
+        - 5 · Pain prevents travelling except lying down
+    expr: (i1+i2+i3+i4+i5+i6+i7+i8+i9+i10)*2
+    value_label: ODI score (%) · 10 items (0–5) × 2
+    decimals: 0
+    outputs:
+    - when: v>=0
+      text: 'Score {v|0}% · MIC consensus: ODI 10 or 30% improvement from baseline (Ostelo 2008); Modified Oswestry MCID ≈
+        6 points (Fritz 2001)'
+      tone: good
+  sources:
+  - text: Ostelo 2008
+    url: https://doi.org/10.1097/BRS.0b013e31815e3a10
+    free_full_text: false
+  - text: Fritz 2001
+    url: https://doi.org/10.1093/ptj/81.2.776
+    free_full_text: false
+  review_status: approved
+- id: rmdq
+  type: info
+  title: Roland-Morris Disability Questionnaire (RMDQ)
+  page: 4
+  summary: 24-item yes/no self-report questionnaire measuring daily physical disability due to low back pain.
+  steps:
+  - Ask the patient to mark each of the 24 statements that applies to them today because of their back pain (Yes = 1, No =
+    0).
+  - Sum the ticked statements to obtain a total score across the 24 items.
+  - Re-administer at follow-up and compare change against baseline.
+  positive: 'MIC consensus (Ostelo 2008): RMDQ 5 or 30% improvement from baseline. Jordan 2006: clinical improvement = 30%
+    reduction from baseline + better on global rating.'
+  interpretation: Highly responsive to change in acute, subacute, and mild-to-moderate low back pain.
+  metrics: 'Ostelo 2008 (MIC consensus): VAS 15; NRS 2; RMDQ 5; ODI 10; or 30% improvement from baseline. Jordan 2006: clinical
+    improvement = 30% reduction from baseline + better on global rating.'
+  evidence: M
+  calculator:
+    kind: scale
+    items: 24
+    min: 0
+    max: 1
+    note: 'Summarised from the 24-item Roland-Morris Disability Questionnaire (1 = Yes if the statement applies today because
+      of back pain; 0 = No). MIC consensus: RMDQ 5 or 30% improvement from baseline (Ostelo 2008); clinical improvement =
+      30% reduction from baseline + better on global rating (Jordan 2006).'
+    item_labels:
+    - Stay at home most of the time because of my back
+    - Change position frequently to try to get my back comfortable
+    - Walk more slowly than usual because of my back
+    - Because of my back, not doing any of the jobs I usually do around the house
+    - Because of my back, use a handrail to get upstairs
+    - Because of my back, lie down to rest more often
+    - Because of my back, have to hold on to something to get out of an easy chair
+    - Because of my back, try to get other people to do things for me
+    - Get dressed more slowly than usual because of my back
+    - Only stand up for short periods of time because of my back
+    - Because of my back, try not to bend or kneel down
+    - Find it difficult to get out of a chair because of my back
+    - My back is painful almost all the time
+    - Find it difficult to turn over in bed because of my back
+    - Appetite is not very good because of my back pain
+    - Have trouble putting on socks (or stockings) because of back pain
+    - Only walk short distances because of my back pain
+    - Sleep less well because of my back
+    - Because of my back pain, get dressed with help from someone else
+    - Sit down for most of the day because of my back
+    - Avoid heavy jobs around the house because of my back
+    - Because of my back pain, more irritable and bad tempered with people than usual
+    - Because of my back, go upstairs more slowly than usual
+    - Stay in bed most of the time because of my back
+    option_labels:
+      0: 0 · No
+      1: 1 · Yes (applies today)
+    aggregate: sum
+    decimals: 0
+    value_label: RMDQ (24 yes/no) · MIC 5 or 30% reduction
+  sources:
+  - text: Ostelo 2008
+    url: https://doi.org/10.1097/BRS.0b013e31815e3a10
+    free_full_text: false
+  - text: Jordan 2006
+    url: https://doi.org/10.1016/j.jclinepi.2005.03.018
+    free_full_text: false
+  review_status: approved
+- id: nprs
+  type: info
+  title: Numeric Pain Rating Scale (NPRS) & MIC Consensus
+  page: 4
+  summary: Numeric pain intensity scale (0 = no pain to 10 = worst imaginable pain) averaged across current, best, and worst
+    ratings.
+  steps:
+  - Ask the patient to rate current pain, best pain, and worst pain on the 0–10 numeric scale.
+  - Average the ratings (or track current/worst rating consistently across visits).
+  - Compare follow-up reduction against validated MDC and MCID thresholds.
+  positive: 'Childs 2005: MDC 2 points; MCID 2.2 (1 week) / 1.5 (4 weeks). Ostelo 2008 (MIC consensus): VAS 15; NRS 2; RMDQ
+    5; ODI 10; or 30% improvement from baseline.'
+  interpretation: Quick, responsive pain intensity measure for every clinical session.
+  metrics: 'Childs 2005: MDC 2 points; MCID 2.2 (1 week) / 1.5 (4 weeks). Ostelo 2008 (MIC consensus): VAS 15; NRS 2; RMDQ
+    5; ODI 10; or 30% improvement from baseline.'
+  evidence: M
+  calculator:
+    kind: scale
+    items: 3
+    min: 0
+    max: 10
+    note: 'Rate 0 (no pain) to 10 (worst pain imaginable). Childs 2005: MDC 2 points; MCID 2.2 (1 week) / 1.5 (4 weeks). Ostelo
+      2008 MIC consensus: NRS 2 or 30% improvement from baseline.'
+    item_labels:
+    - Current pain intensity (0–10)
+    - Best pain intensity (0–10)
+    - Worst pain intensity (0–10)
+    option_labels:
+      0: 0 · no pain
+      10: 10 · worst pain imaginable
+    aggregate: mean
+    decimals: 1
+    value_label: NPRS mean (0–10) · MDC 2; MCID 2.2 (1 week) / 1.5 (4 weeks)
+  sources:
+  - text: Childs 2005
+    url: https://doi.org/10.1097/01.brs.0000164099.92112.29
+    free_full_text: false
+  - text: Ostelo 2008
+    url: https://doi.org/10.1097/BRS.0b013e31815e3a10
+    free_full_text: false
+  review_status: approved
+- id: psfs
+  type: info
+  title: Patient-Specific Functional Scale (PSFS)
+  page: 4
+  summary: Individualised functional outcome scale where the patient nominates important activities limited by low back pain
+    and rates each from 0 (unable) to 10 (able at prior level).
+  steps:
+  - Ask the patient to identify important activities they are unable to do or having difficulty performing because of their
+    low back problem.
+  - Have the patient rate each activity from 0 (unable to perform activity) to 10 (able to perform activity at the same level
+    as before the problem).
+  - Calculate the 0–10 average across the nominated activities at baseline and follow-up.
+  positive: 'Maughan 2010 (chronic LBP): MCID 2 points (ROC); 1.4 (SEM method).'
+  interpretation: Tailors goal-setting and functional tracking directly to the patient's personal participation priorities.
+  metrics: 'Maughan 2010 (chronic LBP): MCID 2 points (ROC); 1.4 (SEM method).'
+  evidence: L
+  calculator:
+    kind: scale
+    items: 3
+    min: 0
+    max: 10
+    note: 'Rate each patient-nominated activity from 0 (unable to perform) to 10 (able to perform at prior level). Maughan
+      2010 (chronic LBP): MCID 2 points (ROC); 1.4 (SEM method).'
+    item_labels:
+    - First patient-nominated functional activity
+    - Second patient-nominated functional activity
+    - Third patient-nominated functional activity
+    option_labels:
+      0: 0 · unable to perform activity
+      10: 10 · able to perform at prior level
+    aggregate: mean
+    decimals: 1
+    value_label: PSFS average (0–10) · MCID 2 points (ROC); 1.4 (SEM method)
+  sources:
+  - text: Maughan 2010
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2989277/
+    free_full_text: true
+  review_status: approved
+- id: tsk-11
+  type: info
+  title: Tampa Scale of Kinesiophobia Short Form (TSK-11)
+  page: 4
+  summary: 11-item questionnaire measuring fear of movement and (re)injury in chronic low back pain, scored 1–4 per item.
+  steps:
+  - Patient rates each of the 11 items from 1 (strongly disagree) to 4 (strongly agree).
+  - Sum all 11 items (higher score = greater kinesiophobia).
+  - Use elevated items to guide behavioural experiments and graded exposure.
+  positive: 'Woby 2005: reduction ≥ 4 points = important change; ICC 0.81, SEM 2.54.'
+  interpretation: Reliable brief screen for pain-related fear; track longitudinal reduction during cognitive functional therapy
+    or graded exercise.
+  metrics: 'Woby 2005: reduction ≥ 4 points = important change; ICC 0.81, SEM 2.54.'
+  evidence: M
+  calculator:
+    kind: scale
+    items: 11
+    min: 1
+    max: 4
+    note: Item topics summarised from Woby 2005 (1 = strongly disagree … 4 = strongly agree). Reduction ≥ 4 points = important
+      change; ICC 0.81, SEM 2.54.
+    item_labels:
+    - Afraid that I might injure myself if I exercise
+    - If I were to try to overcome it, my pain would increase
+    - My body is telling me I have something dangerously wrong
+    - People aren't taking my medical condition seriously enough
+    - My accident/problem has put my body at risk for the rest of my life
+    - Pain always means I have injured my body
+    - Simply being careful that I do not make any unnecessary movements is the safest thing I can do to prevent my pain from
+      worsening
+    - I wouldn't have this much pain if there weren't something potentially dangerous going on in my body
+    - Pain lets me know when to stop exercising so that I don't injure myself
+    - I can't do all the things normal people do because it's too easy for me to get injured
+    - No one should have to exercise when he/she is in pain
+    option_labels:
+      1: 1 · strongly disagree
+      2: 2 · disagree
+      3: 3 · agree
+      4: 4 · strongly agree
+    aggregate: sum
+    decimals: 0
+    value_label: TSK-11 (11 items, 1–4) · reduction ≥ 4 points = important change
+  sources:
+  - text: Woby 2005
+    url: https://doi.org/10.1016/j.pain.2005.05.029
+    free_full_text: false
+  review_status: approved
+- id: fabq
+  type: info
+  title: Fear-Avoidance Beliefs Questionnaire (FABQ)
+  page: 4
+  summary: Self-report questionnaire assessing patient beliefs about how physical activity (FABQ-PA) and work (FABQ-work)
+    affect their low back pain.
+  steps:
+  - Administer the Physical Activity subscale and Work subscale (FABQ-work).
+  - Evaluate work-related fear-avoidance beliefs in acute low back pain to identify risk of prolonged disability and work
+    absence.
+  - Note that low fear-avoidance on the FABQ-work subscale is also one of the 5 criteria in the Flynn/Childs manipulation
+    CPR.
+  positive: predicts 4-week disability and work status in acute LBP — no cut-off in source.
+  interpretation: Address elevated work-related fear-avoidance early with workplace reassurance, graded activity exposure,
+    and occupational coordination.
+  metrics: 'Fritz 2001 Pain: predicts 4-week disability and work status in acute LBP — no cut-off in source.'
+  evidence: M
+  sources:
+  - text: Fritz 2001 Pain
+    url: https://doi.org/10.1016/S0304-3959(01)00333-5
+    free_full_text: false
+  review_status: approved
+- id: pcs
+  type: info
+  title: Pain Catastrophizing Scale (PCS)
+  page: 4
+  summary: Self-report instrument assessing catastrophic cognitions regarding pain across rumination, magnification, and helplessness
+    domains.
+  steps:
+  - Administer the questionnaire to evaluate the extent of rumination, magnification, and helplessness when experiencing pain.
+  - Use item responses qualitatively to guide pain reconceptualisation and cognitive functional therapy.
+  - Track longitudinal changes against the patient's own baseline without applying an unverified cut-off.
+  positive: no verified number — list the tool only.
+  interpretation: List and track the tool against the patient's baseline (no verified number in source file).
+  metrics: no verified number — list the tool only.
+  evidence: E
+  sources: []
+  review_status: approved
+- id: incidental-durotomy
+  type: info
+  title: Incidental Durotomy in Lumbar Spine Surgery
+  page: 5
+  summary: Intraoperative dural tear incidence across primary discectomy, spinal stenosis decompression, and revision discectomy,
+    and post-operative CSF leak vigilance.
+  steps:
+  - Check the operative note for any documented incidental durotomy / dural repair and surgeon-directed posture or mobilisation
+    instructions.
+  - Screen for postural headache (worse upright, relieved lying flat), nausea, photophobia, dizziness, or clear wound drainage.
+  - If CSF leak or pseudomeningocele is suspected, withhold straining/Valsalva and contact the surgical team immediately.
+  positive: 'n = 1,549, 14 UK centres: 3.5% primary discectomy; 8.5% stenosis surgery; 13.2% revision discectomy.'
+  interpretation: Incidental durotomy is more frequent in revision discectomy and stenosis surgery than in primary discectomy;
+    POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.
+  metrics: 'Tafazal & Sell 2005 (n = 1,549, 14 UK centres): 3.5% primary discectomy; 8.5% stenosis surgery; 13.2% revision
+    discectomy.'
+  evidence: M
+  sources:
+  - text: Tafazal & Sell 2005
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3476743/
+    free_full_text: true
+  review_status: approved
+- id: post-op-discectomy-rehab
+  type: info
+  title: Rehabilitation After Lumbar Discectomy
+  page: 5
+  summary: Evidence synthesis for rehabilitation timing and active physiotherapy after lumbar disc surgery.
+  steps:
+  - 'Early post-op phase: screen wound healing, lower-limb neurological status, and cauda equina red flags; early routine
+    referral immediately post-op showed no clinically relevant difference vs no referral (function MD 1.5, −3.6 to 6.7) and
+    was not cost-effective (Oosterhuis 2017 J Physiother).'
+  - 'From 4–6 weeks post-op: exercise from 4–6 weeks vs no treatment reduces pain and improves function (Oosterhuis 2014 Cochrane).'
+  - Active physiotherapy programmes increase odds of global improvement (OR 1.94, Afzal 2022); POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.
+  positive: 'exercise from 4–6 weeks vs no treatment: pain SMD −0.90 (−1.55 to −0.24); function SMD −0.67 (very low / low
+    quality). Active physiotherapy global improvement OR 1.94.'
+  interpretation: POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.
+  metrics: 'Oosterhuis 2014 Cochrane: exercise from 4–6 weeks vs no treatment: pain SMD −0.90 (−1.55 to −0.24); function SMD
+    −0.67 (very low / low quality). Oosterhuis 2017 J Physiother (RCT): no clinically relevant difference vs no referral (function
+    MD 1.5, −3.6 to 6.7); not cost-effective. Afzal 2022 (MA): global improvement OR 1.94.'
+  evidence: M
+  sources:
+  - text: Oosterhuis 2014 Cochrane
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7138272/
+    free_full_text: true
+  - text: Oosterhuis 2017 J Physiother
+    url: https://doi.org/10.1016/j.jphys.2017.05.016
+    free_full_text: false
+  - text: Afzal 2022
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC9601491/
+    free_full_text: true
+  review_status: approved
+- id: post-op-stenosis-decompression
+  type: info
+  title: Rehabilitation After Decompression for Lumbar Stenosis & Pre-Op Activity
+  page: 5
+  summary: Cochrane evidence on active rehabilitation after lumbar spinal stenosis decompression and Swespine registry findings
+    on pre-operative physical activity.
+  steps:
+  - 'Pre-operative phase: encourage regular physical activity and exercise prior to stenosis surgery (Swespine ODI improvement
+    19.2 regular exercise vs 15.9 non-regular).'
+  - 'Post-operative phase: deliver supervised active rehabilitation to improve both short-term and 12-month functional outcomes.'
+  - 'Adhere to surgeon instructions regarding movement: POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.'
+  positive: 'function short-term log SMD −0.22 (−0.44 to 0.00) ≈ 20% improvement; 12 months log SMD −0.26 (−0.46 to −0.05)
+    ≈ 23% (McGregor 2013 Cochrane). Pre-op activity: ODI improvement 19.2 (regular exercise) vs 15.9 (non-regular) (Torstensson
+    2022).'
+  interpretation: POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.
+  metrics: 'McGregor 2013 Cochrane: function short-term log SMD −0.22 (−0.44 to 0.00) ≈ 20% improvement; 12 months log SMD
+    −0.26 (−0.46 to −0.05) ≈ 23%. Torstensson 2022 (Swespine, stenosis surgery): ODI improvement 19.2 (regular exercise) vs
+    15.9 (non-regular).'
+  evidence: M
+  sources:
+  - text: McGregor 2013 Cochrane
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC11972841/
+    free_full_text: true
+  - text: Torstensson 2022
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10151384/
+    free_full_text: true
+  review_status: approved
+- id: post-op-lumbar-fusion
+  type: info
+  title: Complex Rehabilitation After Lumbar Fusion
+  page: 5
+  summary: Multimodal complex rehabilitation combining exercise and cognitive-behavioural components after lumbar spinal fusion.
+  steps:
+  - 'Confirm surgeon-specific fusion protocol before loading: POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.'
+  - Integrate complex rehabilitation (supervised exercise combined with cognitive-behavioural / fear-reduction strategies).
+  - Monitor wound status, adjacent-segment symptoms, and lower-limb neurological integrity at each review.
+  positive: '"complex rehabilitation" disability ES −0.85 (−1.41 to −0.29) short-term; −0.84 (−1.11 to −0.58) long-term; low
+    quality, n = 237.'
+  interpretation: POST-OP RESTRICTIONS ARE SURGEON-DIRECTED.
+  metrics: 'Greenwood 2016 Spine (MA): "complex rehabilitation" disability ES −0.85 (−1.41 to −0.29) short-term; −0.84 (−1.11
+    to −0.58) long-term; low quality, n = 237.'
+  evidence: L
+  sources:
+  - text: Greenwood 2016 Spine
+    url: https://doi.org/10.1097/BRS.0000000000001132
+    free_full_text: false
+  review_status: approved
+- id: lumbar-traction-cochrane
+  type: info
+  title: Lumbar Traction (Cochrane Review & NICE NG59)
+  page: 6
+  summary: Systematic review and guideline evidence demonstrating that mechanical or manual lumbar traction has little or
+    no effect on low back pain.
+  steps:
+  - Review Cochrane evidence (32 RCTs, 2,762 participants) showing that traction alone or with other treatment has little
+    or no effect.
+  - 'Follow NICE NG59 recommendation 1.2.6: Do not offer traction.'
+  - Redirect clinical time toward active exercise, education, and self-management.
+  positive: '32 RCTs, 2,762 participants; traction alone or with other treatment has little or no effect (Wegner 2013). NICE
+    NG59: do not offer traction (1.2.6).'
+  interpretation: Cochrane (small trials, limited-quality evidence) found little or no effect, and NICE NG59 advises against
+    lumbar traction.
+  metrics: 'Wegner 2013 (Cochrane): 32 RCTs, 2,762 participants; traction alone or with other treatment has little or no effect.
+    NICE NG59: do not offer traction (1.2.6).'
+  evidence: M
+  sources:
+  - text: Wegner 2013
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6823219/
+    free_full_text: true
+  - text: NICE NG59
+    url: https://www.nice.org.uk/guidance/ng59/chapter/Recommendations
+    free_full_text: false
+  review_status: approved
+- id: therapeutic-ultrasound-cochrane
+  type: info
+  title: Therapeutic Ultrasound for Chronic Low Back Pain (Cochrane & NICE NG59)
+  page: 6
+  summary: Cochrane systematic review and NICE NG59 recommendation against therapeutic ultrasound for low back pain.
+  steps:
+  - Review Cochrane evidence comparing therapeutic ultrasound with placebo for chronic non-specific low back pain.
+  - 'Follow NICE NG59 recommendation 1.2.9: do not offer ultrasound.'
+  positive: 'vs placebo, short-term pain MD −7.12 (−17.99 to 3.75) on 0–100 VAS: little or no difference (Ebadi 2020). NICE
+    NG59: do not offer ultrasound (1.2.9).'
+  interpretation: Therapeutic ultrasound provides little or no difference in short-term pain compared with placebo.
+  metrics: 'Ebadi 2020 (Cochrane): vs placebo, short-term pain MD −7.12 (−17.99 to 3.75) on 0–100 VAS: little or no difference.
+    NICE NG59: do not offer ultrasound (1.2.9).'
+  evidence: L
+  sources:
+  - text: Ebadi 2020
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC7390505/
+    free_full_text: true
+  - text: NICE NG59
+    url: https://www.nice.org.uk/guidance/ng59/chapter/Recommendations
+    free_full_text: false
+  review_status: approved
+- id: nice-ng59-do-not-offer
+  type: info
+  title: 'NICE NG59 Passive Modalities & Orthoses: ''Do Not Offer'' List'
+  page: 6
+  summary: Summary of electrophysical agents, needling, and orthotic devices that NICE NG59 explicitly recommends not offering
+    for low back pain with or without sciatica.
+  steps:
+  - 'Orthoses & footwear: do not offer belts or corsets (1.2.3); foot orthotics (1.2.4); rocker-sole shoes (1.2.5).'
+  - 'Traction & needling: do not offer traction (1.2.6); acupuncture (1.2.8).'
+  - 'Electrotherapy & ultrasound: do not offer ultrasound (1.2.9); PENS (1.2.10); TENS (1.2.11); interferential (1.2.12).'
+  positive: 'Do not offer: traction (1.2.6); belts or corsets (1.2.3); foot orthotics (1.2.4); rocker-sole shoes (1.2.5);
+    acupuncture (1.2.8); ultrasound (1.2.9); PENS (1.2.10); TENS (1.2.11); interferential (1.2.12).'
+  interpretation: Prioritise active self-management, group exercise (1.2.2), and manual therapy only as part of a treatment
+    package that includes exercise (1.2.7, amended 2026).
+  metrics: 'Level: Guideline. NICE NG59 — do not offer: traction (1.2.6); belts or corsets (1.2.3); foot orthotics (1.2.4);
+    rocker-sole shoes (1.2.5); acupuncture (1.2.8); ultrasound (1.2.9); PENS (1.2.10); TENS (1.2.11); interferential (1.2.12).'
+  evidence: Guideline
+  sources:
+  - text: NICE NG59
+    url: https://www.nice.org.uk/guidance/ng59/chapter/Recommendations
+    free_full_text: false
+  review_status: approved
+- id: acp-2017-superficial-heat
+  type: info
+  title: Superficial Heat & Non-Pharmacologic Care (ACP 2017 & WHO 2023)
+  page: 6
+  summary: American College of Physicians (ACP 2017) clinical practice guideline for acute/subacute low back pain and WHO
+    2023 chronic primary low back pain guideline reference.
+  steps:
+  - For acute or subacute low back pain, reassure the patient of a generally favourable prognosis and advise remaining active.
+  - Consider superficial heat (moderate quality evidence in ACP 2017) for short-term symptomatic relief.
+  - Consult the WHO 2023 guideline for non-surgical management of chronic primary low back pain.
+  positive: 'ACP 2017 (acute/subacute): superficial heat (moderate quality); massage, acupuncture or spinal manipulation (low
+    quality).'
+  interpretation: Use superficial heat as a simple self-management adjunct alongside active movement.
+  metrics: 'Level: Guideline. Qaseem 2017 (ACP 2017, acute/subacute): superficial heat (moderate quality); massage, acupuncture
+    or spinal manipulation (low quality). WHO 2023: guideline link only.'
+  evidence: Guideline
+  sources:
+  - text: Qaseem 2017
+    url: https://doi.org/10.7326/M16-2367
+    free_full_text: false
+  - text: WHO 2023
+    url: https://www.who.int/publications/i/item/9789240081789
+    free_full_text: false
+  review_status: approved
+- id: smt-chronic-lbp
+  type: info
+  title: Spinal Manipulative Therapy (SMT) & Mobilisation for Low Back Pain
+  page: 7
+  summary: BMJ meta-analysis and NICE NG59 guidance on spinal manipulation and mobilisation for low back pain.
+  steps:
+  - Screen out red flags (cauda equina syndrome, fracture, malignancy, infection, severe osteoporosis, anticoagulant use,
+    progressive neurological deficit) and obtain informed consent before manual therapy.
+  - Apply spinal manipulation or mobilisation only as part of a treatment package that includes exercise (NICE NG59 1.2.7,
+    amended 2026).
+  - In acute/subacute presentations, consider the Flynn/Childs 5-criterion manipulation CPR (Page 4) to identify high-probability
+    responders.
+  positive: 'SMT for chronic LBP (47 RCTs, n = 9,211): similar effect to other recommended therapies for short-term pain:
+    MD −3.17 (−7.85 to 1.51), moderate quality.'
+  interpretation: 'NICE NG59 (1.2.7, amended 2026): "Consider manual therapy (spinal manipulation, mobilisation or soft tissue
+    techniques such as massage) … but only as part of a treatment package that includes exercise".'
+  metrics: 'Rubinstein 2019 BMJ (47 RCTs, n = 9,211): similar effect to other recommended therapies for short-term pain: MD
+    −3.17 (−7.85 to 1.51), moderate quality. NICE NG59 (1.2.7, amended 2026).'
+  evidence: M
+  sources:
+  - text: Rubinstein 2019 BMJ
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6396088/
+    free_full_text: true
+  - text: NICE NG59
+    url: https://www.nice.org.uk/guidance/ng59/chapter/Recommendations
+    free_full_text: false
+  review_status: approved
+- id: massage-lbp-cochrane
+  type: info
+  title: Massage Therapy for Low Back Pain (Cochrane)
+  page: 7
+  summary: Cochrane review on soft-tissue massage for subacute and chronic low back pain.
+  steps:
+  - Use soft-tissue massage techniques only as a short-term adjunct within a treatment package that includes exercise (NICE
+    NG59 1.2.7, amended 2026).
+  - Transition immediately within the session from symptom modulation to active spinal movement and progressive loading.
+  positive: subacute/chronic vs inactive control, short-term pain SMD −0.75 (−0.90 to −0.60), function SMD −0.72 (−1.05 to
+    −0.39); not in long term.
+  interpretation: Massage effects are short-lived and only present against inactive controls; always integrate with active
+    exercise.
+  metrics: 'Furlan 2015 (Cochrane): subacute/chronic vs inactive control, short-term pain SMD −0.75 (−0.90 to −0.60), function
+    SMD −0.72 (−1.05 to −0.39); not in long term.'
+  evidence: L
+  sources:
+  - text: Furlan 2015
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8734598/
+    free_full_text: true
+  - text: NICE NG59
+    url: https://www.nice.org.uk/guidance/ng59/chapter/Recommendations
+    free_full_text: false
+  review_status: approved
+- id: stenosis-non-surgical-schneider
+  type: info
+  title: Non-Surgical Management of Lumbar Spinal Stenosis (Schneider RCT)
+  page: 7
+  summary: Randomised clinical trial comparing medical care, group exercise, and manual therapy plus individualised exercise
+    in lumbar spinal stenosis.
+  steps:
+  - 'Compare non-surgical care options for neurogenic claudication / lumbar spinal stenosis: medical care, group exercise,
+    or manual therapy combined with individualised exercise.'
+  - Combine thoracolumbar/hip mobilisation, flexion-biased conditioning, and progressive walking capacity training.
+  positive: 'RCT, n = 259: medical care vs group exercise vs manual therapy + individual exercise.'
+  interpretation: Aligns with NICE NG59 (1.2.7, amended 2026) by pairing manual therapy directly with individualised exercise.
+  metrics: 'Schneider 2019 JAMA Netw Open (RCT, n = 259): medical care vs group exercise vs manual therapy + individual exercise
+    — no numbers beyond n.'
+  evidence: M
+  sources:
+  - text: Schneider 2019 JAMA Netw Open
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6324321/
+    free_full_text: true
+  review_status: approved
+- id: exercise-chronic-lbp-hayden
+  type: info
+  title: Exercise Therapy for Chronic Low Back Pain (Cochrane & Network Meta-Analysis)
+  page: 8
+  summary: Cochrane review (249 trials) and network meta-analysis (217 RCTs) establishing exercise therapy as foundational
+    care for chronic low back pain.
+  steps:
+  - Prescribe structured exercise therapy for chronic low back pain, noting clinically important pain reduction across 249
+    trials.
+  - Incorporate Pilates, McKenzie, or functional restoration approaches, or a group exercise programme (biomechanical, aerobic,
+    mind–body or a combination per NICE NG59 1.2.2).
+  - 'Prioritise adherence and shared decision-making: "encourage the exercise they enjoy" (Hayden 2021 J Physiother).'
+  positive: 'Cochrane (249 trials): pain MD −15.2 (−18.3 to −12.2) — clinically important; function MD −6.8 (−8.3 to −5.3)
+    — below MCID. NMA (217 RCTs): Pilates, McKenzie, functional restoration: MD −15 to −19 pain, −10 to −12 function vs minimal
+    treatment; "encourage the exercise they enjoy".'
+  interpretation: 'NICE NG59 (1.2.2): "Consider a group exercise programme (biomechanical, aerobic, mind–body or a combination)".'
+  metrics: 'Hayden 2021 Cochrane (249 trials): pain MD −15.2 (−18.3 to −12.2) — clinically important; function MD −6.8 (−8.3
+    to −5.3) — below MCID. Hayden 2021 J Physiother (NMA, 217 RCTs): Pilates, McKenzie, functional restoration: MD −15 to
+    −19 pain, −10 to −12 function vs minimal treatment; "encourage the exercise they enjoy". JOSPT CPG 2021: George 2021.'
+  evidence: M
+  sources:
+  - text: Hayden 2021 Cochrane
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8477273/
+    free_full_text: true
+  - text: Hayden 2021 J Physiother
+    url: https://doi.org/10.1016/j.jphys.2021.09.004
+    free_full_text: false
+  - text: NICE NG59
+    url: https://www.nice.org.uk/guidance/ng59/chapter/Recommendations
+    free_full_text: false
+  - text: George 2021
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC10508241/
+    free_full_text: true
+  review_status: approved
+- id: motor-control-pilates-lbp
+  type: info
+  title: Motor Control Exercise & Pilates for Low Back Pain (Cochrane)
+  page: 8
+  summary: Cochrane systematic reviews on motor control exercise (Saragiotto 2016) and Pilates (Yamato 2015) for chronic low
+    back pain.
+  steps:
+  - 'Motor control exercise: retrain coordination, control, and endurance of deep and superficial trunk musculature integrated
+    into functional tasks.'
+  - 'Pilates: deliver mind–body lumbopelvic movement control, breathing, and progressive resistance exercises.'
+  - Select between motor control, Pilates, or general strengthening based on clinical presentation, patient preference, and
+    accessibility.
+  positive: Both motor control exercise and Pilates improve pain and function compared with minimal intervention, with effects
+    similar to other forms of active exercise.
+  interpretation: Align exercise choice with patient preference and movement control findings.
+  metrics: 'Saragiotto 2016 (Motor control exercise Cochrane, 29 trials, n = 2,431): no number from source file. Yamato 2015
+    (Pilates Cochrane, Level L): no number from source file.'
+  evidence: M
+  sources:
+  - text: Saragiotto 2016
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8761501/
+    free_full_text: true
+  - text: Yamato 2015
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC8078578/
+    free_full_text: true
+  review_status: approved
+- id: cft-restore-trial
+  type: info
+  title: Cognitive Functional Therapy (CFT — RESTORE Trial)
+  page: 8
+  summary: Individualised biopsychosocial intervention targeting pain-provocative movement behaviours, fear-avoidance cognitions,
+    and lifestyle factors in chronic disabling low back pain.
+  steps:
+  - 'Making sense of pain: use the patient''s story and examination findings to reconceptualise pain from structural damage
+    to a modifiable biopsychosocial process.'
+  - 'Exposure with control: guide behavioural experiments that relax protective trunk guarding/bracing during feared spinal
+    movements (e.g. flexion, lifting, sitting).'
+  - 'Lifestyle coaching: build regular enjoyable physical activity, sleep hygiene, and stress regulation.'
+  positive: 'RESTORE, n = 492: RMDQ MD −4.6 (−5.9 to −3.4) at 13 weeks; societal saving −AU$5,276.'
+  interpretation: Large three-arm RCT supporting CFT for chronic disabling low back pain.
+  metrics: 'Kent 2023 Lancet (RESTORE, n = 492): RMDQ MD −4.6 (−5.9 to −3.4) at 13 weeks; societal saving −AU$5,276.'
+  evidence: H
+  sources:
+  - text: Kent 2023 Lancet
+    url: https://doi.org/10.1016/S0140-6736(23)00441-5
+    free_full_text: false
+  review_status: approved
+- id: walkback-trial
+  type: info
+  title: Individualised Walking & Education Programme (WalkBack Trial)
+  page: 8
+  summary: Progressive, physiotherapist-coached walking and pain education programme preventing recurrence after recovery
+    from an episode of non-specific low back pain.
+  steps:
+  - Enrol patients who have recently recovered from an episode of non-specific low back pain.
+  - Co-design an individualised, progressive walking programme tailored to patient schedule, baseline capacity, and goals.
+  - Pair walking progression with contemporary pain education to reduce fear of flare-ups and promote self-management.
+  positive: 'WalkBack, n = 701: recurrence HR 0.72 (0.60–0.85); median days to recurrence 208 vs 112.'
+  interpretation: Accessible, scalable, cost-effective secondary prevention strategy after LBP recovery.
+  metrics: 'Pocovi 2024 Lancet (WalkBack, n = 701): recurrence HR 0.72 (0.60–0.85); median days to recurrence 208 vs 112.'
+  evidence: H
+  sources:
+  - text: Pocovi 2024 Lancet
+    url: https://doi.org/10.1016/S0140-6736(24)00755-4
+    free_full_text: false
+  review_status: approved
+- id: lbp-secondary-prevention
+  type: info
+  title: 'Low Back Pain Prevention: Exercise & Education'
+  page: 8
+  summary: Systematic review and meta-analysis evidence for preventing low back pain episodes through exercise and education.
+  steps:
+  - Prescribe regular ongoing exercise combined with biopsychosocial back education as the primary preventive strategy.
+  - Maintain long-term exercise adherence — protective effects diminish if exercise is discontinued.
+  - Avoid relying on lumbar belts, corsets, or foot orthotics for LBP prevention.
+  positive: 'exercise + education: RR 0.55 (0.41–0.74); exercise alone RR 0.65 (0.50–0.86) (Steffens 2016); exercise alone
+    RR 0.67 (0.53–0.85) (Shiri 2018).'
+  interpretation: Strongest preventive evidence is for exercise combined with education, as well as regular exercise alone.
+  metrics: 'Steffens 2016 JAMA Intern Med: exercise + education RR 0.55 (0.41–0.74); exercise alone RR 0.65 (0.50–0.86). Shiri
+    2018 Am J Epidemiol: exercise alone RR 0.67 (0.53–0.85).'
+  evidence: M
+  sources:
+  - text: Steffens 2016 JAMA Intern Med
+    url: https://doi.org/10.1001/jamainternmed.2015.7431
+    free_full_text: false
+  - text: Shiri 2018 Am J Epidemiol
+    url: https://doi.org/10.1093/aje/kwx337
+    free_full_text: false
+  review_status: approved
+- id: spondylolysis-rts-sweeney
+  type: info
+  title: 'Adolescent Spondylolysis: Immediate Physical Therapy & Return to Sport'
+  page: 8
+  summary: Prospective evidence on immediate physical therapy, MRI bony healing at 3 months, and recurrence rates in adolescent
+    athletes with active lumbar spondylolysis.
+  steps:
+  - Initiate immediate structured physical therapy targeting lumbopelvic control and hip mobility while temporarily withholding
+    provocative sport hyperextension loading.
+  - Monitor clinical resolution of extension pain alongside bony healing on MRI at 3 months.
+  - Counsel athletes and families that bony healing on MRI is associated with markedly lower recurrence (7.3% recurrence vs
+    50%).
+  positive: 'adolescent athletes, n = 53: immediate PT did not worsen healing; 81% healed on MRI at 3 months; healed → 7.3%
+    recurrence vs 50%.'
+  interpretation: Supports early active physical rehabilitation without prolonged immobilisation prior to starting PT.
+  metrics: 'Sweeney (Selhorst group) 2026 OJSM (adolescent athletes, n = 53): immediate PT did not worsen healing; 81% healed
+    on MRI at 3 months; healed → 7.3% recurrence vs 50%.'
+  evidence: L
+  sources:
+  - text: Sweeney (Selhorst group) 2026 OJSM
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13145073/
+    free_full_text: true
+  review_status: approved
+- id: lumbar-tracking-flowsheet
+  type: info
+  title: Longitudinal Lumbar Outcome Tracking & MIC Thresholds
+  page: 9
+  summary: Session-by-session tracking and discharge milestone criteria comparing baseline and follow-up PROMs against validated
+    minimal important change (MIC / MCID) thresholds.
+  steps:
+  - Record session pain (NPRS), directional preference / centralisation status, neurological re-check, interventions delivered,
+    and loading progression across visits.
+  - At discharge, re-administer baseline PROMs (ODI, RMDQ, NPRS, PSFS, TSK-11) and compute absolute and percentage change.
+  - Benchmark individual recovery against Ostelo 2008 MIC consensus (VAS 15; NRS 2; RMDQ 5; ODI 10; or 30% improvement from
+    baseline) and scale-specific MCIDs.
+  positive: 'MIC consensus: VAS 15; NRS 2; RMDQ 5; ODI 10; or 30% improvement from baseline (Ostelo 2008). Modified Oswestry
+    MCID ≈ 6 points (Fritz 2001). RMDQ clinical improvement = 30% reduction from baseline + better on global rating (Jordan
+    2006). NPRS MDC 2 points; MCID 2.2 (1 week) / 1.5 (4 weeks) (Childs 2005). PSFS MCID 2 points (ROC); 1.4 (SEM method)
+    (Maughan 2010). TSK-11 reduction ≥ 4 points = important change; ICC 0.81, SEM 2.54 (Woby 2005).'
+  interpretation: Combines patient-reported milestones with objective neurological and movement control restoration to support
+    discharge or specialist referral.
+  metrics: 'Ostelo 2008: VAS 15; NRS 2; RMDQ 5; ODI 10; or 30% improvement from baseline. Fritz 2001: Modified Oswestry MCID
+    ≈ 6 points. Jordan 2006: RMDQ clinical improvement = 30% reduction from baseline + better on global rating. Childs 2005:
+    NPRS MDC 2 points; MCID 2.2 (1 week) / 1.5 (4 weeks). Maughan 2010: PSFS MCID 2 points (ROC); 1.4 (SEM method). Woby 2005:
+    TSK-11 reduction ≥ 4 points = important change; ICC 0.81, SEM 2.54.'
+  evidence: M
+  sources:
+  - text: Ostelo 2008
+    url: https://doi.org/10.1097/BRS.0b013e31815e3a10
+    free_full_text: false
+  - text: Childs 2005
+    url: https://doi.org/10.1097/01.brs.0000164099.92112.29
+    free_full_text: false
+  - text: Fritz 2001
+    url: https://doi.org/10.1093/ptj/81.2.776
+    free_full_text: false
+  - text: Jordan 2006
+    url: https://doi.org/10.1016/j.jclinepi.2005.03.018
+    free_full_text: false
+  - text: Maughan 2010
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2989277/
+    free_full_text: true
+  - text: Woby 2005
+    url: https://doi.org/10.1016/j.pain.2005.05.029
+    free_full_text: false
+  review_status: approved

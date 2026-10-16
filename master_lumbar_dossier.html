@@ -1,0 +1,1626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lumbar Spine Master Dossier</title>
+<meta name="description" content="9-page A4 master clinical assessment and rehabilitation dossier for the lumbar spine: triage and red flags, differential diagnosis, stratification, objective exam, neurodynamics, clinical prediction rules, PROMs, post-surgical rehab, electrophysical agents, manual therapy, exercise and prevention, and flowsheet. Companion Test Atlas: https://azhry-x.github.io/lumbar-atlas">
+<style>
+/* =====================================================================
+   HIP COMPLEX MASTER DOSSIER — design system
+   Mirrors the Knee Complex and Ankle & Foot dossiers so all read as one series.
+   Fonts are bundled locally; no CDN, no emoji fonts (icons are inline SVG).
+   ===================================================================== */
+@font-face { font-family: "Source Sans 3"; src: url("fonts/SourceSans3-Regular.ttf") format("truetype"); font-weight: 400; font-style: normal; font-display: block; }
+@font-face { font-family: "Source Sans 3"; src: url("fonts/SourceSans3-Semibold.ttf") format("truetype"); font-weight: 600; font-style: normal; font-display: block; }
+@font-face { font-family: "Source Sans 3"; src: url("fonts/SourceSans3-Bold.ttf") format("truetype"); font-weight: 700; font-style: normal; font-display: block; }
+@font-face { font-family: "Source Sans 3"; src: url("fonts/SourceSans3-Bold.ttf") format("truetype"); font-weight: 800; font-style: normal; font-display: block; }
+@font-face { font-family: "Source Sans 3"; src: url("fonts/SourceSans3-Bold.ttf") format("truetype"); font-weight: 900; font-style: normal; font-display: block; }
+
+:root{
+  --ink:#0f172a; --navy:#1e3a8a; --crimson:#991b1b; --emerald:#065f46; --paper:#f8fafc;
+  --line:#cbd5e1; --line2:#e2e8f0; --mut:#475569;
+}
+
+/* ================= PRINT GEOMETRY ================= */
+@page { size: A4 portrait; margin: 0; }
+@media print {
+  html, body { width: 210mm; margin: 0; padding: 0; background: #FFFFFF !important; }
+  .clinical-page { page-break-after: always; break-after: page; margin: 0 !important; box-shadow: none !important; }
+  .clinical-page:last-child { page-break-after: auto; break-after: auto; }
+}
+
+*{ box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+html,body{ margin:0; padding:0; }
+body{
+  font-family: "Source Sans 3", sans-serif;
+  color:var(--ink); font-size:9px; line-height:1.26;
+  font-variant-numeric: tabular-nums;
+  background:linear-gradient(160deg,#0f172a 0%,#1e293b 45%,#1e3a8a 100%);
+  background-attachment:fixed;
+}
+@media screen { body{ padding:10mm 0; } }
+
+/* ================= PAGE SHELL ================= */
+.clinical-page{
+  width:210mm; height:297mm; max-height:297mm; box-sizing:border-box; padding:5mm 7mm;
+  overflow:hidden; display:flex; flex-direction:column; justify-content:space-between;
+  background-color:#F8FAFC; position:relative; gap:1.5mm;
+  margin:0 auto 12mm auto; box-shadow:0 20px 60px rgba(2,6,23,.55);
+}
+.clinical-page:last-child{ margin-bottom:0; }
+.clinical-page{ --accent:#1E3A8A; --accent-soft:#eef2ff; --accent-line:#bfdbfe; }
+.clinical-page[data-accent="red"]{    --accent:#B42318; --accent-soft:#fef2f2; --accent-line:#fecaca; }
+.clinical-page[data-accent="blue"]{   --accent:#1E3A8A; --accent-soft:#eef2ff; --accent-line:#bfdbfe; }
+.clinical-page[data-accent="purple"]{ --accent:#6B21A8; --accent-soft:#faf5ff; --accent-line:#e9d5ff; }
+.clinical-page[data-accent="orange"]{ --accent:#C2410C; --accent-soft:#fff7ed; --accent-line:#fed7aa; }
+.clinical-page[data-accent="teal"]{   --accent:#0F766E; --accent-soft:#f0fdfa; --accent-line:#99f6e4; }
+.clinical-page[data-accent="green"]{  --accent:#15803D; --accent-soft:#f0fdf4; --accent-line:#bbf7d0; }
+.clinical-page[data-accent="slate"]{  --accent:#334155; --accent-soft:#f1f5f9; --accent-line:#cbd5e1; }
+.pg-body{ flex:1 1 auto; min-height:0; display:flex; flex-direction:column; gap:1.5mm; }
+
+/* ================= HEADER / FOOTER ================= */
+.pg-hdr{ display:flex; justify-content:space-between; align-items:flex-end; gap:3mm; border-bottom:2px solid var(--accent); padding-bottom:1.3mm; }
+.brand{ display:flex; align-items:center; gap:2mm; min-width:0; }
+.logo{ width:9.5mm; height:9.5mm; border-radius:2mm; flex:0 0 auto; background:linear-gradient(135deg,#1e3a8a 0%,#0f172a 100%); color:#fff;
+  display:flex; align-items:center; justify-content:center; font-weight:900; font-size:9.5px; letter-spacing:.02em; box-shadow:inset 0 0 0 1px rgba(255,255,255,.15); }
+.kicker{ font-size:6.8px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:#64748b; }
+.pg-title{ font-size:12.5px; font-weight:900; letter-spacing:-.01em; color:var(--ink); line-height:1.1; margin:0; }
+.hdr-right{ display:flex; align-items:flex-end; gap:2.5mm; font-size:8px; white-space:nowrap; }
+.pgno{ background:var(--accent); color:#fff; font-weight:800; font-size:9px; padding:1mm 2.2mm; border-radius:1.4mm; letter-spacing:.06em; }
+
+.pg-ftr{ display:flex; flex-direction:column; align-items:stretch; gap:1mm;
+  border-top:1px solid var(--line); padding-top:1mm; font-size:7.2px; color:var(--mut); min-height:22px; }
+.ftr-top{ display:flex; justify-content:space-between; align-items:center; gap:2mm; white-space:nowrap; }
+.pg-ftr b{ color:var(--ink); }
+.pnav-wrap{ display:flex; align-items:center; justify-content:center; flex:0 0 auto; }
+.pnav{ display:flex; align-items:center; justify-content:center; gap:1.5pt; min-height:34pt; width:100%; padding:0;
+  background:#F1F5F9; border:1px solid #CBD5E1; border-radius:1.5mm; }
+.pnav .nl{ font-size:6.8px; font-weight:800; letter-spacing:.08em; color:#475569; text-transform:uppercase; margin-right:.8mm; line-height:1; }
+.ptab{ position:relative; display:inline-flex; align-items:center; justify-content:center;
+  width:34pt; height:34pt; min-width:34pt; border-radius:1mm; border:1px solid var(--line);
+  background:#fff; color:var(--navy); font-weight:800; font-size:11pt; text-decoration:none; line-height:1; }
+.ptab.on{ background:var(--accent); color:#fff; border-color:var(--accent); }
+
+/* ================= LINK BADGES & EVIDENCE MARKERS ================= */
+.ref-badge, .calc-badge, .guide-badge, .find-badge {
+  position: relative; display: inline-flex; align-items: center; gap: 2px;
+  font-size: 6.8pt; line-height: 1; padding: 1.5px 4px; border-radius: 3px;
+  text-decoration: none; font-weight: 700; white-space: nowrap; vertical-align: middle; letter-spacing: .02em;
+}
+.calc-badge { background-color: #ECFDF5; border: 1px solid #A7F3D0; color: #047857; }
+.guide-badge { background-color: #FFFBEB; border: 1px solid #FDE68A; color: #B45309; }
+.ref-badge { background-color: #F0F9FF; border: 1px solid #BAE6FD; color: #0369A1; }
+.badge-ico{ width:7.5px; height:7.5px; flex:0 0 auto; display:inline-block; }
+.card-h .calc-badge, .card-h .guide-badge{ font-size:6.4pt; text-transform:none; letter-spacing:.01em; }
+
+.eb{ font-size:6.2px; font-weight:800; padding:0.2px 1.8px; border-radius:1.5px; vertical-align:super; line-height:1; display:inline-block; margin-left:1px; text-transform:none; letter-spacing:0; }
+.eb-h{ color:#047857; background:#ecfdf5; border:0.6px solid #a7f3d0; }
+.eb-m{ color:#b45309; background:#fffbeb; border:0.6px solid #fde68a; }
+.eb-l{ color:#b91c1c; background:#fef2f2; border:0.6px solid #fecaca; }
+.eb-e{ color:#4338ca; background:#eef2ff; border:0.6px solid #c7d2fe; }
+
+/* Atlas test-name link (underline = Atlas card; ▸ = verified video) */
+.test-link{ color:inherit; text-decoration:underline; text-decoration-color:rgba(30,58,138,0.45); text-underline-offset:1.6px; font-weight:inherit; }
+.test-link.has-video::after{ content:"\00a0\25B8"; font-size:0.82em; color:#1e3a8a; text-decoration:none; font-weight:700; }
+.card-h .test-link, .card.red > .card-h .test-link{ text-decoration-color:rgba(255,255,255,0.7); }
+.card-h .test-link.has-video::after{ color:#fff; }
+
+/* Atlas info icon */
+.info-icon{ display:inline-flex; align-items:center; justify-content:center; width:3.8mm; height:3.8mm; min-width:3.8mm; text-decoration:none; vertical-align:middle; margin:0 0.2mm; color:var(--accent); }
+.card-h .info-icon{ color:#ffffff; }
+.sh.r .info-icon, .crit .info-icon{ color:var(--crimson); }
+.info-svg{ width:3.3mm; height:3.3mm; display:inline-block; pointer-events:none; }
+
+/* ================= CARDS ================= */
+.card{ border:1px solid var(--line); border-radius:1.6mm; overflow:hidden; background:#fff; }
+.card-h{ background:var(--accent); color:#fff; font-weight:800; font-size:8.4px; letter-spacing:.07em; text-transform:uppercase;
+  padding:1mm 2mm; display:flex; justify-content:space-between; align-items:center; gap:2mm; }
+.card-h > span:first-child{ display:inline-flex; align-items:center; gap:1.2mm; flex-wrap:wrap; }
+.card-b{ padding:1.2mm 2mm; }
+.card.red{ border:2px solid var(--crimson); }
+.card.red > .card-h{ background:linear-gradient(90deg,#991b1b,#7f1d1d); }
+.card.green{ border:2px solid var(--emerald); }
+.card.ink > .card-h{ background:var(--ink); }
+.card.soft{ background:var(--paper); }
+.tag{ font-size:6.8px; font-weight:800; letter-spacing:.08em; background:rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.35);
+  padding:.2mm 1.5mm; border-radius:3mm; white-space:nowrap; }
+
+.sh{ font-weight:800; font-size:8px; text-transform:uppercase; letter-spacing:.05em; color:var(--accent); display:flex; justify-content:space-between;
+  align-items:center; gap:2mm; border-bottom:1px dashed var(--accent-line); padding-bottom:.4mm; margin:.8mm 0 .5mm; }
+.sh > span:first-child{ display:inline-flex; align-items:center; gap:1mm; flex-wrap:wrap; }
+.sh:first-child{ margin-top:0; }
+.sh.r{ color:var(--crimson); border-bottom-color:#fecaca; }
+.sh.g{ color:var(--emerald); border-bottom-color:#a7f3d0; }
+.sh.n{ color:var(--navy); border-bottom-color:#bfdbfe; }
+
+/* Pathway router */
+.router-row{ display:grid; grid-template-columns:minmax(0,25fr) minmax(0,45fr) minmax(0,30fr); gap:1.2mm; min-height:9.0mm; align-items:center; }
+.router-col{ display:flex; align-items:center; flex-wrap:nowrap; gap:0.4mm; min-height:9.0mm; white-space:nowrap; }
+.rchip{ display:inline-flex; align-items:center; justify-content:center; width:4.8mm; min-width:4.8mm; height:9.0mm; min-height:9.0mm;
+  position:relative; background:transparent; color:var(--navy); font-weight:800; font-size:7.4px; text-decoration:none; line-height:1;
+  isolation:isolate; z-index:1; }
+.rchip::before{ content:""; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); width:4.4mm; height:4.4mm; border-radius:1mm; border:1px solid #94a3b8; background:#fff; z-index:-1; box-sizing:border-box; }
+.router-col > span{ font-size:7.0px; color:#64748b; font-weight:700; }
+
+/* ================= FORM PRIMITIVES ================= */
+.cb{ display:inline-block; width:12px; height:12px; min-width:12px; border:1.5px solid #334155; border-radius:2.5px; background:#fff; vertical-align:middle; flex:0 0 auto; }
+.cb.sm{ width:9px; height:9px; min-width:9px; border-width:1.3px; border-radius:2px; }
+.cb.r{ border-color:var(--crimson); } .cb.g{ border-color:var(--emerald); } .cb.n{ border-color:var(--navy); } .cb.w{ border-color:#fff; background:transparent; }
+.ci{ display:flex; align-items:flex-start; gap:1.3mm; padding:.25mm 0; }
+.ci > .cb{ margin-top:-0.5px; }
+.cio{ display:inline-flex; align-items:center; gap:.8mm; margin-right:1.8mm; white-space:nowrap; }
+.row{ display:flex; align-items:flex-end; gap:3mm; }
+.fr{ display:flex; align-items:flex-end; gap:1.2mm; white-space:nowrap; min-height:14px; }
+.fr .fl{ flex:1 1 auto; }
+.fl{ display:inline-block; border-bottom:1px solid #94a3b8; min-width:9mm; height:12px; vertical-align:bottom; }
+.fl.s{ min-width:7mm; width:7mm; flex:0 0 auto; } .fl.m{ min-width:12mm; width:12mm; flex:0 0 auto; } .fl.l{ min-width:20mm; width:20mm; flex:0 0 auto; }
+.lb{ font-weight:700; color:#334155; font-size:8px; }
+.mut{ color:var(--mut); } .xs{ font-size:7.4px; } .xxs{ font-size:6.8px; } .b{ font-weight:700; }
+.crim{ color:var(--crimson); } .emer{ color:var(--emerald); } .nav{ color:var(--navy); } .acc{ color:var(--accent); }
+.stat{ display:inline-block; font-size:7px; font-weight:800; padding:.2mm 1.2mm; border-radius:2mm; background:#eff6ff; color:var(--navy); border:1px solid #bfdbfe; white-space:nowrap; text-transform:none; letter-spacing:0; }
+.stat.r{ background:#fef2f2; color:var(--crimson); border-color:#fecaca; }
+.stat.g{ background:#ecfdf5; color:var(--emerald); border-color:#a7f3d0; }
+.stat.w{ background:rgba(255,255,255,.14); color:#fff; border-color:rgba(255,255,255,.4); }
+.lr{ display:inline-flex; align-items:flex-end; gap:.8mm; white-space:nowrap; font-weight:700; color:#64748b; font-size:7.4px; }
+.circ{ display:inline-flex; gap:1.2mm; font-weight:700; color:#334155; font-size:7.8px; }
+.circ span{ border:1px solid var(--line); border-radius:3mm; padding:0 1.3mm; background:#fff; }
+.nprs{ display:inline-flex; gap:2px; }
+.nprs span{ width:14px; height:14px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:7.4px; font-weight:800; border:1.3px solid; background:#fff; }
+.mini{ border:1px solid var(--line2); border-radius:1.2mm; padding:.7mm 1.3mm; background:#fff; }
+.box{ border:1.2px solid var(--line); border-radius:1.2mm; padding:.6mm 1.2mm; background:#fff; }
+.box.r{ border-color:#b91c1c; background:#fff5f5; }
+.box.n{ border-color:#93c5fd; background:#f8fbff; }
+.box.g{ border-color:#10b981; background:#f0fdf4; }
+.box.a{ border-color:var(--accent-line); background:var(--accent-soft); }
+
+/* ================= TABLES ================= */
+.t{ width:100%; border-collapse:collapse; font-size:8.6px; font-variant-numeric:tabular-nums; }
+.t th{ background:var(--accent-soft); color:var(--accent); font-weight:800; text-align:left; padding:.7mm 1.1mm; border:1px solid var(--line); font-size:7.1px; text-transform:uppercase; letter-spacing:.04em; line-height:1.15; }
+.t td{ border:1px solid var(--line); padding:.55mm 1.1mm; vertical-align:middle; background:#fff; line-height:1.18; }
+.t tr:nth-child(even) td{ background:#fbfdff; }
+.t td.k{ font-weight:700; } .t td.w{ background:#fff !important; }
+.t.dense td{ font-size:8.2px; padding:.45mm 1mm; }
+.t.red th{ background:#fef2f2; color:var(--crimson); }
+.t.green th{ background:#ecfdf5; color:var(--emerald); }
+.t.navy th{ background:#eef2ff; color:var(--navy); }
+.t td.c, .t th.c{ text-align:center; }
+.t.ink th{ background:var(--ink); color:#fff; border-color:#334155; }
+.t.slate th{ background:#e2e8f0; color:#334155; border-color:#cbd5e1; }
+.t tr.sub td{ background:var(--accent-soft) !important; color:var(--accent); font-weight:800; font-size:7.4px; text-transform:uppercase; letter-spacing:.05em; padding:.4mm 1.1mm; }
+.t tr.redrow td:first-child{ border-left:3px solid #991b1b; }
+
+/* ================= HANDWRITING ZONES ================= */
+.dots{ position:relative; border:1px solid var(--line); border-radius:1.6mm; background-color:#fff;
+  background-image:radial-gradient(circle, #64748b 0.85px, transparent 1.05px); background-size:5mm 5mm; background-position:2.5mm 2.5mm; }
+.dots-l{ position:absolute; top:1mm; left:1.6mm; font-size:7.2px; font-weight:800; color:var(--accent); background:#fff; padding:.2mm 1.2mm;
+  text-transform:uppercase; letter-spacing:.07em; border-radius:1mm; border:1px solid var(--line2); }
+.fill{ flex:1 1 auto; min-height:10mm; }
+
+.crit{ display:flex; align-items:center; gap:1.4mm; border:2px solid var(--crimson); background:repeating-linear-gradient(135deg,#fef2f2 0 6px,#fff 6px 12px);
+  border-radius:1.4mm; padding:.6mm 1.6mm; color:var(--crimson); font-weight:800; font-size:8px; line-height:1.15; }
+.crit svg.stop{ width:10px; height:10px; flex:0 0 auto; }
+.ok{ border:1.5px solid var(--emerald); background:#ecfdf5; border-radius:1.4mm; padding:.6mm 1.6mm; color:var(--emerald); font-weight:700; }
+.note{ border-left:3px solid var(--accent); background:#fff; padding:.7mm 2mm; border-radius:0 1.2mm 1.2mm 0; }
+.divider-v{ border-left:1px dashed #fecaca; padding-left:2mm; }
+
+/* ================= ANATOMICAL WIREFRAMES ================= */
+.bm{ display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:1.4mm; }
+.bm figure{ margin:0; border:1px solid var(--line2); border-radius:1.2mm; background:#fff; padding:.8mm .8mm .4mm; display:flex; flex-direction:column; align-items:center; }
+.bm svg{ width:100%; height:auto; display:block; }
+.bm figcaption{ font-size:6.8px; font-weight:800; letter-spacing:.12em; color:var(--navy); text-transform:uppercase; margin-top:.3mm; }
+.bm .o{ fill:#F8FAFC; stroke:#64748B; stroke-width:1.1; stroke-linejoin:round; stroke-linecap:round; }
+.bm .b{ fill:#eef2ff; stroke:#64748B; stroke-width:.9; }
+.bm .d{ fill:none; stroke:#94a3b8; stroke-width:.7; stroke-dasharray:2 1.6; }
+.bm .lm{ fill:none; stroke:#1e3a8a; stroke-width:.85; stroke-dasharray:2 1.3; }
+.bm .pt{ fill:#1e3a8a; }
+.bm text{ font-family:"Source Sans 3", sans-serif; font-size:5.2px; font-weight:700; fill:#64748B; }
+.bm text.k{ fill:#1e3a8a; }
+
+/* ================= FLOWSHEET ================= */
+.flow td{ vertical-align:top; }
+.flow .p{ font-size:5.6pt; color:#64748b; font-weight:600; line-height:1.05; white-space:nowrap; }
+.vnum{ font-size:10px; font-weight:800; color:var(--navy); text-align:center; vertical-align:middle !important; background:#f8fafc; }
+.bm .mk circle{ fill:#1e3a8a; }
+.bm .mk text{ fill:#fff; font-size:5.4px; font-weight:800; }
+.bm text.s{ font-size:5px; font-weight:800; fill:#94a3b8; letter-spacing:.04em; }
+.sh .calc-badge, .sh .guide-badge{ text-transform:none; letter-spacing:.01em; }
+.t tr.sub .calc-badge, .t tr.sub .guide-badge{ text-transform:none; letter-spacing:.01em; }
+
+/* ---- compiled utility classes (Tailwind v3, generated at build) ---- */
+.col-span-2{grid-column:span 2/span 2}.col-span-5{grid-column:span 5/span 5}.col-span-7{grid-column:span 7/span 7}.my-\[1px\]{margin-top:1px;margin-bottom:1px}.mb-0\.5{margin-bottom:.125rem}.mb-\[1px\]{margin-bottom:1px}.mb-\[2px\]{margin-bottom:2px}.mr-1{margin-right:.25rem}.mr-2{margin-right:.5rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-\[1px\]{margin-top:1px}.mt-\[2px\]{margin-top:2px}.flex{display:flex}.table{display:table}.grid{display:grid}.h-1\.5{height:.375rem}.h-auto{height:auto}.w-1\.5{width:.375rem}.w-full{width:100%}.flex-1{flex:1 1 0%}.grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-\[1\.5mm\]{gap:1.5mm}.gap-\[1\.5px\]{gap:1.5px}.gap-\[1px\]{gap:1px}.gap-\[2px\]{gap:2px}.gap-x-1{-moz-column-gap:.25rem;column-gap:.25rem}.gap-x-2{-moz-column-gap:.5rem;column-gap:.5rem}.gap-x-3{-moz-column-gap:.75rem;column-gap:.75rem}.rounded-full{border-radius:9999px}.border-l{border-left-width:1px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-red-200{--tw-border-opacity:1;border-color:rgb(254 202 202/var(--tw-border-opacity,1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity,1))}.pl-2{padding-left:.5rem}.pt-1{padding-top:.25rem}.pt-\[1px\]{padding-top:1px}.text-\[6\.5px\]{font-size:6.5px}.text-\[7\.2px\]{font-size:7.2px}.text-\[7px\]{font-size:7px}.font-bold{font-weight:700}.uppercase{text-transform:uppercase}.tracking-wider{letter-spacing:.05em}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}
+</style>
+</head>
+<body>
+
+<!-- ===================== PAGE 1 ===================== -->
+<div class="clinical-page" id="page-1" data-accent="red">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">LBP</div>
+      <div>
+        <div class="kicker">Lumbar Spine &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Emergency Triage, Red Flags, Rapid Screen &amp; Subjective</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">MRN</span><span class="fl l"></span></div>
+      <div class="pgno">01 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <!-- A : Demographics -->
+<section class="card" id="p1-demographics">
+<div class="card-h"><span>A · Patient Demographics &amp; Lumbar Spine Presentation Profile</span><span class="tag">INTAKE</span></div>
+<div class="card-b flex flex-col gap-[2px]">
+<div class="row">
+<div class="fr" style="flex:3.2"><span class="lb">Patient Name</span><span class="fl"></span></div>
+<div class="fr" style="flex:.8"><span class="lb">Age</span><span class="fl"></span></div>
+<div class="fr"><span class="lb">Sex</span><span class="cio"><span class="cb"></span>M</span><span class="cio"><span class="cb"></span>F</span></div>
+<div class="fr" style="flex:1.4"><span class="lb">Date</span><span class="fl"></span></div>
+</div>
+<div class="row">
+<div class="fr" style="flex:2"><span class="lb">Occupation / Sport</span><span class="fl"></span></div>
+<div class="fr"><span class="lb">Work status</span><span class="cio"><span class="cb"></span>Full duty</span><span class="cio"><span class="cb"></span>Modified</span><span class="cio"><span class="cb"></span>Off work</span></div>
+<div class="fr"><span class="lb">Distribution</span><span class="cio"><span class="cb"></span>Central</span><span class="cio"><span class="cb"></span>L</span><span class="cio"><span class="cb"></span>R</span><span class="cio"><span class="cb"></span>Bilat</span></div>
+</div>
+<div class="row">
+<div class="fr" style="flex:1.2"><span class="lb">Episode Onset</span><span class="fl"></span></div>
+<div class="fr" style="flex:1.4"><span class="lb">Referrer / Setting</span><span class="fl"></span></div>
+<div class="fr" style="flex:1.2"><span class="lb">Prior Spine Surgery</span><span class="fl"></span></div>
+<div class="fr" style="flex:1.2"><span class="lb">Prior Episodes</span><span class="fl"></span></div>
+</div>
+<div class="fr flex-wrap" style="row-gap:1px"><span class="lb">Primary Presentation</span>
+<span class="cio"><span class="cb"></span>Axial low back pain only</span>
+<span class="cio"><span class="cb"></span>Somatic buttock / thigh referral (above knee)</span>
+<span class="cio"><span class="cb"></span>Unilateral radicular leg pain (below knee)</span>
+<span class="cio"><span class="cb"></span>Bilateral neurogenic claudication</span>
+<span class="cio"><span class="cb"></span>Paresthesia / numbness / motor loss</span>
+</div>
+<div class="row">
+<div class="fr"><span class="lb"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#nprs" rel="noopener" target="_blank">NPRS</a> Now (circle)</span>
+<span class="nprs">
+<span style="border-color:#065f46;color:#065f46">0</span><span style="border-color:#047857;color:#047857">1</span><span style="border-color:#15803d;color:#15803d">2</span><span style="border-color:#4d7c0f;color:#4d7c0f">3</span><span style="border-color:#a16207;color:#a16207">4</span><span style="border-color:#b45309;color:#b45309">5</span><span style="border-color:#c2410c;color:#c2410c">6</span><span style="border-color:#b91c1c;color:#b91c1c">7</span><span style="border-color:#991b1b;color:#991b1b">8</span><span style="border-color:#7f1d1d;color:#7f1d1d">9</span><span style="border-color:#450a0a;color:#450a0a">10</span>
+</span>
+</div>
+<div class="fr" style="flex:1"><span class="lb">Best</span><span class="fl"></span><span class="lb">Worst</span><span class="fl"></span><span class="lb">Back vs Leg dominant</span><span class="fl"></span></div>
+</div>
+</div>
+</section>
+<!-- B : Red Flags -->
+<section class="card red" id="p1-redflags">
+<div class="card-h"><span>B · Emergency Screening &amp; Red Flags — Complete Before Any Loading or Manual Therapy</span><span class="tag">TRIAGE GATE</span></div>
+<div class="card-b grid grid-cols-2 gap-x-3">
+<div>
+<div class="sh r" style="margin:1px 0 .5px;"><span>Cauda Equina Syndrome (CES) — Same-Day Emergency</span><span class="stat r">Surgical Emergency</span></div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#ces-triage" rel="noopener" target="_blank"><b>Cauda equina syndrome</b></a> <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#ces-triage" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a> — activate <b class="crim">same-day emergency</b> pathway for MRI &amp; neurosurgical / spinal review</div></div>
+<div class="ci"><span class="cb r"></span><div><b>Urinary retention:</b> <span class="stat r">Sn 0.90, Sp 0.99</span> (classic estimate, Deyo 1992 JAMA) <span class="eb eb-l">L</span></div></div>
+<div class="ci"><span class="cb r"></span><div><b>Bladder scan rule:</b> <b class="crim">PVR &gt; 200 mL → MRI-confirmed CES in 43%</b>; PVR &lt; 200 mL without objective signs → MRI+ rare (Ann R Coll Surg Engl 2024) <span class="eb eb-l">L</span> • PVR: <span class="fl s"></span> mL</div></div>
+<div class="ci"><span class="cb r"></span><div><b>Timing &amp; prognosis:</b> <b class="crim">decompression &lt; 48 h associated with better outcomes</b> (Ahn 2000 meta-analysis) <span class="eb eb-l">L</span>; bladder status at the time of surgery is the dominant factor for bladder recovery (Qureshi &amp; Sell 2007) <span class="eb eb-l">L</span></div></div>
+<div class="fr flex-wrap xs" style="row-gap:1px">
+<span class="cio"><span class="cb sm r"></span>Saddle sensory loss</span>
+<span class="cio"><span class="cb sm r"></span>Voiding difficulty / retention</span>
+<span class="cio"><span class="cb sm r"></span>Faecal incontinence</span>
+<span class="cio"><span class="cb sm r"></span>Bilateral sciatica / motor loss</span>
+</div>
+<div class="sh r" style="margin:1mm 0 .5px;"><span>Vertebral Fracture Red Flags (Post-Test Probability)</span><span class="stat r">Downie 2013 BMJ</span></div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#vertebral-fracture-red-flags" rel="noopener" target="_blank"><b>Fracture red flags</b></a> <span class="eb eb-m">M</span>: <b>older age 9% (3–25)</b> • <b>prolonged corticosteroid use 33% (10–67)</b> • <b>severe trauma 11% (8–16)</b> • <b class="crim">contusion/abrasion 62% (49–74)</b> • <b class="crim">multiple red flags 90% (34–99)</b></div></div>
+<div class="ci"><span class="cb r"></span><div><b>Cochrane fracture rule:</b> most single red flags uninformative; use in combination (Han 2023 Cochrane) <span class="eb eb-m">M</span></div></div>
+</div>
+<div class="divider-v">
+<div class="sh r" style="margin:0 0 .5px;"><span>Malignancy, Vascular, Inflammatory &amp; Infection</span><span class="stat r">Systemic &amp; NICE NG59</span></div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#spinal-malignancy-red-flags" rel="noopener" target="_blank"><b>Malignancy red flag</b></a> (Downie 2013 BMJ) <span class="eb eb-m">M</span>: <b class="crim">history of cancer 7% (3–16) in primary care; 33% (22–46) in emergency care</b></div></div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#aaa-abdominal-palpation" rel="noopener" target="_blank"><b>Abdominal aortic aneurysm</b></a> (AAA palpation, Fink 2000 Arch Intern Med) <span class="eb eb-m">M</span>: <b>Sn 68% (60–76), Sp 75% (68–82), LR+ 2.7, LR− 0.43</b>; <b class="crim">Sn 82% for AAA ≥ 5.0 cm</b>; <b>Sn 91% if girth &lt; 100 cm vs 53% if ≥ 100 cm</b></div></div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#axial-spa-asas" rel="noopener" target="_blank"><b>Axial spondyloarthritis</b></a> (ASAS criteria, Rudwaleit 2011) <span class="eb eb-m">M</span>: <span class="stat r">Sn 79.5%, Sp 83.3%</span> • chronic inflammatory back pain → rheumatology referral</div></div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#spinal-infection-screen" rel="noopener" target="_blank"><b>Spinal infection</b></a> <span class="eb eb-e">E</span>: fever/rigors, IV drug use, immunosuppression, recent spinal procedure, relentless non-mechanical pain → urgent medical workup</div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#nice-ng59-imaging" rel="noopener" target="_blank"><b>Imaging rule</b></a> <a class="guide-badge" href="https://www.nice.org.uk/guidance/ng59/chapter/Recommendations" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>NICE NG59</a>: <b>“Do not routinely offer imaging in a non-specialist setting” (1.1.4)</b>; consider imaging in specialist settings <b>“only if the result is likely to change management” (1.1.6)</b> • ref: Jarvik &amp; Deyo 2002</div></div>
+</div>
+<div class="col-span-2 flex flex-wrap items-center gap-x-1 mt-[1px] pt-[1px] border-t border-dashed border-red-200">
+<span class="lb crim">TRIAGE DISPOSITION:</span>
+<span class="cio"><span class="cb g"></span><b class="emer">Cleared — proceed with clinical dossier</b></span>
+<span class="cio"><span class="cb r"></span>Specialist / rheumatology referral</span>
+<span class="cio"><span class="cb r"></span>Urgent medical / oncology workup</span>
+<span class="cio"><span class="cb r"></span><b class="crim">Same-day emergency MRI / ED transfer (CES / AAA)</b></span>
+</div>
+</div>
+</section>
+<!-- C : Router + fast track -->
+<section class="card green" id="p1-fasttrack">
+<div class="card-h"><span>C · Clinical Pathway Router &amp; Rapid Screen</span><span class="tag">RAPID</span></div>
+<div class="card-b flex flex-col gap-[1.5px]">
+<div class="box g" style="padding:.4mm 1.2mm;">
+<div class="flex items-center justify-between" style="font-size:7px; font-weight:800; color:#065f46; text-transform:uppercase; letter-spacing:0.04em;">
+<span>Clinical Pathway Router</span>
+<span class="mut" style="font-weight:600; text-transform:none; font-size:6.8px;">Tick route → jump to matching pages</span>
+</div>
+<div class="router-row">
+<div class="router-col">
+<span class="cb sm g" style="margin-right:0.4mm;"></span>
+<b class="emer" style="margin-right:0.4mm;font-size:7.1px;">A · SCIATICA:</b>
+<a class="rchip" href="#page-1">1</a><span>→</span><a class="rchip" href="#page-3">3</a><span>→</span><a class="rchip" href="#page-4">4</a><span>→</span><a class="rchip" href="#page-8">8</a><span>→</span><a class="rchip" href="#page-9">9</a>
+</div>
+<div class="router-col">
+<span class="cb sm g" style="margin-right:0.4mm;"></span>
+<b class="nav" style="margin-right:0.4mm;font-size:7.1px;">B · MECHANICAL:</b>
+<a class="rchip" href="#page-1">1</a><span>→</span><a class="rchip" href="#page-2">2</a><span>→</span><a class="rchip" href="#page-3">3</a><span>→</span><a class="rchip" href="#page-4">4</a><span>→</span><a class="rchip" href="#page-7">7</a><span>→</span><a class="rchip" href="#page-8">8</a><span>→</span><a class="rchip" href="#page-9">9</a>
+</div>
+<div class="router-col">
+<span class="cb sm g" style="margin-right:0.4mm;"></span>
+<b style="color:#b45309;margin-right:0.4mm;font-size:7.1px;">C · POST-OP:</b>
+<a class="rchip" href="#page-1">1</a><span>→</span><a class="rchip" href="#page-5">5</a><span>→</span><a class="rchip" href="#page-6">6</a><span>→</span><a class="rchip" href="#page-8">8</a><span>→</span><a class="rchip" href="#page-9">9</a>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-4 gap-1 text-[7.2px] mt-[1px]">
+<div class="mini flex flex-col justify-between" style="padding:0.8mm;">
+<div class="lb">Gait &amp; Posture</div>
+<div class="fr"><span class="cio"><span class="cb sm"></span>Normal</span><span class="cio"><span class="cb sm r"></span>Shift/Antalgic</span></div>
+</div>
+<div class="mini flex flex-col justify-between" style="padding:0.8mm;">
+<div class="lb">Repeated Movements</div>
+<div class="fr"><span class="cio"><span class="cb sm g"></span>Centralises</span><span class="cio"><span class="cb sm r"></span>Peripheralises</span></div>
+</div>
+<div class="mini flex flex-col justify-between" style="padding:0.8mm;">
+<div class="lb">Heel / Toe Walk</div>
+<div class="fr"><span class="cio"><span class="cb sm"></span>Intact</span><span class="cio"><span class="cb sm r"></span>Weakness</span></div>
+</div>
+<div class="mini flex flex-col justify-between" style="padding:0.8mm;">
+<div class="lb">SLR / Slump Screen</div>
+<div class="fr"><span class="cio"><span class="cb sm"></span>Negative</span><span class="cio"><span class="cb sm r"></span>Positive</span></div>
+</div>
+</div>
+</div>
+</section>
+<!-- D : Subjective & Pain Map -->
+<section class="card flex flex-col" id="p1-subjective">
+<div class="card-h"><span>D · Subjective History, Symptom Behaviour &amp; Lumbosacral Pain Mapping</span><span class="tag">SUBJECTIVE</span></div>
+<div class="card-b grid grid-cols-12 gap-2" style="padding:.6mm 1.2mm;">
+<div class="col-span-7 flex flex-col gap-[1.5px]">
+<div class="sh" style="margin:0 0 1px;"><span>Symptom Location &amp; Clinical Pattern</span><span class="stat">Clinical Signpost</span></div>
+<div class="ci"><span class="cb"></span><div><b>Central / Paraspinal Lumbar Ache:</b> localized across lumbosacral segments → <span class="nav b">Non-specific mechanical / discogenic / facet</span></div></div>
+<div class="ci"><span class="cb"></span><div><b>Distal Dermatomal Leg Pain &gt; Back Pain:</b> lancinating radiation with paresthesia → <span class="nav b">Radiculopathy / disc herniation (p4)</span></div></div>
+<div class="ci"><span class="cb"></span><div><b>Bilateral Leg Cramping on Walking, Relieved by Sitting:</b> shopping-cart sign → <span class="nav b">Lumbar spinal stenosis / claudication (p2)</span></div></div>
+<div class="ci"><span class="cb"></span><div><b>Unilateral PSIS / Buttock Pain (Fortin area):</b> transitional sit-to-stand pain → <span class="nav b">Sacroiliac joint provocation cluster (p2)</span></div></div>
+<div class="ci"><span class="cb"></span><div><b>Alternating Buttock Pain &amp; Morning Stiffness Relieved by Movement:</b> insidious onset → <span class="nav b">Axial spondyloarthritis screen (p1/p2)</span></div></div>
+<div class="sh" style="margin:.8mm 0 1px;"><span>Mechanical Aggravators &amp; Easing Factors</span><span class="stat">Behaviour</span></div>
+<div class="grid grid-cols-2 gap-x-2 text-[7.2px]">
+<div>
+<div>• <b>Sustained flexion / sitting / lifting:</b> Discogenic / radicular</div>
+<div>• <b>Sustained standing / walking / extension:</b> Stenosis / facet / pars</div>
+<div>• <b>Cough / sneeze / Valsalva impulse:</b> Dural / disc root irritation</div>
+</div>
+<div>
+<div>• <b>Sit-to-stand / rolling in bed:</b> Segmental instability / SIJ</div>
+<div>• <b>Walking / gentle movement eases pain:</b> Mechanical / inflammatory</div>
+<div>• <b>Seated flexion relieves leg symptoms:</b> Neurogenic claudication</div>
+</div>
+</div>
+</div>
+<div class="col-span-5 flex flex-col items-center justify-center border-l border-slate-200 pl-2">
+<div class="text-[7px] font-bold text-slate-700 uppercase tracking-wider mb-0.5">Lumbosacral &amp; Radicular Pain Map</div>
+<svg aria-label="Lumbar spine pain map" class="w-full h-auto" style="max-height:25mm;" viewbox="0 0 180 135">
+<!-- Trunk & Pelvis Outline -->
+<path d="M 62,8 L 118,8 L 122,48 C 132,56 134,72 126,84 L 122,130 L 95,130 L 92,88 L 88,88 L 85,130 L 58,130 L 54,84 C 46,72 48,56 58,48 Z" fill="#f8fafc" stroke="#64748b" stroke-width="1.2"></path>
+<!-- Lumbar Vertebrae Midline -->
+<line stroke="#94a3b8" stroke-dasharray="3,2" stroke-width="2" x1="90" x2="90" y1="12" y2="58"></line>
+<!-- Central Lumbar Belt Zone -->
+<ellipse cx="90" cy="40" fill="rgba(30,58,138,0.22)" rx="22" ry="9" stroke="#1e3a8a" stroke-width="1.1"></ellipse>
+<text fill="#1e3a8a" font-size="4.8" font-weight="800" text-anchor="middle" x="90" y="42">LUMBAR</text>
+<!-- Left SIJ / Buttock -->
+<ellipse cx="73" cy="62" fill="rgba(16,185,129,0.25)" rx="9" ry="7" stroke="#047857" stroke-width="1"></ellipse>
+<text fill="#047857" font-size="4.5" font-weight="800" text-anchor="middle" x="73" y="64">SIJ</text>
+<!-- Saddle / Perineal Emergency Zone -->
+<ellipse cx="90" cy="76" fill="rgba(185,28,28,0.28)" rx="8" ry="5" stroke="#991b1b" stroke-width="1.1"></ellipse>
+<text fill="#991b1b" font-size="4.3" font-weight="800" text-anchor="middle" x="90" y="78">SADDLE</text>
+<!-- Right Sciatic / Radicular Tract -->
+<path d="M 102,56 Q 112,85 110,126" fill="none" opacity="0.45" stroke="#c2410c" stroke-linecap="round" stroke-width="3.5"></path>
+<text fill="#c2410c" font-size="4.6" font-weight="800" text-anchor="middle" x="112" y="106">RADICULAR</text>
+</svg>
+<div class="flex flex-wrap justify-center gap-x-2 text-[6.5px] font-bold mt-0.5">
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full" style="background:#1e3a8a"></span>Axial</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full" style="background:#047857"></span>SIJ/Gluteal</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full" style="background:#c2410c"></span>Radicular</span>
+<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full" style="background:#991b1b"></span>Saddle (CES)</span>
+</div>
+</div>
+</div>
+</section>
+<div class="dots fill" id="p1-notes"><span class="dots-l">Subjective History · Goals (PSFS) · Patient Expectations</span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Clinician</b> <span class="fl l"></span> <b>Date</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab on" href="#page-1">1</a>
+        <a class="ptab" href="#page-2">2</a>
+        <a class="ptab" href="#page-3">3</a>
+        <a class="ptab" href="#page-4">4</a>
+        <a class="ptab" href="#page-5">5</a>
+        <a class="ptab" href="#page-6">6</a>
+        <a class="ptab" href="#page-7">7</a>
+        <a class="ptab" href="#page-8">8</a>
+        <a class="ptab" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<!-- ===================== PAGE 2 ===================== -->
+<div class="clinical-page" id="page-2" data-accent="blue">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">LBP</div>
+      <div>
+        <div class="kicker">Lumbar Spine &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Differential Diagnosis, Risk Stratification &amp; Screening</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">Patient</span><span class="fl l"></span></div>
+      <div class="pgno">02 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <div class="note xs"><b class="nav">Differential &amp; prognostic stratification:</b> evaluate all 8 clinical patterns, administer risk stratification (<a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#start-back-tool" rel="noopener" target="_blank">STarT Back</a> / <a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#ompsq-10" rel="noopener" target="_blank">ÖMPSQ-10</a>), test repeated movements for <a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#mckenzie-directional-preference" rel="noopener" target="_blank">centralisation / directional preference</a>, and screen the hip, sacroiliac joint, and lower-limb neural integrity.</div>
+<!-- 1 : Differential Diagnosis Matrix (8 domains) -->
+<div class="grid grid-cols-2 gap-[1.5mm]">
+<section class="card" id="p2-diff-neural">
+<div class="card-h"><span>1 · Neural, Canal &amp; Somatic Spine Patterns</span><span class="tag">MATRIX A</span></div>
+<div class="card-b">
+<div class="ci"><span class="cb n"></span><div><b>Discogenic / Radicular (Sciatica):</b> leg pain &gt; back pain in dermatomal distribution; (+) <a class="test-link has-video" href="https://azhry-x.github.io/lumbar-atlas/#slr-test" rel="noopener" target="_blank">SLR</a> / <a class="test-link has-video" href="https://azhry-x.github.io/lumbar-atlas/#crossed-slr-test" rel="noopener" target="_blank">crossed SLR</a> / <a class="test-link has-video" href="https://azhry-x.github.io/lumbar-atlas/#slump-test" rel="noopener" target="_blank">Slump</a> or <a class="test-link has-video" href="https://azhry-x.github.io/lumbar-atlas/#femoral-stretch-pkb" rel="noopener" target="_blank">FST</a> (p4); check <a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#mckenzie-directional-preference" rel="noopener" target="_blank">centralisation</a> <span class="eb eb-m">M</span></div></div>
+<div class="ci"><span class="cb n"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#lumbar-stenosis-cluster" rel="noopener" target="_blank"><b>Lumbar spinal stenosis cluster</b></a> (Cook 2011) <span class="eb eb-l">L</span>: bilateral symptoms, leg &gt; back pain, pain during walking/standing, relief upon sitting, older age → <b class="nav">≥ 4 of 5 findings → post-test probability 76%</b></div></div>
+<div class="ci"><span class="cb n"></span><div><b>Facet joint / somatic referred pain:</b> paraspinal tenderness, somatic referral into buttock/thigh without radicular deficit, aggravated by extension/rotation <span class="eb eb-e">E</span></div></div>
+<div class="ci"><span class="cb n"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#sij-laslett-cluster" rel="noopener" target="_blank"><b>SIJ provocation cluster</b></a> (Laslett 2005) <span class="eb eb-m">M</span>: <b class="nav">≥ 3 of 6 tests: Sn 94%, Sp 78%</b>; <b class="nav">any 2 of the best 4 tests: AUC 0.842</b>; <b class="nav">all 6 negative → SIJ ruled out</b></div></div>
+</div>
+</section>
+<section class="card" id="p2-diff-instab">
+<div class="card-h"><span>2 · Instability, Pars, Inflammatory &amp; Visceral/Vascular</span><span class="tag">MATRIX B</span></div>
+<div class="card-b">
+<div class="ci"><span class="cb n"></span><div><b>Lumbar segmental instability:</b> (+) <a class="test-link has-video" href="https://azhry-x.github.io/lumbar-atlas/#passive-lumbar-extension-test" rel="noopener" target="_blank">PLET</a>, (+) <a class="test-link has-video" href="https://azhry-x.github.io/lumbar-atlas/#prone-instability-test" rel="noopener" target="_blank">PIT</a>, <a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#fritz-instability-predictors" rel="noopener" target="_blank">Fritz instability predictors</a> (p3), <a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#aberrant-movement-patterns" rel="noopener" target="_blank">aberrant motions</a>, <a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#stabilisation-cpr-hicks" rel="noopener" target="_blank">Hicks stabilisation CPR</a> (p4) <span class="eb eb-l">L</span></div></div>
+<div class="ci"><span class="cb n"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#one-legged-hyperextension-test" rel="noopener" target="_blank"><b>Spondylolysis — one-legged hyperextension test</b></a> (Masci 2006 BJSM) <span class="eb eb-l">L</span>: <b class="crim">“neither sensitive nor specific” for active spondylolysis</b> • see adolescent athlete RTS on p8</div></div>
+<div class="ci"><span class="cb n"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#axial-spa-asas" rel="noopener" target="_blank"><b>Axial spondyloarthritis (ASAS)</b></a> (Rudwaleit 2011) <span class="eb eb-m">M</span>: <span class="stat">Sn 79.5%, Sp 83.3%</span> • morning stiffness improving with exercise, not rest</div></div>
+<div class="ci"><span class="cb n"></span><div><b>Visceral / vascular referral:</b> <a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#aaa-abdominal-palpation" rel="noopener" target="_blank">AAA abdominal palpation</a> (p1) <span class="eb eb-m">M</span>, renal/ureteric, retroperitoneal, gastrointestinal or pelvic pathology (non-mechanical pain) <span class="eb eb-e">E</span></div></div>
+</div>
+</section>
+</div>
+<!-- 2 : Stratification (STarT Back + OMPSQ-10) & TBC / McKenzie / Waddell -->
+<div class="grid grid-cols-2 gap-[1.5mm]">
+<section class="card" id="p2-stratification">
+<div class="card-h"><span>3 · Risk Stratification (<a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#start-back-tool" rel="noopener" target="_blank">STarT Back</a> &amp; <a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#ompsq-10" rel="noopener" target="_blank">ÖMPSQ-10</a>)</span><span class="tag">STRATIFICATION</span></div>
+<div class="card-b flex flex-col gap-[1.5px]">
+<div class="ci"><span class="cb n"></span><div><b>NICE on stratification</b> <a class="guide-badge" href="https://www.nice.org.uk/guidance/ng59/chapter/Recommendations" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>NICE NG59</a>: <b>“Consider using risk stratification (for example, the STarT Back risk assessment tool) at first point of contact” (1.1.2)</b></div></div>
+<div class="ci"><span class="cb n"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#start-back-tool" rel="noopener" target="_blank"><b>STarT Back — scoring</b></a> <a class="calc-badge" href="https://azhry-x.github.io/lumbar-atlas/#start-back-tool" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><rect fill="none" height="8.8" rx="1.4" stroke="currentColor" stroke-width="1.1" width="8.8" x=".6" y=".6"></rect><rect fill="currentColor" height="1.7" rx=".3" width="5.6" x="2.2" y="2.1"></rect><circle cx="2.9" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="2.9" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="7.6" fill="currentColor" r=".62"></circle></svg>Calc</a> (Hill 2008) <span class="eb eb-m">M</span>: <b class="nav">9 items; total 0–3 = low risk; psychosocial subscale (items 5–9) 4–5 = high risk; rest = medium</b></div></div>
+<div class="ci"><span class="cb n"></span><div><b>STarT Back — stratified care (RCT, n = 851)</b> (Hill 2011 Lancet) <span class="eb eb-h">H</span>: <b class="nav">RMDQ between-group difference 1.81 (1.06–2.57) at 4 months; 1.06 (0.25–1.86) at 12 months</b></div></div>
+<div class="ci"><span class="cb n"></span><div><b>STarT Back in older adults</b> (Vigdal 2024) <span class="eb eb-m">M</span>: <b class="crim">predictive validity poor; AUC 0.65–0.67</b></div></div>
+<div class="ci"><span class="cb n"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#ompsq-10" rel="noopener" target="_blank"><b>Örebro short form (ÖMPSQ-10)</b></a> (Linton 2011) <span class="eb eb-m">M</span>: <b class="nav">correlation with long form 0.91; cut-off 50 identified 85% (occupational) / 83% (primary care) of those who developed disability</b></div></div>
+<div class="box flex flex-wrap items-center justify-between xs mt-[1px]" style="padding:.4mm 1mm;">
+<span><b>STarT Back:</b> Total <span class="fl s"></span> Psych <span class="fl s"></span> → <span class="cio"><span class="cb sm g"></span>Low</span><span class="cio"><span class="cb sm"></span>Medium</span><span class="cio"><span class="cb sm r"></span>High</span></span>
+<span><b>ÖMPSQ-10:</b> <span class="fl s"></span> (<span class="cio"><span class="cb sm r"></span>≥ 50 risk</span>)</span>
+</div>
+</div>
+</section>
+<section class="card" id="p2-tbc-mckenzie">
+<div class="card-h"><span>4 · TBC, Directional Preference &amp; Waddell Caution</span><span class="tag">SUBGROUPING</span></div>
+<div class="card-b flex flex-col gap-[1.5px]">
+<div class="ci"><span class="cb n"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#tbc-classification" rel="noopener" target="_blank"><b>Treatment-based classification (TBC)</b></a> (Fritz 2003) <span class="eb eb-m">M</span>: <b class="nav">TBC group: greater Oswestry change at 4 weeks (P = 0.023) and better return to full duty (P = 0.017) vs guideline-based care</b></div></div>
+<div class="ci"><span class="cb n"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#mckenzie-directional-preference" rel="noopener" target="_blank"><b>McKenzie directional preference (DP)</b></a> (Long 2004) <span class="eb eb-m">M</span>: <b class="nav">DP elicited in 74% (230) of subjects; exercises matching the DP improved every outcome vs opposite / non-directional</b></div></div>
+<div class="grid grid-cols-2 gap-1 xs my-[1px]">
+<div class="box" style="padding:.4mm 1mm;">
+<div class="lb nav">Centralisation Status</div>
+<div class="fr flex-wrap"><span class="cio"><span class="cb sm g"></span>Centralises</span><span class="cio"><span class="cb sm r"></span>Peripheralises</span><span class="cio"><span class="cb sm"></span>None</span></div>
+</div>
+<div class="box" style="padding:.4mm 1mm;">
+<div class="lb nav">Directional Preference (DP)</div>
+<div class="fr flex-wrap"><span class="cio"><span class="cb sm g"></span>Ext</span><span class="cio"><span class="cb sm g"></span>Flex</span><span class="cio"><span class="cb sm g"></span>Lat shift</span><span class="cio"><span class="cb sm"></span>No DP</span></div>
+</div>
+</div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#waddell-signs" rel="noopener" target="_blank"><b>Waddell signs</b></a> (Fishbain 2003 review) <span class="eb eb-m">M</span>: <b class="crim">associated with lower function, poorer non-surgical outcome and more pain; NOT evidence of secondary gain or psychological distress; cannot separate organic from non-organic</b></div></div>
+</div>
+</section>
+</div>
+<!-- 3 : Working Hypothesis + Mandatory Hip / SIJ / Neural Screen -->
+<div class="grid grid-cols-12 gap-[1.5mm]">
+<section class="card col-span-5 flex flex-col" id="p2-hypothesis">
+<div class="card-h"><span>5 · Working Hypothesis &amp; TBC Subgroup</span><span class="tag">SYNTHESIS</span></div>
+<div class="card-b flex flex-col justify-between" style="padding:.8mm 1.2mm;">
+<div class="flex flex-col gap-[2px]">
+<div class="fr"><span class="lb nav">Primary Driver:</span><span class="fl"></span></div>
+<div class="fr"><span class="lb">Secondary / Adjacent:</span><span class="fl"></span></div>
+<div class="fr"><span class="lb">Psychosocial / Work:</span><span class="fl"></span></div>
+<div class="fr flex-wrap gap-x-2 mt-1 pt-1 border-t border-slate-200">
+<span class="lb">Irritability:</span>
+<span class="cio"><span class="cb sm"></span>Low</span>
+<span class="cio"><span class="cb sm"></span>Moderate</span>
+<span class="cio"><span class="cb sm r"></span>High</span>
+</div>
+<div class="fr flex-wrap gap-x-1 mt-[1px]">
+<span class="lb">TBC Match:</span>
+<span class="cio"><span class="cb sm"></span>Specific Ex / DP</span>
+<span class="cio"><span class="cb sm"></span>Manipulation</span>
+<span class="cio"><span class="cb sm"></span>Stabilisation</span>
+</div>
+</div>
+</div>
+</section>
+<section class="card col-span-7 flex flex-col" id="p2-screen">
+<div class="card-h"><span>6 · Mandatory Hip, Sacroiliac Joint &amp; Neural Screen</span><span class="tag">CLEARING SCREEN</span></div>
+<div class="card-b grid grid-cols-2 gap-x-2" style="padding:.8mm 1.2mm;">
+<div>
+<div class="sh" style="margin:0 0 1px;"><span>Hip &amp; Sacroiliac Clearing</span><span class="stat">Adjacent</span></div>
+<div class="ci"><span class="cb"></span><div><b>Hip Joint Screen:</b> passive hip IR/ER &amp; flexion, FADIR / FABER <span class="eb eb-e">E</span>: <span class="cio"><span class="cb sm g"></span>Cleared</span><span class="cio"><span class="cb sm r"></span>Hip positive</span></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#sij-laslett-cluster" rel="noopener" target="_blank"><b>Laslett SIJ Cluster</b></a> <span class="eb eb-m">M</span>: <span class="cio"><span class="cb sm"></span>Distraction</span><span class="cio"><span class="cb sm"></span>Thigh thrust</span><span class="cio"><span class="cb sm"></span>Compression</span><span class="cio"><span class="cb sm"></span>Sacral thrust</span><span class="cio"><span class="cb sm"></span>Gaenslen L</span><span class="cio"><span class="cb sm"></span>Gaenslen R</span></div></div>
+</div>
+<div>
+<div class="sh" style="margin:0 0 1px;"><span>Stenosis &amp; Neural Screen</span><span class="stat">Cluster</span></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#lumbar-stenosis-cluster" rel="noopener" target="_blank"><b>Cook Stenosis Items:</b></a> <span class="cio"><span class="cb sm"></span>Bilat</span><span class="cio"><span class="cb sm"></span>Leg&gt;Back</span><span class="cio"><span class="cb sm"></span>Walk/stand pain</span><span class="cio"><span class="cb sm"></span>Sit relief</span><span class="cio"><span class="cb sm"></span>Older age</span></div></div>
+<div class="ci"><span class="cb"></span><div><b>Neural Screen (p3/p4):</b> <span class="cio"><span class="cb sm"></span>Myotomes</span><span class="cio"><span class="cb sm"></span>Dermatomes</span><span class="cio"><span class="cb sm"></span>Reflexes</span><span class="cio"><span class="cb sm"></span>SLR/Slump/FST</span></div></div>
+</div>
+</div>
+</section>
+</div>
+<div class="dots fill" id="p2-notes"><span class="dots-l">Differential Reasoning · Stratification Plan · Clearing Screen Notes</span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Clinician</b> <span class="fl l"></span> <b>Date</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab" href="#page-1">1</a>
+        <a class="ptab on" href="#page-2">2</a>
+        <a class="ptab" href="#page-3">3</a>
+        <a class="ptab" href="#page-4">4</a>
+        <a class="ptab" href="#page-5">5</a>
+        <a class="ptab" href="#page-6">6</a>
+        <a class="ptab" href="#page-7">7</a>
+        <a class="ptab" href="#page-8">8</a>
+        <a class="ptab" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<!-- ===================== PAGE 3 ===================== -->
+<div class="clinical-page" id="page-3" data-accent="blue">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">LBP</div>
+      <div>
+        <div class="kicker">Lumbar Spine &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Objective Examination, Neurological Grid &amp; Motor Control</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">Patient</span><span class="fl l"></span></div>
+      <div class="pgno">03 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <!-- 1 : Active Lumbar ROM Table (Blank write-in fields, no norms) -->
+<section class="card" id="p3-rom">
+<div class="card-h"><span>1 · Active Lumbar Range of Motion &amp; Repeated Movement Assessment <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#lumbar-rom-assessment" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">BLANK WRITE-IN FIELDS · NO NORMS</span></div>
+<div class="card-b" style="padding:.8mm 1.2mm;">
+<table class="t dense">
+<thead>
+<tr>
+<th style="width:22%">Lumbar Motion</th>
+<th class="c" style="width:14%">Baseline</th>
+<th class="c" style="width:14%">Follow-Up</th>
+<th style="width:24%">Symptom Reproduction &amp; End-Feel</th>
+<th style="width:26%">Repeated Movement Response (<a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#mckenzie-directional-preference" rel="noopener" target="_blank">DP</a>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#lumbar-rom-assessment" rel="noopener" target="_blank">Lumbar Flexion</a></td>
+<td></td><td></td><td></td>
+<td><span class="cio"><span class="cb sm g"></span>Centralises</span><span class="cio"><span class="cb sm r"></span>Peripheralises</span><span class="cio"><span class="cb sm"></span>No change</span></td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#lumbar-rom-assessment" rel="noopener" target="_blank">Lumbar Extension</a></td>
+<td></td><td></td><td></td>
+<td><span class="cio"><span class="cb sm g"></span>Centralises</span><span class="cio"><span class="cb sm r"></span>Peripheralises</span><span class="cio"><span class="cb sm"></span>No change</span></td>
+</tr>
+<tr>
+<td class="k">Left Lateral Flexion / Side-Glide</td>
+<td></td><td></td><td></td>
+<td><span class="cio"><span class="cb sm g"></span>Centralises</span><span class="cio"><span class="cb sm r"></span>Peripheralises</span><span class="cio"><span class="cb sm"></span>No change</span></td>
+</tr>
+<tr>
+<td class="k">Right Lateral Flexion / Side-Glide</td>
+<td></td><td></td><td></td>
+<td><span class="cio"><span class="cb sm g"></span>Centralises</span><span class="cio"><span class="cb sm r"></span>Peripheralises</span><span class="cio"><span class="cb sm"></span>No change</span></td>
+</tr>
+<tr>
+<td class="k">Thoracolumbar Rotation (L / R)</td>
+<td></td><td></td><td></td>
+<td><span class="cio"><span class="cb sm"></span>Symmetric</span><span class="cio"><span class="cb sm r"></span>Painful / restricted</span></td>
+</tr>
+</tbody>
+</table>
+<div class="xs mt-[1px]"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#fritz-instability-predictors" rel="noopener" target="_blank"><b>Radiographic instability predictors</b></a> (Fritz 2005 Eur Spine J) <span class="eb eb-l">L</span>: <b class="nav">lumbar flexion ≥ 53° OR no hypomobility on segmental testing → LR+ 4.3 (1.8–10.6)</b>.</div>
+</div>
+</section>
+<!-- 2 : Lower-Limb Neurological Grid L2–S1 -->
+<section class="card" id="p3-neuro">
+<div class="card-h"><span>2 · Lower-Limb Neurological Examination Grid (L2–S1) <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#lower-limb-neuro-screen" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">DERMATOME · MYOTOME · REFLEX</span></div>
+<div class="card-b" style="padding:.8mm 1.2mm;">
+<table class="t dense">
+<thead>
+<tr>
+<th style="width:8%">Root</th>
+<th style="width:27%">Dermatome (Light Touch / Pinprick)</th>
+<th style="width:29%">Myotome (Key Muscle Action)</th>
+<th style="width:20%">Reflex</th>
+<th class="c" style="width:8%">Left</th>
+<th class="c" style="width:8%">Right</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#lower-limb-neuro-screen" rel="noopener" target="_blank">L2</a></td>
+<td>Anteromedial mid-thigh <span class="eb eb-e">E</span></td>
+<td>Hip flexion (Iliopsoas)</td>
+<td>—</td>
+<td></td><td></td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#lower-limb-neuro-screen" rel="noopener" target="_blank">L3</a></td>
+<td>Distal anteromedial thigh &amp; medial knee <span class="eb eb-e">E</span></td>
+<td>Knee extension (Quadriceps)</td>
+<td>Patellar tendon (L3–L4)</td>
+<td></td><td></td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#lower-limb-neuro-screen" rel="noopener" target="_blank">L4</a></td>
+<td>Medial leg &amp; medial malleolus <span class="eb eb-e">E</span></td>
+<td>Ankle dorsiflexion (Tibialis anterior / heel walk)</td>
+<td>Patellar tendon (L4)</td>
+<td></td><td></td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#lower-limb-neuro-screen" rel="noopener" target="_blank">L5</a></td>
+<td>Anterolateral leg &amp; dorsum of foot / first web space <span class="eb eb-e">E</span></td>
+<td>Great toe extension (EHL) &amp; hip abduction</td>
+<td>—</td>
+<td></td><td></td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#lower-limb-neuro-screen" rel="noopener" target="_blank">S1</a></td>
+<td>Posterior calf, lateral heel &amp; lateral foot <span class="eb eb-e">E</span></td>
+<td>Ankle plantarflexion (Gastrocnemius-soleus / toe walk)</td>
+<td><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#achilles-reflex-test" rel="noopener" target="_blank">Achilles tendon</a> (S1, p4)</td>
+<td></td><td></td>
+</tr>
+<tr>
+<td class="k">UMN / Saddle</td>
+<td colspan="3">Perineal / saddle sensation (CES screen p1) • Plantar response (Babinski) • Ankle clonus <span class="eb eb-e">E</span></td>
+<td class="c" colspan="2"><span class="cio"><span class="cb sm g"></span>Intact</span><span class="cio"><span class="cb sm r"></span>Abnormal</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- 3 : Segmental Testing & Instability Battery -->
+<section class="card" id="p3-instability">
+<div class="card-h"><span>3 · Segmental Mobility Testing &amp; Clinical Instability Battery</span><span class="tag">RELIABILITY WARNING · PLET · PIT</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb n"></span><div><a class="test-link has-video" href="https://azhry-x.github.io/lumbar-atlas/#segmental-mobility-testing" rel="noopener" target="_blank"><b>Segmental mobility testing — reliability warning</b></a> (Hicks 2003) <span class="eb eb-l">L</span>: <b class="crim">κ −0.02 to 0.26 (not reliable); pain provocation κ 0.25–0.55</b> — rely on pain provocation rather than stiffness grading</div></div>
+<div class="ci"><span class="cb n"></span><div><a class="test-link has-video" href="https://azhry-x.github.io/lumbar-atlas/#prone-instability-test" rel="noopener" target="_blank"><b>Prone instability test (PIT) — reliability</b></a> <span class="eb eb-l">L</span>: <b class="crim">κ = 0.87 (Hicks 2003) BUT κ = 0.10 (−0.27 to 0.47) in a later study (Ravenna 2011) — reliability inconsistent</b></div></div>
+<div class="ci"><span class="cb n"></span><div><a class="test-link has-video" href="https://azhry-x.github.io/lumbar-atlas/#passive-lumbar-extension-test" rel="noopener" target="_blank"><b>Passive lumbar extension (PLE) test</b></a> (Kasai 2006; review confirming it as most accurate: Alqarni 2011) <span class="eb eb-l">L</span>: <span class="stat">Sn 84.2%, Sp 90.4%, LR+ 8.84 (4.51–17.33)</span></div></div>
+<div class="ci"><span class="cb n"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#fritz-instability-predictors" rel="noopener" target="_blank"><b>Radiographic instability predictors</b></a> (Fritz 2005 Eur Spine J) <span class="eb eb-l">L</span>: <b class="nav">lumbar flexion ≥ 53° OR no hypomobility on segmental testing → LR+ 4.3 (1.8–10.6)</b></div></div>
+<div class="box flex flex-wrap items-center justify-between xs mt-[1px]" style="padding:.4mm 1mm;">
+<span><b>PA Pain Provocation:</b> <span class="cio"><span class="cb sm"></span>L1</span><span class="cio"><span class="cb sm"></span>L2</span><span class="cio"><span class="cb sm"></span>L3</span><span class="cio"><span class="cb sm"></span>L4</span><span class="cio"><span class="cb sm"></span>L5</span><span class="cio"><span class="cb sm"></span>S1</span></span>
+<span><b>Instability Tests:</b> <span class="cio"><span class="cb sm"></span>PLET (+)</span><span class="cio"><span class="cb sm"></span>PIT (+)</span><span class="cio"><span class="cb sm"></span>No hypomobility</span></span>
+</div>
+</div>
+</section>
+<!-- 4 : McGill Endurance Ratios + Sørensen + Aberrant Movement Checklist -->
+<div class="grid grid-cols-2 gap-[1.5mm]">
+<section class="card" id="p3-endurance">
+<div class="card-h"><span>4 · <a class="test-link has-video" href="https://azhry-x.github.io/lumbar-atlas/#mcgill-endurance-battery" rel="noopener" target="_blank">McGill Endurance Ratios</a> &amp; <a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#biering-sorensen-test" rel="noopener" target="_blank">Sørensen</a></span><span class="tag">RATIOS ONLY · NO SECOND NORMS</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb n"></span><div><a class="test-link has-video" href="https://azhry-x.github.io/lumbar-atlas/#mcgill-endurance-battery" rel="noopener" target="_blank"><b>McGill endurance battery</b></a> (McGill 1999) <span class="eb eb-l">L</span>: <b class="nav">reliability &gt; 0.97; men side bridge = 65% of extensor time, 99% of flexor time; women 39% and 79% — ratios only, no second norms</b></div></div>
+<div class="ci"><span class="cb n"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#biering-sorensen-test" rel="noopener" target="_blank"><b>Biering-Sørensen</b></a> (Biering-Sørensen 1984) <span class="eb eb-l">L</span>: <b class="nav">good isometric back-extensor endurance may prevent first-time LBP in men — no second norms</b></div></div>
+<div class="row xs mt-[1px]">
+<div class="fr"><span class="lb">Flexor</span><span class="fl"></span></div>
+<div class="fr"><span class="lb">Extensor</span><span class="fl"></span></div>
+<div class="fr"><span class="lb">Side Bridge L</span><span class="fl"></span></div>
+<div class="fr"><span class="lb">Side Bridge R</span><span class="fl"></span></div>
+</div>
+<div class="row xs">
+<div class="fr"><span class="lb">Flex / Ext Ratio</span><span class="fl"></span></div>
+<div class="fr"><span class="lb">SB / Ext Ratio</span><span class="fl"></span></div>
+<div class="fr"><span class="lb">SB L / R Ratio</span><span class="fl"></span></div>
+</div>
+</div>
+</section>
+<section class="card" id="p3-aberrant">
+<div class="card-h"><span>5 · Movement Quality &amp; Aberrant Movements <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#aberrant-movement-patterns" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">MOTOR CONTROL</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#aberrant-movement-patterns" rel="noopener" target="_blank"><b>Painful arc in flexion:</b></a> symptoms provoked in mid-range arc of forward bending <span class="eb eb-l">L</span></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#aberrant-movement-patterns" rel="noopener" target="_blank"><b>Painful arc on return:</b></a> symptoms provoked during return from flexion to upright <span class="eb eb-l">L</span></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#aberrant-movement-patterns" rel="noopener" target="_blank"><b>Instability catch / judder:</b></a> sudden acceleration, deceleration, or out-of-plane deviation <span class="eb eb-l">L</span></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#aberrant-movement-patterns" rel="noopener" target="_blank"><b>Gower sign (“thigh climbing”):</b></a> hands walk up thighs to assist trunk extension <span class="eb eb-l">L</span></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#aberrant-movement-patterns" rel="noopener" target="_blank"><b>Reversal of lumbopelvic rhythm:</b></a> knee flexion &amp; anterior pelvic shift on return <span class="eb eb-l">L</span></div></div>
+</div>
+</section>
+</div>
+<div class="dots fill" id="p3-notes"><span class="dots-l">Objective Examination Notes · Palpation · Motor Control Observations</span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Clinician</b> <span class="fl l"></span> <b>Date</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab" href="#page-1">1</a>
+        <a class="ptab" href="#page-2">2</a>
+        <a class="ptab on" href="#page-3">3</a>
+        <a class="ptab" href="#page-4">4</a>
+        <a class="ptab" href="#page-5">5</a>
+        <a class="ptab" href="#page-6">6</a>
+        <a class="ptab" href="#page-7">7</a>
+        <a class="ptab" href="#page-8">8</a>
+        <a class="ptab" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<!-- ===================== PAGE 4 ===================== -->
+<div class="clinical-page" id="page-4" data-accent="blue">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">LBP</div>
+      <div>
+        <div class="kicker">Lumbar Spine &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Neurodynamic Tests, Clinical Prediction Rules &amp; PROMs</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">Patient</span><span class="fl l"></span></div>
+      <div class="pgno">04 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <div class="note xs"><b class="nav">How to read:</b> copy &amp; interpret diagnostic accuracy within its clinical context. <u>Underline</u> = Atlas card · <b class="nav">▸</b> = verified video · <span class="calc-badge">Calc</span> = interactive scale calculator · <span class="guide-badge">Guide</span> = clinical guideline.</div>
+<!-- 1 : Neurodynamic & Nerve Root Impingement Tests -->
+<section class="card" id="p4-neurodynamics">
+<div class="card-h"><span>1 · Neurodynamic &amp; Nerve Root Impingement Tests</span><span class="tag">SCIATIC · FEMORAL · REFLEX</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb n"></span><div class="flex-1 flex justify-between gap-1"><span><a class="test-link has-video" href="https://azhry-x.github.io/lumbar-atlas/#slr-test" rel="noopener" target="_blank"><b>Straight Leg Raise (SLR)</b></a> <span class="mut xs">(Cochrane, mostly surgical samples — van der Windt 2010)</span></span><span><span class="cio"><span class="cb sm"></span>L</span><span class="cio"><span class="cb sm"></span>R</span> <span class="stat">Sn 0.92 (0.87–0.95), Sp 0.28 (0.18–0.40)</span> <span class="eb eb-m">M</span></span></div></div>
+<div class="ci"><span class="cb n"></span><div class="flex-1 flex justify-between gap-1"><span><a class="test-link has-video" href="https://azhry-x.github.io/lumbar-atlas/#crossed-slr-test" rel="noopener" target="_blank"><b>Crossed SLR</b></a> <span class="mut xs">(well-leg raise reproducing concordant symptomatic leg pain — van der Windt 2010)</span></span><span><span class="cio"><span class="cb sm"></span>L</span><span class="cio"><span class="cb sm"></span>R</span> <span class="stat">Sp 0.90 (0.85–0.94), Sn 0.28 (0.22–0.35)</span> <span class="eb eb-m">M</span></span></div></div>
+<div class="ci"><span class="cb n"></span><div class="flex-1 flex justify-between gap-1"><span><a class="test-link has-video" href="https://azhry-x.github.io/lumbar-atlas/#slump-test" rel="noopener" target="_blank"><b>Slump vs SLR</b></a> <span class="mut xs">(seated dural/sciatic tension with cervical differentiation — Majlesi 2008)</span></span><span><span class="cio"><span class="cb sm"></span>L</span><span class="cio"><span class="cb sm"></span>R</span> <span class="stat">Slump Sn 0.84, Sp 0.83; SLR Sn 0.52, Sp 0.89</span> <span class="eb eb-l">L</span></span></div></div>
+<div class="ci"><span class="cb n"></span><div class="flex-1 flex justify-between gap-1"><span><a class="test-link has-video" href="https://azhry-x.github.io/lumbar-atlas/#femoral-stretch-pkb" rel="noopener" target="_blank"><b>Femoral stretch test (prone knee bend)</b></a> <span class="mut xs">(mid-lumbar impingement — Suri 2011 Spine)</span></span><span><span class="cio"><span class="cb sm"></span>L</span><span class="cio"><span class="cb sm"></span>R</span> <span class="stat">FST + patellar reflex LR 7.0 (2.3–21); FST at L3 LR 5.7</span> <span class="eb eb-l">L</span></span></div></div>
+<div class="ci"><span class="cb n"></span><div class="flex-1 flex justify-between gap-1"><span><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#achilles-reflex-test" rel="noopener" target="_blank"><b>Achilles reflex</b></a> <span class="mut xs">(low-lumbar impingement — Suri 2011 Spine)</span></span><span><span class="cio"><span class="cb sm"></span>L</span><span class="cio"><span class="cb sm"></span>R</span> <span class="stat">low-lumbar impingement LR 7.1 (0.96–53)</span> <span class="eb eb-l">L</span></span></div></div>
+</div>
+</section>
+<!-- 2 : Clinical Prediction Rules (Flynn/Childs Manipulation CPR & Hicks Stabilisation CPR) -->
+<div class="grid grid-cols-2 gap-[1.5mm]">
+<section class="card" id="p4-cpr-manip">
+<div class="card-h"><span>2 · Manipulation CPR (Flynn 2002 / Childs 2004) <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#manipulation-cpr-flynn-childs" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">5 CRITERIA CHECKLIST</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="xs"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#manipulation-cpr-flynn-childs" rel="noopener" target="_blank"><b>Flynn 2002:</b></a> <b class="nav">5 criteria; ≥ 4/5 → LR+ 24.38; probability of success 45% → 95%</b> <span class="eb eb-l">L</span></div>
+<div class="xs"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#manipulation-cpr-flynn-childs" rel="noopener" target="_blank"><b>Childs 2004 validation:</b></a> <b class="nav">rule-positive + manipulation: OR 60.8 (5.2–704.7); 92% chance of success; NNT 1.9 (1.4–3.5) at 4 weeks</b> <span class="eb eb-m">M</span></div>
+<div class="ci"><span class="cb"></span><div><b>Criterion:</b> Acute / recent onset of current low back pain episode</div></div>
+<div class="ci"><span class="cb"></span><div><b>Criterion:</b> No symptoms extending distal to the knee</div></div>
+<div class="ci"><span class="cb"></span><div><b>Criterion:</b> Low fear-avoidance beliefs on the <a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#fabq" rel="noopener" target="_blank">FABQ-work</a> subscale</div></div>
+<div class="ci"><span class="cb"></span><div><b>Criterion:</b> Hypomobility on lumbar posteroanterior segmental testing</div></div>
+<div class="ci"><span class="cb"></span><div><b>Criterion:</b> Adequate hip internal rotation range of motion</div></div>
+<div class="box flex justify-between items-center xs mt-[1px]" style="padding:.4mm 1mm;">
+<span><b>Criteria ticked:</b> <span class="fl s"></span> / 5</span>
+<span><span class="cio"><span class="cb sm g"></span>≥ 4/5 Rule-Positive (pair with exercise, p7)</span></span>
+</div>
+</div>
+</section>
+<section class="card" id="p4-cpr-stab">
+<div class="card-h"><span>3 · Stabilisation CPR (Hicks 2005) <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#stabilisation-cpr-hicks" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">KEY VARIABLES CHECKLIST</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="xs"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#stabilisation-cpr-hicks" rel="noopener" target="_blank"><b>Hicks 2005:</b></a> <b class="nav">success LR+ 4.0; failure LR− 0.18; key variables: age, SLR, prone instability test, aberrant motions, hypermobility, fear-avoidance</b> <span class="eb eb-l">L</span></div>
+<div class="ci"><span class="cb"></span><div><b>Key variable:</b> Age (younger age predictor)</div></div>
+<div class="ci"><span class="cb"></span><div><b>Key variable:</b> Straight Leg Raise (<a class="test-link has-video" href="https://azhry-x.github.io/lumbar-atlas/#slr-test" rel="noopener" target="_blank">SLR</a>) range of motion</div></div>
+<div class="ci"><span class="cb"></span><div><b>Key variable:</b> Positive <a class="test-link has-video" href="https://azhry-x.github.io/lumbar-atlas/#prone-instability-test" rel="noopener" target="_blank">Prone Instability Test (PIT)</a></div></div>
+<div class="ci"><span class="cb"></span><div><b>Key variable:</b> <a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#aberrant-movement-patterns" rel="noopener" target="_blank">Aberrant motions</a> present during active flexion / return</div></div>
+<div class="ci"><span class="cb"></span><div><b>Key variable:</b> Lumbar segmental hypermobility on PA spring testing</div></div>
+<div class="ci"><span class="cb"></span><div><b>Key variable:</b> Fear-avoidance beliefs (<a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#fabq" rel="noopener" target="_blank">FABQ</a>)</div></div>
+<div class="box flex justify-between items-center xs mt-[1px]" style="padding:.4mm 1mm;">
+<span><span class="cio"><span class="cb sm g"></span>Success profile (LR+ 4.0)</span></span>
+<span><span class="cio"><span class="cb sm r"></span>Failure profile (LR− 0.18)</span></span>
+</div>
+</div>
+</section>
+</div>
+<!-- 3 : Validated PROMs Dashboard Table -->
+<section class="card" id="p4-proms">
+<div class="card-h"><span>4 · Validated Patient-Reported Outcome Measures (PROMs Dashboard)</span><span class="tag">PROMS · VERIFIED MCIDS ONLY</span></div>
+<div class="card-b" style="padding:.8mm 1.2mm;">
+<div class="box g xs mb-[2px]" style="padding:.4mm 1mm;">
+<b>MIC consensus (LBP — Ostelo 2008) <span class="eb eb-m">M</span>:</b> <span class="stat">VAS 15; NRS 2; RMDQ 5; ODI 10; or 30% improvement from baseline</span>
+</div>
+<table class="t dense">
+<thead>
+<tr>
+<th style="width:28%">Instrument &amp; Calculator</th>
+<th class="c" style="width:10%">Baseline</th>
+<th class="c" style="width:10%">Follow-Up</th>
+<th style="width:52%">Verified MCID / MIC &amp; Psychometric Properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#odi" rel="noopener" target="_blank">ODI / Modified Oswestry</a> <a class="calc-badge" href="https://azhry-x.github.io/lumbar-atlas/#odi" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><rect fill="none" height="8.8" rx="1.4" stroke="currentColor" stroke-width="1.1" width="8.8" x=".6" y=".6"></rect><rect fill="currentColor" height="1.7" rx=".3" width="5.6" x="2.2" y="2.1"></rect><circle cx="2.9" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="2.9" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="7.6" fill="currentColor" r=".62"></circle></svg>Calc</a> <span class="eb eb-m">M</span></td>
+<td></td><td></td>
+<td><b>ODI 10; or 30% improvement from baseline</b> (Ostelo 2008) • Modified Oswestry: <b>MCID ≈ 6 points</b> (Fritz 2001)</td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#rmdq" rel="noopener" target="_blank">Roland-Morris (RMDQ, 24 yes/no)</a> <a class="calc-badge" href="https://azhry-x.github.io/lumbar-atlas/#rmdq" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><rect fill="none" height="8.8" rx="1.4" stroke="currentColor" stroke-width="1.1" width="8.8" x=".6" y=".6"></rect><rect fill="currentColor" height="1.7" rx=".3" width="5.6" x="2.2" y="2.1"></rect><circle cx="2.9" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="2.9" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="7.6" fill="currentColor" r=".62"></circle></svg>Calc</a> <span class="eb eb-m">M</span></td>
+<td></td><td></td>
+<td><b>RMDQ 5; or 30% improvement from baseline</b> (Ostelo 2008) • <b>clinical improvement = 30% reduction from baseline + better on global rating</b> (Jordan 2006)</td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#nprs" rel="noopener" target="_blank">NPRS / VAS Pain</a> <a class="calc-badge" href="https://azhry-x.github.io/lumbar-atlas/#nprs" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><rect fill="none" height="8.8" rx="1.4" stroke="currentColor" stroke-width="1.1" width="8.8" x=".6" y=".6"></rect><rect fill="currentColor" height="1.7" rx=".3" width="5.6" x="2.2" y="2.1"></rect><circle cx="2.9" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="2.9" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="7.6" fill="currentColor" r=".62"></circle></svg>Calc</a> <span class="eb eb-m">M</span></td>
+<td></td><td></td>
+<td><b>MDC 2 points; MCID 2.2 (1 week) / 1.5 (4 weeks)</b> (Childs 2005) • MIC consensus: <b>VAS 15; NRS 2; or 30% improvement from baseline</b> (Ostelo 2008)</td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#psfs" rel="noopener" target="_blank">PSFS (chronic LBP)</a> <a class="calc-badge" href="https://azhry-x.github.io/lumbar-atlas/#psfs" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><rect fill="none" height="8.8" rx="1.4" stroke="currentColor" stroke-width="1.1" width="8.8" x=".6" y=".6"></rect><rect fill="currentColor" height="1.7" rx=".3" width="5.6" x="2.2" y="2.1"></rect><circle cx="2.9" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="2.9" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="7.6" fill="currentColor" r=".62"></circle></svg>Calc</a> <span class="eb eb-l">L</span></td>
+<td></td><td></td>
+<td><b>MCID 2 points (ROC); 1.4 (SEM method)</b> (Maughan 2010)</td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#tsk-11" rel="noopener" target="_blank">TSK-11 (11 items, 1–4)</a> <a class="calc-badge" href="https://azhry-x.github.io/lumbar-atlas/#tsk-11" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><rect fill="none" height="8.8" rx="1.4" stroke="currentColor" stroke-width="1.1" width="8.8" x=".6" y=".6"></rect><rect fill="currentColor" height="1.7" rx=".3" width="5.6" x="2.2" y="2.1"></rect><circle cx="2.9" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="2.9" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="7.6" fill="currentColor" r=".62"></circle></svg>Calc</a> <span class="eb eb-m">M</span></td>
+<td></td><td></td>
+<td><b>reduction ≥ 4 points = important change; ICC 0.81, SEM 2.54</b> (Woby 2005)</td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#fabq" rel="noopener" target="_blank">FABQ-work</a> <span class="eb eb-m">M</span></td>
+<td></td><td></td>
+<td><b>predicts 4-week disability and work status in acute LBP — no cut-off in source</b> (Fritz 2001 Pain)</td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#pcs" rel="noopener" target="_blank">Pain Catastrophizing Scale (PCS)</a> <span class="eb eb-e">E</span></td>
+<td></td><td></td>
+<td>no verified number — list the tool only</td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#start-back-tool" rel="noopener" target="_blank">STarT Back (9 items)</a> <a class="calc-badge" href="https://azhry-x.github.io/lumbar-atlas/#start-back-tool" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><rect fill="none" height="8.8" rx="1.4" stroke="currentColor" stroke-width="1.1" width="8.8" x=".6" y=".6"></rect><rect fill="currentColor" height="1.7" rx=".3" width="5.6" x="2.2" y="2.1"></rect><circle cx="2.9" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="2.9" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="7.6" fill="currentColor" r=".62"></circle></svg>Calc</a> <span class="eb eb-m">M</span></td>
+<td></td><td></td>
+<td><b>total 0–3 = low risk; psychosocial subscale (items 5–9) 4–5 = high risk; rest = medium</b> (Hill 2008)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<div class="dots fill" id="p4-notes"><span class="dots-l">Neurodynamic Synthesis · CPR Subgroup Decision · Baseline PROM Goals</span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Clinician</b> <span class="fl l"></span> <b>Date</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab" href="#page-1">1</a>
+        <a class="ptab" href="#page-2">2</a>
+        <a class="ptab" href="#page-3">3</a>
+        <a class="ptab on" href="#page-4">4</a>
+        <a class="ptab" href="#page-5">5</a>
+        <a class="ptab" href="#page-6">6</a>
+        <a class="ptab" href="#page-7">7</a>
+        <a class="ptab" href="#page-8">8</a>
+        <a class="ptab" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<!-- ===================== PAGE 5 ===================== -->
+<div class="clinical-page" id="page-5" data-accent="purple">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">LBP</div>
+      <div>
+        <div class="kicker">Lumbar Spine &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Post-Surgical Rehabilitation &amp; Red-Flag Re-Check</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">Patient</span><span class="fl l"></span></div>
+      <div class="pgno">05 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <!-- Top Mandate & Post-Op Red-Flag Re-Check -->
+<div class="crit flex-col items-start gap-[1px]" style="font-size:7.3px;">
+<div class="flex items-center gap-1.5"><svg aria-hidden="true" class="stop" viewbox="0 0 12 12"><path d="M3.5 .5h5l3 3v5l-3 3h-5l-3-3v-5z" fill="#991b1b"></path><rect fill="#fff" height="1.6" width="6" x="3" y="5.2"></rect></svg><span><b>POST-OP RESTRICTIONS ARE SURGEON-DIRECTED</b> <span class="eb eb-e">E</span> — follow the operating surgeon’s protocol for movement, loading, and bracing.</span></div>
+</div>
+<section class="card red" id="p5-recheck">
+<div class="card-h"><span>1 · Post-Operative Wound, Neurological, Durotomy &amp; CES Re-Check Gate</span><span class="tag">MANDATORY EVERY VISIT</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#incidental-durotomy" rel="noopener" target="_blank"><b>Incidental durotomy (n = 1,549, 14 UK centres)</b></a> (Tafazal &amp; Sell 2005) <span class="eb eb-m">M</span>: <b class="crim">3.5% primary discectomy; 8.5% stenosis surgery; 13.2% revision discectomy</b> • screen for postural headache (worse upright, relieved supine) or clear CSF wound leak</div></div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#ces-triage" rel="noopener" target="_blank"><b>Post-op Cauda equina syndrome (CES) &amp; epidural haematoma re-check:</b></a> new urinary retention (<b>Sn 0.90, Sp 0.99</b>; <b class="crim">PVR &gt; 200 mL → MRI-confirmed CES in 43%</b>), saddle numbness, or progressive bilateral motor deficit → <b class="crim">same-day emergency</b> surgical team contact (<b class="crim">decompression &lt; 48 h associated with better outcomes</b>) <span class="eb eb-l">L</span></div></div>
+<div class="flex flex-wrap items-center gap-x-2 xs mt-[1px] pt-[1px] border-t border-dashed border-red-200">
+<span class="lb crim">VISIT RE-CHECK:</span>
+<span class="cio"><span class="cb sm g"></span>Wound clean &amp; dry (no infection)</span>
+<span class="cio"><span class="cb sm g"></span>No postural headache / CSF leak</span>
+<span class="cio"><span class="cb sm g"></span>Myotomes &amp; reflexes stable</span>
+<span class="cio"><span class="cb sm g"></span>Bladder / bowel / saddle intact</span>
+</div>
+</div>
+</section>
+<!-- 2 : Lumbar Discectomy Rehabilitation -->
+<section class="card" id="p5-discectomy">
+<div class="card-h"><span>2 · Lumbar Discectomy Rehabilitation <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#post-op-discectomy-rehab" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">OOSTERHUIS COCHRANE + RCT · AFZAL MA</span></div>
+<div class="card-b" style="padding:.8mm 1.2mm;">
+<table class="t dense">
+<thead>
+<tr>
+<th style="width:24%">Evidence / Phase</th>
+<th>Verified Trial / Meta-Analysis Finding &amp; Clinical Application</th>
+<th class="c" style="width:8%">Level</th>
+<th class="c" style="width:7%">Tick</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#post-op-discectomy-rehab" rel="noopener" target="_blank">Early routine rehab</a><br/><span class="mut">Oosterhuis 2017 J Physiother (RCT)</span></td>
+<td><b>no clinically relevant difference vs no referral (function MD 1.5, −3.6 to 6.7); not cost-effective</b> • focus early care on self-management, walking progression, and neurological vigilance</td>
+<td class="c"><span class="eb eb-m">M</span></td>
+<td class="c"><span class="cb sm"></span></td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#post-op-discectomy-rehab" rel="noopener" target="_blank">Rehab after first-time disc surgery</a><br/><span class="mut">Oosterhuis 2014 Cochrane</span></td>
+<td><b>exercise from 4–6 weeks vs no treatment: pain SMD −0.90 (−1.55 to −0.24); function SMD −0.67 (very low / low quality)</b></td>
+<td class="c"><span class="eb eb-l">L</span></td>
+<td class="c"><span class="cb sm"></span></td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#post-op-discectomy-rehab" rel="noopener" target="_blank">Active physiotherapy after discectomy</a><br/><span class="mut">Afzal 2022 (MA)</span></td>
+<td><b>global improvement OR 1.94</b> • structured active exercise and functional restoration</td>
+<td class="c"><span class="eb eb-l">L</span></td>
+<td class="c"><span class="cb sm"></span></td>
+</tr>
+<tr>
+<td class="k">Movement Restrictions</td>
+<td><b>POST-OP RESTRICTIONS ARE SURGEON-DIRECTED</b></td>
+<td class="c"><span class="eb eb-e">E</span></td>
+<td class="c"><span class="cb sm"></span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- 3 : Stenosis Decompression & Lumbar Fusion -->
+<div class="grid grid-cols-2 gap-[1.5mm]">
+<section class="card" id="p5-stenosis">
+<div class="card-h"><span>3 · Stenosis Decompression &amp; Pre-Op Activity <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#post-op-stenosis-decompression" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">MCGREGOR · SWESPINE</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#post-op-stenosis-decompression" rel="noopener" target="_blank"><b>Pre-op activity (Swespine, stenosis surgery)</b></a> (Torstensson 2022) <span class="eb eb-l">L</span>: <b class="nav">ODI improvement 19.2 (regular exercise) vs 15.9 (non-regular)</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#post-op-stenosis-decompression" rel="noopener" target="_blank"><b>Rehab after decompression for stenosis (Cochrane)</b></a> (McGregor 2013 Cochrane) <span class="eb eb-m">M</span>: <b class="nav">function short-term log SMD −0.22 (−0.44 to 0.00) ≈ 20% improvement; 12 months log SMD −0.26 (−0.46 to −0.05) ≈ 23%</b></div></div>
+<div class="ci"><span class="cb"></span><div><b>Restrictions:</b> <b>POST-OP RESTRICTIONS ARE SURGEON-DIRECTED</b> <span class="eb eb-e">E</span></div></div>
+</div>
+</section>
+<section class="card" id="p5-fusion">
+<div class="card-h"><span>4 · Lumbar Spinal Fusion Rehabilitation <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#post-op-lumbar-fusion" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">GREENWOOD MA</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#post-op-lumbar-fusion" rel="noopener" target="_blank"><b>Rehab after lumbar fusion (MA)</b></a> (Greenwood 2016 Spine) <span class="eb eb-l">L</span>: <b class="nav">“complex rehabilitation” disability ES −0.85 (−1.41 to −0.29) short-term; −0.84 (−1.11 to −0.58) long-term; low quality, n = 237</b></div></div>
+<div class="ci"><span class="cb"></span><div><b>Multimodal care:</b> combine supervised active exercise with cognitive-behavioural management of fear-avoidance <span class="eb eb-l">L</span></div></div>
+<div class="ci"><span class="cb"></span><div><b>Restrictions:</b> <b>POST-OP RESTRICTIONS ARE SURGEON-DIRECTED</b> <span class="eb eb-e">E</span></div></div>
+</div>
+</section>
+</div>
+<!-- 4 : Operative Record & Surgeon Protocol Write-In Box -->
+<section class="card" id="p5-op-details">
+<div class="card-h"><span>5 · Operative Procedure &amp; Surgeon-Directed Protocol Log</span><span class="tag">WRITE-IN</span></div>
+<div class="card-b flex flex-col gap-[2px]" style="padding:.8mm 1.2mm;">
+<div class="row">
+<div class="fr" style="flex:1.8"><span class="lb">Procedure &amp; Level(s)</span><span class="fl"></span></div>
+<div class="fr" style="flex:1.2"><span class="lb">Surgery Date</span><span class="fl"></span></div>
+<div class="fr" style="flex:1.4"><span class="lb">Operating Surgeon</span><span class="fl"></span></div>
+<div class="fr"><span class="lb">Durotomy noted?</span><span class="cio"><span class="cb sm"></span>No</span><span class="cio"><span class="cb sm r"></span>Yes</span></div>
+</div>
+<div class="row">
+<div class="fr" style="flex:1"><span class="lb">Surgeon-Directed Restrictions</span><span class="fl"></span></div>
+</div>
+</div>
+</section>
+<div class="dots fill" id="p5-notes"><span class="dots-l">Operative Notes · Surgeon-Directed Restrictions · Post-Surgical Rehabilitation Plan</span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Clinician</b> <span class="fl l"></span> <b>Date</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab" href="#page-1">1</a>
+        <a class="ptab" href="#page-2">2</a>
+        <a class="ptab" href="#page-3">3</a>
+        <a class="ptab" href="#page-4">4</a>
+        <a class="ptab on" href="#page-5">5</a>
+        <a class="ptab" href="#page-6">6</a>
+        <a class="ptab" href="#page-7">7</a>
+        <a class="ptab" href="#page-8">8</a>
+        <a class="ptab" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<!-- ===================== PAGE 6 ===================== -->
+<div class="clinical-page" id="page-6" data-accent="orange">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">LBP</div>
+      <div>
+        <div class="kicker">Lumbar Spine &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Electrophysical Agents &amp; Passive Modalities</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">Patient</span><span class="fl l"></span></div>
+      <div class="pgno">06 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <!-- 1 : NICE NG59 "Do Not Offer" List -->
+<section class="card red" id="p6-nice-donotoffer">
+<div class="card-h"><span>1 · NICE NG59 — Modalities &amp; Orthoses Not Recommended (“Do Not Offer”) <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#nice-ng59-do-not-offer" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a> <a class="guide-badge" href="https://www.nice.org.uk/guidance/ng59/chapter/Recommendations" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>NICE NG59</a></span><span class="tag">GUIDELINE</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="crit" style="font-size:7.2px;"><svg aria-hidden="true" class="stop" viewbox="0 0 12 12"><path d="M3.5 .5h5l3 3v5l-3 3h-5l-3-3v-5z" fill="#991b1b"></path><rect fill="#fff" height="1.6" width="6" x="3" y="5.2"></rect></svg><span><b>NICE NG59:</b> <b>Do not offer traction</b> (1.2.6) or passive electrotherapy/orthotic modalities listed below for managing low back pain with or without sciatica.</span></div>
+<table class="t dense red mt-[1px]">
+<thead>
+<tr>
+<th style="width:28%">Category</th>
+<th>NICE NG59 “Do Not Offer” Recommendation &amp; Exact Number</th>
+<th class="c" style="width:12%">Level</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#lumbar-traction-cochrane" rel="noopener" target="_blank">Spinal Traction</a></td>
+<td><b>Do not offer traction (1.2.6)</b></td>
+<td class="c">Guideline</td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#nice-ng59-do-not-offer" rel="noopener" target="_blank">Orthoses &amp; Footwear</a></td>
+<td><b>Do not offer belts or corsets (1.2.3); foot orthotics (1.2.4); rocker-sole shoes (1.2.5)</b></td>
+<td class="c">Guideline</td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#nice-ng59-do-not-offer" rel="noopener" target="_blank">Needling</a></td>
+<td><b>Do not offer acupuncture (1.2.8)</b></td>
+<td class="c">Guideline</td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#therapeutic-ultrasound-cochrane" rel="noopener" target="_blank">Therapeutic Ultrasound</a></td>
+<td><b>Do not offer ultrasound (1.2.9)</b></td>
+<td class="c">Guideline</td>
+</tr>
+<tr>
+<td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#nice-ng59-do-not-offer" rel="noopener" target="_blank">Electrotherapy</a></td>
+<td><b>Do not offer PENS (1.2.10); TENS (1.2.11); interferential (1.2.12)</b></td>
+<td class="c">Guideline</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- 2 : Cochrane Evidence on Traction & Ultrasound -->
+<div class="grid grid-cols-2 gap-[1.5mm]">
+<section class="card" id="p6-traction">
+<div class="card-h"><span>2 · Lumbar Traction (Cochrane) <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#lumbar-traction-cochrane" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">WEGNER 2013</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#lumbar-traction-cochrane" rel="noopener" target="_blank"><b>Traction (Cochrane)</b></a> (Wegner 2013) <span class="eb eb-m">M</span>: <b class="crim">32 RCTs, 2,762 participants; traction alone or with other treatment has little or no effect</b></div></div>
+<div class="xs mut">Applies to both mechanical and manual traction in low back pain with or without sciatica; redirect treatment time to active exercise (p8).</div>
+</div>
+</section>
+<section class="card" id="p6-ultrasound">
+<div class="card-h"><span>3 · Therapeutic Ultrasound (Cochrane) <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#therapeutic-ultrasound-cochrane" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">EBADI 2020</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#therapeutic-ultrasound-cochrane" rel="noopener" target="_blank"><b>Therapeutic ultrasound (Cochrane)</b></a> (Ebadi 2020) <span class="eb eb-l">L</span>: <b class="crim">vs placebo, short-term pain MD −7.12 (−17.99 to 3.75) on 0–100 VAS: little or no difference</b></div></div>
+<div class="xs mut">No clinically important benefit over placebo; not recommended by NICE NG59 (1.2.9).</div>
+</div>
+</section>
+</div>
+<!-- 3 : ACP 2017 Superficial Heat & WHO 2023 Guideline -->
+<section class="card" id="p6-heat-who">
+<div class="card-h"><span>4 · Superficial Heat (ACP 2017) &amp; WHO 2023 Guideline <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#acp-2017-superficial-heat" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">GUIDELINES</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#acp-2017-superficial-heat" rel="noopener" target="_blank"><b>ACP 2017 (acute/subacute)</b></a> (Qaseem 2017) <a class="guide-badge" href="https://doi.org/10.7326/M16-2367" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Qaseem 2017</a>: <b class="nav">superficial heat (moderate quality); massage, acupuncture or spinal manipulation (low quality)</b> — Level: Guideline</div></div>
+<div class="ci"><span class="cb"></span><div><b>WHO 2023 Guideline:</b> non-surgical management of chronic primary low back pain <a class="guide-badge" href="https://www.who.int/publications/i/item/9789240081789" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>WHO 2023</a> — Level: Guideline</div></div>
+<div class="xs mut"><b>Thermal safety screen <span class="eb eb-e">E</span>:</b> check skin integrity and thermal sensation before applying superficial heat; avoid over acute inflammation, impaired sensation, malignancy, or bleeding tissue.</div>
+</div>
+</section>
+<!-- 4 : Dosing / Parameter Log with Blank Fields -->
+<section class="card" id="p6-dosing-log">
+<div class="card-h"><span>5 · Modality &amp; Symptom-Modulation Parameter Log (Blank Write-In Fields)</span><span class="tag">PARAMETER LOG</span></div>
+<div class="card-b" style="padding:.8mm 1.2mm;">
+<table class="t dense">
+<thead>
+<tr>
+<th class="c" style="width:5%">Rx</th>
+<th style="width:22%">Modality / Adjunct</th>
+<th style="width:22%">Anatomical Site &amp; Position</th>
+<th style="width:18%">Dose / Parameter</th>
+<th style="width:15%">Duration</th>
+<th style="width:18%">Response &amp; Active Pairing</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height:6.5mm;"><td class="c"><span class="cb sm"></span></td><td>Superficial heat (ACP 2017)</td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:6.5mm;"><td class="c"><span class="cb sm"></span></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:6.5mm;"><td class="c"><span class="cb sm"></span></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:6.5mm;"><td class="c"><span class="cb sm"></span></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:6.5mm;"><td class="c"><span class="cb sm"></span></td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<div class="dots fill" id="p6-notes"><span class="dots-l">Patient Reassurance · De-Implementation of Passive Modalities · Self-Management Notes</span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Clinician</b> <span class="fl l"></span> <b>Date</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab" href="#page-1">1</a>
+        <a class="ptab" href="#page-2">2</a>
+        <a class="ptab" href="#page-3">3</a>
+        <a class="ptab" href="#page-4">4</a>
+        <a class="ptab" href="#page-5">5</a>
+        <a class="ptab on" href="#page-6">6</a>
+        <a class="ptab" href="#page-7">7</a>
+        <a class="ptab" href="#page-8">8</a>
+        <a class="ptab" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<!-- ===================== PAGE 7 ===================== -->
+<div class="clinical-page" id="page-7" data-accent="teal">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">LBP</div>
+      <div>
+        <div class="kicker">Lumbar Spine &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Manual Therapy, Safety Screen &amp; Informed Consent</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">Patient</span><span class="fl l"></span></div>
+      <div class="pgno">07 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <!-- 1 : Spinal Manipulative Therapy & NICE 1.2.7 -->
+<section class="card" id="p7-smt">
+<div class="card-h"><span>1 · Spinal Manipulative Therapy (SMT), Mobilisation &amp; NICE NG59 <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#smt-chronic-lbp" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a> <a class="guide-badge" href="https://www.nice.org.uk/guidance/ng59/chapter/Recommendations" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>NICE NG59</a></span><span class="tag">PACKAGE WITH EXERCISE</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb"></span><div><b>NICE manual therapy</b> <a class="guide-badge" href="https://www.nice.org.uk/guidance/ng59/chapter/Recommendations" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>NICE NG59</a>: <b>“Consider manual therapy (spinal manipulation, mobilisation or soft tissue techniques such as massage) … but only as part of a treatment package that includes exercise” (1.2.7, amended 2026)</b> — Level: Guideline</div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#smt-chronic-lbp" rel="noopener" target="_blank"><b>SMT for chronic LBP (47 RCTs, n = 9,211)</b></a> (Rubinstein 2019 BMJ) <span class="eb eb-m">M</span>: <b class="nav">similar effect to other recommended therapies for short-term pain: MD −3.17 (−7.85 to 1.51), moderate quality</b></div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#manipulation-cpr-flynn-childs" rel="noopener" target="_blank"><b>Manipulation CPR (see page 4):</b></a> Flynn 2002 (<b>5 criteria; ≥ 4/5 → LR+ 24.38; probability of success 45% → 95%</b> <span class="eb eb-l">L</span>) • Childs 2004 (<b>rule-positive + manipulation: OR 60.8 (5.2–704.7); 92% chance of success; NNT 1.9 (1.4–3.5) at 4 weeks</b> <span class="eb eb-m">M</span>)</div></div>
+</div>
+</section>
+<!-- 2 : Massage (Furlan) & Stenosis RCT (Schneider) -->
+<div class="grid grid-cols-2 gap-[1.5mm]">
+<section class="card" id="p7-massage">
+<div class="card-h"><span>2 · Massage (Cochrane — Furlan 2015) <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#massage-lbp-cochrane" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">SHORT-TERM ONLY</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#massage-lbp-cochrane" rel="noopener" target="_blank"><b>Massage (Cochrane)</b></a> (Furlan 2015) <span class="eb eb-l">L</span>: <b class="nav">subacute/chronic vs inactive control, short-term pain SMD −0.75 (−0.90 to −0.60), function SMD −0.72 (−1.05 to −0.39); not in long term</b></div></div>
+<div class="xs mut">Per NICE NG59 (1.2.7, amended 2026), deliver soft-tissue massage only as part of a treatment package that includes exercise.</div>
+</div>
+</section>
+<section class="card" id="p7-stenosis">
+<div class="card-h"><span>3 · Lumbar Stenosis RCT (Schneider 2019) <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#stenosis-non-surgical-schneider" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">NON-SURGICAL RCT</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#stenosis-non-surgical-schneider" rel="noopener" target="_blank"><b>Stenosis — non-surgical (RCT, n = 259)</b></a> (Schneider 2019 JAMA Netw Open) <span class="eb eb-m">M</span>: <b class="nav">medical care vs group exercise vs manual therapy + individual exercise</b></div></div>
+<div class="xs mut">Integrates spine/hip mobilisation with individualised conditioning and walking progression.</div>
+</div>
+</section>
+</div>
+<!-- 3 : Manual Therapy & Paired Exercise Delivery Table (Blank Write-In Fields) -->
+<section class="card" id="p7-delivery">
+<div class="card-h"><span>4 · Manual Therapy &amp; Mandatory Paired Exercise Log</span><span class="tag">WRITE-IN LOG</span></div>
+<div class="card-b" style="padding:.8mm 1.2mm;">
+<table class="t dense">
+<thead>
+<tr>
+<th class="c" style="width:5%">Rx</th>
+<th style="width:26%">Technique Category</th>
+<th style="width:22%">Target Segment / Region</th>
+<th style="width:22%">Immediate Pre/Post Response</th>
+<th style="width:25%">Paired Exercise (NICE NG59 1.2.7)</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height:6mm;"><td class="c"><span class="cb sm"></span></td><td class="k">Lumbopelvic thrust manipulation (HVLA)</td><td></td><td></td><td></td></tr>
+<tr style="height:6mm;"><td class="c"><span class="cb sm"></span></td><td class="k">Lumbar PA / rotational mobilisation</td><td></td><td></td><td></td></tr>
+<tr style="height:6mm;"><td class="c"><span class="cb sm"></span></td><td class="k">Thoracic / hip joint mobilisation adjunct</td><td></td><td></td><td></td></tr>
+<tr style="height:6mm;"><td class="c"><span class="cb sm"></span></td><td class="k">Soft-tissue massage (Furlan 2015)</td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- 4 : Manipulation Safety Screen -->
+<section class="card red" id="p7-safety">
+<div class="card-h"><span>5 · Pre-Manipulation &amp; Manual Therapy Safety Screen</span><span class="tag">CONTRAINDICATION GATE</span></div>
+<div class="card-b grid grid-cols-2 gap-x-2" style="padding:.8mm 1.2mm;">
+<div>
+<div class="ci"><span class="cb r"></span><div><b>Cauda equina syndrome excluded:</b> bladder, bowel &amp; saddle sensation intact (p1) <span class="eb eb-l">L</span></div></div>
+<div class="ci"><span class="cb r"></span><div><b>Vertebral fracture &amp; osteoporosis excluded:</b> trauma / steroid / multi-flag screen negative (p1) <span class="eb eb-m">M</span></div></div>
+<div class="ci"><span class="cb r"></span><div><b>Spinal malignancy &amp; infection excluded:</b> cancer history &amp; systemic fever/infection negative (p1) <span class="eb eb-m">M</span></div></div>
+</div>
+<div>
+<div class="ci"><span class="cb r"></span><div><b>Abdominal aortic aneurysm (AAA) excluded:</b> no expansile abdominal mass or vascular pain (p1) <span class="eb eb-m">M</span></div></div>
+<div class="ci"><span class="cb r"></span><div><b>No progressive neurological deficit:</b> serial myotomes &amp; reflexes stable (p3) <span class="eb eb-e">E</span></div></div>
+<div class="ci"><span class="cb r"></span><div><b>Anticoagulant / bleeding / post-op fusion hardware screened:</b> no thrust over unstable/fused segments <span class="eb eb-e">E</span></div></div>
+</div>
+</div>
+</section>
+<!-- Consent Block -->
+<div class="box r flex flex-wrap items-center xs" style="padding:.7mm 1.6mm;">
+<b class="crim mr-2">CONSENT OBTAINED FOR:</b>
+<span class="cio"><span class="cb r"></span>Spinal manipulation</span>
+<span class="cio"><span class="cb r"></span>Spinal mobilisation</span>
+<span class="cio"><span class="cb r"></span>Soft-tissue massage</span>
+<span class="mut mr-1">|</span><span class="cio"><span class="cb r"></span>Risks &amp; alternatives discussed</span>
+<span class="cio"><span class="cb r"></span>Part of exercise package (1.2.7)</span>
+<span class="cio"><span class="cb r"></span>Patient may decline</span>
+<span class="lr" style="margin-left:auto">Signature <span class="fl l"></span></span>
+</div>
+<div class="dots fill" id="p7-notes"><span class="dots-l">Manual Therapy Clinical Reasoning · Immediate Re-Test · Exercise Integration</span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Clinician</b> <span class="fl l"></span> <b>Date</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab" href="#page-1">1</a>
+        <a class="ptab" href="#page-2">2</a>
+        <a class="ptab" href="#page-3">3</a>
+        <a class="ptab" href="#page-4">4</a>
+        <a class="ptab" href="#page-5">5</a>
+        <a class="ptab" href="#page-6">6</a>
+        <a class="ptab on" href="#page-7">7</a>
+        <a class="ptab" href="#page-8">8</a>
+        <a class="ptab" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<!-- ===================== PAGE 8 ===================== -->
+<div class="clinical-page" id="page-8" data-accent="green">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">LBP</div>
+      <div>
+        <div class="kicker">Lumbar Spine &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Exercise Therapy, Secondary Prevention &amp; 12-Week Loading Log</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">Patient</span><span class="fl l"></span></div>
+      <div class="pgno">08 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <!-- 1 : Hayden Cochrane + NMA & NICE 1.2.2 -->
+<section class="card green" id="p8-hayden">
+<div class="card-h"><span>1 · Exercise Therapy for Chronic LBP (Hayden Cochrane &amp; NMA · NICE NG59) <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#exercise-chronic-lbp-hayden" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a> <a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10508241/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>George 2021</a></span><span class="tag">CORE INTERVENTION</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb g"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#exercise-chronic-lbp-hayden" rel="noopener" target="_blank"><b>Exercise therapy, chronic LBP (Cochrane, 249 trials)</b></a> (Hayden 2021 Cochrane) <span class="eb eb-m">M</span>: <b class="emer">pain MD −15.2 (−18.3 to −12.2) — clinically important; function MD −6.8 (−8.3 to −5.3) — below MCID</b></div></div>
+<div class="ci"><span class="cb g"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#exercise-chronic-lbp-hayden" rel="noopener" target="_blank"><b>Exercise types (NMA, 217 RCTs)</b></a> (Hayden 2021 J Physiother) <span class="eb eb-m">M</span>: <b class="emer">Pilates, McKenzie, functional restoration: MD −15 to −19 pain, −10 to −12 function vs minimal treatment; “encourage the exercise they enjoy”</b></div></div>
+<div class="ci"><span class="cb g"></span><div><b>NICE exercise</b> <a class="guide-badge" href="https://www.nice.org.uk/guidance/ng59/chapter/Recommendations" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>NICE NG59</a>: <b>“Consider a group exercise programme (biomechanical, aerobic, mind–body or a combination)” (1.2.2)</b> — Level: Guideline</div></div>
+<div class="ci"><span class="cb g"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#motor-control-pilates-lbp" rel="noopener" target="_blank"><b>Motor control exercise (Cochrane, 29 trials, n = 2,431 — Saragiotto 2016)</b></a> <span class="eb eb-m">M</span> &amp; <a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#motor-control-pilates-lbp" rel="noopener" target="_blank"><b>Pilates (Cochrane — Yamato 2015)</b></a> <span class="eb eb-l">L</span>: coordinate lumbopelvic control and progressive movement conditioning tailored to patient preference</div></div>
+</div>
+</section>
+<!-- 2 : CFT RESTORE & WalkBack -->
+<div class="grid grid-cols-2 gap-[1.5mm]">
+<section class="card green" id="p8-cft">
+<div class="card-h"><span>2 · Cognitive Functional Therapy (RESTORE) <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#cft-restore-trial" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">KENT 2023 LANCET</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb g"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#cft-restore-trial" rel="noopener" target="_blank"><b>Cognitive functional therapy (RESTORE, n = 492)</b></a> (Kent 2023 Lancet) <span class="eb eb-h">H</span>: <b class="emer">RMDQ MD −4.6 (−5.9 to −3.4) at 13 weeks; societal saving −AU$5,276</b></div></div>
+<div class="fr flex-wrap xs mt-[1px]" style="row-gap:1px">
+<span class="cio"><span class="cb sm g"></span>Making sense of pain</span>
+<span class="cio"><span class="cb sm g"></span>Exposure with control</span>
+<span class="cio"><span class="cb sm g"></span>Lifestyle coaching</span>
+</div>
+</div>
+</section>
+<section class="card green" id="p8-walkback">
+<div class="card-h"><span>3 · Walking + Education (WalkBack) <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#walkback-trial" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">POCOVI 2024 LANCET</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb g"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#walkback-trial" rel="noopener" target="_blank"><b>Walking + education (WalkBack, n = 701)</b></a> (Pocovi 2024 Lancet) <span class="eb eb-h">H</span>: <b class="emer">recurrence HR 0.72 (0.60–0.85); median days to recurrence 208 vs 112</b></div></div>
+<div class="xs mut">Individualised progressive walking and pain education after LBP recovery.</div>
+</div>
+</section>
+</div>
+<!-- 3 : Secondary Prevention RRs & Spondylolysis RTS (Sweeney 2026) -->
+<div class="grid grid-cols-2 gap-[1.5mm]">
+<section class="card green" id="p8-prevention">
+<div class="card-h"><span>4 · Secondary Prevention RRs (Steffens &amp; Shiri) <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#lbp-secondary-prevention" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">PREVENTION</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb g"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#lbp-secondary-prevention" rel="noopener" target="_blank"><b>Prevention (exercise + education)</b></a> (Steffens 2016 JAMA Intern Med) <span class="eb eb-m">M</span>: <b class="emer">RR 0.55 (0.41–0.74); exercise alone RR 0.65 (0.50–0.86)</b></div></div>
+<div class="ci"><span class="cb g"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#lbp-secondary-prevention" rel="noopener" target="_blank"><b>Prevention (exercise alone)</b></a> (Shiri 2018 Am J Epidemiol) <span class="eb eb-m">M</span>: <b class="emer">RR 0.67 (0.53–0.85)</b></div></div>
+</div>
+</section>
+<section class="card green" id="p8-spondylolysis">
+<div class="card-h"><span>5 · Adolescent Spondylolysis RTS (Sweeney 2026) <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#spondylolysis-rts-sweeney" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">ATHLETE PARS RTS</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb g"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#spondylolysis-rts-sweeney" rel="noopener" target="_blank"><b>Spondylolysis (adolescent athletes, n = 53)</b></a> (Sweeney (Selhorst group) 2026 OJSM) <span class="eb eb-l">L</span>: <b class="emer">immediate PT did not worsen healing; 81% healed on MRI at 3 months; healed → 7.3% recurrence vs 50%</b></div></div>
+</div>
+</section>
+</div>
+<!-- 4 : 12-Week Loading Log (Blank Write-In Fields) -->
+<section class="card" id="p8-loading-log">
+<div class="card-h"><span>6 · 12-Week Exercise &amp; Functional Loading Progression Log</span><span class="tag">12-WEEK LOG</span></div>
+<div class="card-b" style="padding:.8mm 1.2mm;">
+<div class="flex flex-wrap xs mb-[2px]" style="row-gap:1px">
+<span class="lb mr-1">Primary Programme Ticked:</span>
+<span class="cio"><span class="cb sm g"></span>Directional Preference (McKenzie)</span>
+<span class="cio"><span class="cb sm g"></span>Pilates</span>
+<span class="cio"><span class="cb sm g"></span>Motor Control / Stabilisation</span>
+<span class="cio"><span class="cb sm g"></span>Functional Restoration</span>
+<span class="cio"><span class="cb sm g"></span>CFT Exposure</span>
+<span class="cio"><span class="cb sm g"></span>WalkBack Walking</span>
+<span class="cio"><span class="cb sm g"></span>Group Exercise (NICE 1.2.2)</span>
+</div>
+<table class="t dense">
+<thead>
+<tr>
+<th style="width:22%">Exercise / Functional Task</th>
+<th class="c" style="width:15%">Phase I (Baseline)</th>
+<th class="c" style="width:15%">Phase II</th>
+<th class="c" style="width:15%">Phase III</th>
+<th class="c" style="width:15%">Phase IV</th>
+<th class="c" style="width:18%">Week 12 / Maintenance</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height:6.5mm;"><td class="k">1 · Primary Exercise / DP</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:6.5mm;"><td class="k">2 · Trunk / Hip Conditioning</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:6.5mm;"><td class="k">3 · Functional Lifting / Control</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:6.5mm;"><td class="k">4 · Walking / Aerobic Volume</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:6.5mm;"><td class="k">5 · Symptom Response (NPRS)</td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+<div class="dots fill" id="p8-notes"><span class="dots-l">Exercise Prescription Details · Shared Decision-Making (“Encourage the Exercise They Enjoy”) · Prevention Plan</span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Clinician</b> <span class="fl l"></span> <b>Date</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab" href="#page-1">1</a>
+        <a class="ptab" href="#page-2">2</a>
+        <a class="ptab" href="#page-3">3</a>
+        <a class="ptab" href="#page-4">4</a>
+        <a class="ptab" href="#page-5">5</a>
+        <a class="ptab" href="#page-6">6</a>
+        <a class="ptab" href="#page-7">7</a>
+        <a class="ptab on" href="#page-8">8</a>
+        <a class="ptab" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+<!-- ===================== PAGE 9 ===================== -->
+<div class="clinical-page" id="page-9" data-accent="slate">
+  <header class="pg-hdr">
+    <div class="brand">
+      <div class="logo">LBP</div>
+      <div>
+        <div class="kicker">Lumbar Spine &middot; Master Clinical Assessment &amp; Rehabilitation Dossier</div>
+        <h1 class="pg-title">Longitudinal Session-by-Session Tracking Flowsheet</h1>
+      </div>
+    </div>
+    <div class="hdr-right">
+      <div class="fr"><span class="lb">Patient</span><span class="fl l"></span></div>
+      <div class="pgno">09 / 09</div>
+    </div>
+  </header>
+  <main class="pg-body">
+ <table class="t flow slate" id="p9-flowsheet" style="table-layout:fixed;">
+<thead>
+<tr>
+<th class="c" style="width:3.5%">#</th>
+<th style="width:7%">Date</th>
+<th style="width:6.5%">NPRS</th>
+<th style="width:7.5%">DP / Centr.</th>
+<th style="width:7.5%">Neuro / SLR</th>
+<th style="width:6.5%">ROM</th>
+<th style="width:24%">Exercise &amp; CFT delivered</th>
+<th style="width:17.5%">Manual &amp; adjuncts</th>
+<th style="width:8.5%">Progression</th>
+<th style="width:7.5%">Adherence</th>
+<th class="c" style="width:4%">Init</th>
+</tr>
+</thead>
+<tbody>
+<tr style="height:12.6mm;">
+<td class="vnum">1</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:12.6mm;">
+<td class="vnum">2</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:12.6mm;">
+<td class="vnum">3</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:12.6mm;">
+<td class="vnum">4</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:12.6mm;">
+<td class="vnum">5</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:12.6mm;">
+<td class="vnum">6</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:12.6mm;">
+<td class="vnum">7</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:12.6mm;">
+<td class="vnum">8</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:12.6mm;">
+<td class="vnum">9</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:12.6mm;">
+<td class="vnum">10</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:12.6mm;">
+<td class="vnum">11</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+<tr style="height:12.6mm;">
+<td class="vnum">12</td>
+<td></td><td></td><td></td><td></td><td></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
+<td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
+<td></td><td></td>
+</tr>
+</tbody>
+</table>
+<div class="grid grid-cols-12 gap-[1.5mm]">
+<section class="card col-span-7" id="p9-discharge">
+<div class="card-h"><span>Discharge &amp; Outcome Milestone Summary (Change vs Verified MCID) <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#lumbar-tracking-flowsheet" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">FINAL OUTCOME</span></div>
+<div class="card-b" style="padding:.8mm 1.2mm;">
+<div class="xxs mb-[1px]"><b>MIC consensus (Ostelo 2008) <span class="eb eb-m">M</span>:</b> VAS 15; NRS 2; RMDQ 5; ODI 10; or 30% improvement from baseline.</div>
+<table class="t dense slate">
+<thead><tr><th>Lumbar PROM &amp; Verified Threshold</th><th class="c">Initial</th><th class="c">Discharge</th><th class="c">Δ</th><th class="c">MCID met</th></tr></thead>
+<tbody>
+<tr><td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#odi" rel="noopener" target="_blank">ODI</a> (MIC 10 or 30% • Mod. ODI MCID ≈ 6 points)</td><td class="c"></td><td class="c"></td><td></td><td class="c"><span class="cb sm"></span></td></tr>
+<tr><td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#rmdq" rel="noopener" target="_blank">RMDQ</a> (MIC 5 or 30% reduction + global rating)</td><td class="c"></td><td class="c"></td><td></td><td class="c"><span class="cb sm"></span></td></tr>
+<tr><td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#nprs" rel="noopener" target="_blank">NPRS</a> (MDC 2; MCID 2.2 at 1 week / 1.5 at 4 weeks; NRS 2)</td><td class="c"></td><td class="c"></td><td></td><td class="c"><span class="cb sm"></span></td></tr>
+<tr><td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#psfs" rel="noopener" target="_blank">PSFS</a> (MCID 2 points ROC; 1.4 SEM method)</td><td class="c"></td><td class="c"></td><td></td><td class="c"><span class="cb sm"></span></td></tr>
+<tr><td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#tsk-11" rel="noopener" target="_blank">TSK-11</a> (reduction ≥ 4 points = important change)</td><td class="c"></td><td class="c"></td><td></td><td class="c"><span class="cb sm"></span></td></tr>
+<tr><td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#start-back-tool" rel="noopener" target="_blank">STarT Back</a> (0–3 low; items 5–9 4–5 high) / <a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#ompsq-10" rel="noopener" target="_blank">ÖMPSQ-10</a> (cut-off 50)</td><td class="c"></td><td class="c"></td><td></td><td class="c"><span class="cb sm"></span></td></tr>
+</tbody>
+</table>
+<div class="flex flex-wrap items-center mt-[2px] xs" style="row-gap:1px"><span class="lb mr-1">Discharge:</span><span class="cio"><span class="cb g"></span>Goals &amp; MCID met</span><span class="cio"><span class="cb"></span>WalkBack / self-management plan</span><span class="cio"><span class="cb"></span>Specialist / surgical referral</span><span class="cio"><span class="cb r"></span>Non-responder</span></div>
+</div>
+</section>
+<section class="card col-span-5" id="p9-milestones">
+<div class="card-h"><span>Objective Re-Test Milestones</span><span class="tag">SERIAL RE-TEST</span></div>
+<div class="card-b" style="padding:.8mm 1.2mm;">
+<table class="t dense slate">
+<thead><tr><th>Objective Measure</th><th class="c">Base</th><th class="c">Mid</th><th class="c">D/C</th><th class="c">Met</th></tr></thead>
+<tbody>
+<tr><td class="k">Lumbar Flexion / Extension</td><td></td><td></td><td></td><td class="c"><span class="cb sm"></span></td></tr>
+<tr><td class="k">Centralisation / DP Status</td><td></td><td></td><td></td><td class="c"><span class="cb sm"></span></td></tr>
+<tr><td class="k">Myotome / Reflex / Sensory</td><td></td><td></td><td></td><td class="c"><span class="cb sm"></span></td></tr>
+<tr><td class="k">Neurodynamics (SLR / Slump / FST)</td><td></td><td></td><td></td><td class="c"><span class="cb sm"></span></td></tr>
+<tr><td class="k">McGill Endurance Ratios</td><td></td><td></td><td></td><td class="c"><span class="cb sm"></span></td></tr>
+<tr><td class="k">Aberrant Movements Resolved</td><td></td><td></td><td></td><td class="c"><span class="cb sm"></span></td></tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<div class="dots fill" id="p9-notes" style="min-height:8mm"><span class="dots-l">Home Programme · WalkBack Prevention Plan · Discharge Summary</span></div>
+<div class="fr xs" style="gap:2mm"><span class="lb">Physician follow-up / sign-off</span><span class="fl"></span><span class="lb">Signature</span><span class="fl"></span><span class="lb">Date</span><span class="fl m"></span></div>
+
+  </main>
+  <footer class="pg-ftr">
+    <div class="ftr-top">
+      <span><b>Discharging Clinician</b> <span class="fl l"></span> <b>Sig.</b> <span class="fl l"></span></span>
+      <span>Underline = Atlas card &middot; &#9656; = video &middot; Evidence: <span class="eb eb-h">H</span> high <span class="eb eb-m">M</span> moderate <span class="eb eb-l">L</span> low <span class="eb eb-e">E</span> expert &middot; Confidential &middot; v2026.10</span>
+    </div>
+    <div class="pnav-wrap">
+      <nav class="pnav" aria-label="Dossier pages">
+        <span class="nl">GO TO</span>
+        <a class="ptab" href="#page-1">1</a>
+        <a class="ptab" href="#page-2">2</a>
+        <a class="ptab" href="#page-3">3</a>
+        <a class="ptab" href="#page-4">4</a>
+        <a class="ptab" href="#page-5">5</a>
+        <a class="ptab" href="#page-6">6</a>
+        <a class="ptab" href="#page-7">7</a>
+        <a class="ptab" href="#page-8">8</a>
+        <a class="ptab on" href="#page-9">9</a>
+      </nav>
+    </div>
+  </footer>
+</div>
+</body>
+</html>
