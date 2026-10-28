@@ -227,8 +227,10 @@ body{
 .sh .calc-badge, .sh .guide-badge{ text-transform:none; letter-spacing:.01em; }
 .t tr.sub .calc-badge, .t tr.sub .guide-badge{ text-transform:none; letter-spacing:.01em; }
 
+#p9-flowsheet .p { font-size: 4.9pt; letter-spacing: -0.15px; }
+
 /* ---- compiled utility classes (Tailwind v3, generated at build) ---- */
-.col-span-2{grid-column:span 2/span 2}.col-span-5{grid-column:span 5/span 5}.col-span-7{grid-column:span 7/span 7}.my-\[1px\]{margin-top:1px;margin-bottom:1px}.mb-0\.5{margin-bottom:.125rem}.mb-\[1px\]{margin-bottom:1px}.mb-\[2px\]{margin-bottom:2px}.mr-1{margin-right:.25rem}.mr-2{margin-right:.5rem}.mt-0\.5{margin-top:.125rem}.mt-1{margin-top:.25rem}.mt-\[1px\]{margin-top:1px}.mt-\[2px\]{margin-top:2px}.flex{display:flex}.table{display:table}.grid{display:grid}.h-1\.5{height:.375rem}.h-auto{height:auto}.w-1\.5{width:.375rem}.w-full{width:100%}.flex-1{flex:1 1 0%}.grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-4{grid-template-columns:repeat(4,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-\[1\.5mm\]{gap:1.5mm}.gap-\[1\.5px\]{gap:1.5px}.gap-\[1px\]{gap:1px}.gap-\[2px\]{gap:2px}.gap-x-1{-moz-column-gap:.25rem;column-gap:.25rem}.gap-x-2{-moz-column-gap:.5rem;column-gap:.5rem}.gap-x-3{-moz-column-gap:.75rem;column-gap:.75rem}.rounded-full{border-radius:9999px}.border-l{border-left-width:1px}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-red-200{--tw-border-opacity:1;border-color:rgb(254 202 202/var(--tw-border-opacity,1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity,1))}.pl-2{padding-left:.5rem}.pt-1{padding-top:.25rem}.pt-\[1px\]{padding-top:1px}.text-\[6\.5px\]{font-size:6.5px}.text-\[7\.2px\]{font-size:7.2px}.text-\[7px\]{font-size:7px}.font-bold{font-weight:700}.uppercase{text-transform:uppercase}.tracking-wider{letter-spacing:.05em}.text-slate-700{--tw-text-opacity:1;color:rgb(51 65 85/var(--tw-text-opacity,1))}
+.absolute{position:absolute}.col-span-2{grid-column:span 2/span 2}.col-span-5{grid-column:span 5/span 5}.col-span-7{grid-column:span 7/span 7}.my-\[1px\]{margin-top:1px}.mb-\[1px\],.my-\[1px\]{margin-bottom:1px}.mb-\[2px\]{margin-bottom:2px}.mr-1{margin-right:.25rem}.mr-2{margin-right:.5rem}.mt-1{margin-top:.25rem}.mt-\[1px\]{margin-top:1px}.mt-\[2px\]{margin-top:2px}.mt-auto{margin-top:auto}.flex{display:flex}.table{display:table}.grid{display:grid}.flex-1{flex:1 1 0%}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.grid-cols-12{grid-template-columns:repeat(12,minmax(0,1fr))}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.gap-1\.5{gap:.375rem}.gap-2{gap:.5rem}.gap-\[0\.5px\]{gap:.5px}.gap-\[1\.5mm\]{gap:1.5mm}.gap-\[1\.5px\]{gap:1.5px}.gap-\[1px\]{gap:1px}.gap-\[2px\]{gap:2px}.gap-x-1{-moz-column-gap:.25rem;column-gap:.25rem}.gap-x-1\.5{-moz-column-gap:.375rem;column-gap:.375rem}.gap-x-2{-moz-column-gap:.5rem;column-gap:.5rem}.gap-x-3{-moz-column-gap:.75rem;column-gap:.75rem}.border-t{border-top-width:1px}.border-dashed{border-style:dashed}.border-red-200{--tw-border-opacity:1;border-color:rgb(254 202 202/var(--tw-border-opacity,1))}.border-slate-200{--tw-border-opacity:1;border-color:rgb(226 232 240/var(--tw-border-opacity,1))}.pt-1{padding-top:.25rem}.pt-\[1px\]{padding-top:1px}
 </style>
 </head>
 <body>
@@ -249,28 +251,29 @@ body{
     </div>
   </header>
   <main class="pg-body">
- <!-- A : Demographics -->
+ <!-- A : Demographics, Vitals & Medication / Safety Strip -->
 <section class="card" id="p1-demographics">
-<div class="card-h"><span>A · Patient Demographics &amp; Lumbar Spine Presentation Profile</span><span class="tag">INTAKE</span></div>
-<div class="card-b flex flex-col gap-[2px]">
+<div class="card-h"><span>A · Patient Demographics, Vitals &amp; Medication / Safety Screen</span><span class="tag">INTAKE · SAFETY</span></div>
+<div class="card-b flex flex-col gap-[1.5px]">
 <div class="row">
-<div class="fr" style="flex:3.2"><span class="lb">Patient Name</span><span class="fl"></span></div>
-<div class="fr" style="flex:.8"><span class="lb">Age</span><span class="fl"></span></div>
+<div class="fr" style="flex:2.8"><span class="lb">Patient Name</span><span class="fl"></span></div>
+<div class="fr" style="flex:.7"><span class="lb">Age</span><span class="fl"></span></div>
 <div class="fr"><span class="lb">Sex</span><span class="cio"><span class="cb"></span>M</span><span class="cio"><span class="cb"></span>F</span></div>
-<div class="fr" style="flex:1.4"><span class="lb">Date</span><span class="fl"></span></div>
-</div>
-<div class="row">
-<div class="fr" style="flex:2"><span class="lb">Occupation / Sport</span><span class="fl"></span></div>
-<div class="fr"><span class="lb">Work status</span><span class="cio"><span class="cb"></span>Full duty</span><span class="cio"><span class="cb"></span>Modified</span><span class="cio"><span class="cb"></span>Off work</span></div>
 <div class="fr"><span class="lb">Distribution</span><span class="cio"><span class="cb"></span>Central</span><span class="cio"><span class="cb"></span>L</span><span class="cio"><span class="cb"></span>R</span><span class="cio"><span class="cb"></span>Bilat</span></div>
+<div class="fr" style="flex:1.2"><span class="lb">Date</span><span class="fl"></span></div>
 </div>
 <div class="row">
-<div class="fr" style="flex:1.2"><span class="lb">Episode Onset</span><span class="fl"></span></div>
-<div class="fr" style="flex:1.4"><span class="lb">Referrer / Setting</span><span class="fl"></span></div>
-<div class="fr" style="flex:1.2"><span class="lb">Prior Spine Surgery</span><span class="fl"></span></div>
-<div class="fr" style="flex:1.2"><span class="lb">Prior Episodes</span><span class="fl"></span></div>
+<div class="fr" style="flex:1.5"><span class="lb">Occupation / Sport</span><span class="fl"></span></div>
+<div class="fr"><span class="lb">Work</span><span class="cio"><span class="cb"></span>Full duty</span><span class="cio"><span class="cb"></span>Modified</span><span class="cio"><span class="cb"></span>Off work</span></div>
+<div class="fr" style="flex:.9"><span class="lb">Onset / Surgery</span><span class="fl"></span></div>
+<div class="fr" style="flex:2.1"><span class="lb">Vitals:</span>
+<span class="lr">BP <span class="fl s"></span></span>
+<span class="lr">HR <span class="fl s"></span></span>
+<span class="lr">SpO₂ <span class="fl s"></span></span>
+<span class="lr">Temp <span class="fl s"></span></span>
 </div>
-<div class="fr flex-wrap" style="row-gap:1px"><span class="lb">Primary Presentation</span>
+</div>
+<div class="fr flex-wrap" style="row-gap:1px"><span class="lb">Presentation</span>
 <span class="cio"><span class="cb"></span>Axial low back pain only</span>
 <span class="cio"><span class="cb"></span>Somatic buttock / thigh referral (above knee)</span>
 <span class="cio"><span class="cb"></span>Unilateral radicular leg pain (below knee)</span>
@@ -284,6 +287,10 @@ body{
 </span>
 </div>
 <div class="fr" style="flex:1"><span class="lb">Best</span><span class="fl"></span><span class="lb">Worst</span><span class="fl"></span><span class="lb">Back vs Leg dominant</span><span class="fl"></span></div>
+</div>
+<div class="box r flex flex-col gap-[0.5px]" style="font-size:6.8px;line-height:1.16;padding:.35mm 1mm;">
+<div><span class="cio"><span class="cb sm r"></span><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#epa-medication-safety" rel="noopener" target="_blank"><b class="crim">EPA contraindications</b></a></span> (<a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3031347/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Houghton 2010</a>): implanted electronic devices, pregnancy, malignancy, recently irradiated tissue, active DVT, bleeding, impaired sensation — Level: Guideline</div>
+<div><span class="cio"><span class="cb sm r"></span><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#epa-medication-safety" rel="noopener" target="_blank"><b class="crim">Anticoagulants / coagulopathy before needling</b></a></span> (<a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6598537/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Kearns 2019</a>): caution — possible increased incidence or severity of haematoma and bruising <span class="eb eb-e">E</span></div>
 </div>
 </div>
 </section>
@@ -324,108 +331,40 @@ body{
 </div>
 </div>
 </section>
-<!-- C : Router + fast track -->
-<section class="card green" id="p1-fasttrack">
-<div class="card-h"><span>C · Clinical Pathway Router &amp; Rapid Screen</span><span class="tag">RAPID</span></div>
-<div class="card-b flex flex-col gap-[1.5px]">
-<div class="box g" style="padding:.4mm 1.2mm;">
-<div class="flex items-center justify-between" style="font-size:7px; font-weight:800; color:#065f46; text-transform:uppercase; letter-spacing:0.04em;">
-<span>Clinical Pathway Router</span>
-<span class="mut" style="font-weight:600; text-transform:none; font-size:6.8px;">Tick route → jump to matching pages</span>
-</div>
-<div class="router-row">
-<div class="router-col">
-<span class="cb sm g" style="margin-right:0.4mm;"></span>
-<b class="emer" style="margin-right:0.4mm;font-size:7.1px;">A · SCIATICA:</b>
-<a class="rchip" href="#page-1">1</a><span>→</span><a class="rchip" href="#page-3">3</a><span>→</span><a class="rchip" href="#page-4">4</a><span>→</span><a class="rchip" href="#page-8">8</a><span>→</span><a class="rchip" href="#page-9">9</a>
-</div>
-<div class="router-col">
-<span class="cb sm g" style="margin-right:0.4mm;"></span>
-<b class="nav" style="margin-right:0.4mm;font-size:7.1px;">B · MECHANICAL:</b>
-<a class="rchip" href="#page-1">1</a><span>→</span><a class="rchip" href="#page-2">2</a><span>→</span><a class="rchip" href="#page-3">3</a><span>→</span><a class="rchip" href="#page-4">4</a><span>→</span><a class="rchip" href="#page-7">7</a><span>→</span><a class="rchip" href="#page-8">8</a><span>→</span><a class="rchip" href="#page-9">9</a>
-</div>
-<div class="router-col">
-<span class="cb sm g" style="margin-right:0.4mm;"></span>
-<b style="color:#b45309;margin-right:0.4mm;font-size:7.1px;">C · POST-OP:</b>
-<a class="rchip" href="#page-1">1</a><span>→</span><a class="rchip" href="#page-5">5</a><span>→</span><a class="rchip" href="#page-6">6</a><span>→</span><a class="rchip" href="#page-8">8</a><span>→</span><a class="rchip" href="#page-9">9</a>
+<!-- C : Body Chart, Pathway Router & Subjective Behaviour -->
+<section class="card fill flex flex-col" id="p1-subjective">
+<div class="card-h"><span>C · Lumbosacral Pain Distribution Map, Pathway Router &amp; Subjective Behaviour</span><span class="tag">BODY CHART · SUBJECTIVE</span></div>
+<div class="card-b flex-1 flex flex-col gap-[2px]" style="padding:.6mm 1.2mm;">
+<div class="flex flex-wrap items-center justify-between xs" style="gap:1mm">
+<div><b class="nav">PAIN MAP:</b> shade symptom area · <span class="cio"><span class="cb sm"></span>Shift / antalgic gait</span><span class="cio"><span class="cb sm g"></span>Centralises</span><span class="cio"><span class="cb sm r"></span>Peripheralises</span><span class="cio"><span class="cb sm r"></span>Heel / toe walk weak</span><span class="cio"><span class="cb sm r"></span>SLR / Slump (+)</span></div>
+<div class="flex flex-wrap items-center gap-x-1.5">
+<span class="lb">Routes:</span>
+<span><b class="emer">Sciatica</b> <a class="rchip" href="#page-3">3</a><a class="rchip" href="#page-4">4</a><a class="rchip" href="#page-8">8</a></span>
+<span><b class="nav">Mechanical</b> <a class="rchip" href="#page-2">2</a><a class="rchip" href="#page-3">3</a><a class="rchip" href="#page-7">7</a><a class="rchip" href="#page-8">8</a></span>
+<span><b style="color:#b45309">Post-op</b> <a class="rchip" href="#page-5">5</a><a class="rchip" href="#page-6">6</a><a class="rchip" href="#page-9">9</a></span>
 </div>
 </div>
+<div id="p1-bodymap" style="border:1px solid #cbd5e1;border-radius:1.2mm;background:#fff;padding:.4mm;">
+<svg font-family="Source Sans 3, Arial, sans-serif" style="width:100%;max-height:56mm;height:56mm;display:block" viewbox="0 0 880 334" xmlns="http://www.w3.org/2000/svg"><path d="M 170 4 C 168.7 9.0 164.7 23.3 162.0 34.0 C 159.3 44.7 155.0 55.3 154.0 68.0 C 153.0 80.7 154.7 94.7 156.0 110.0 C 157.3 125.3 159.7 144.0 162.0 160.0 C 164.3 176.0 168.7 193.3 170.0 206.0 C 171.3 218.7 169.0 225.0 170.0 236.0 C 171.0 247.0 173.7 262.0 176.0 272.0 C 178.3 282.0 182.7 292.0 184.0 296.0 C 184 306 186 316 190 320 L 198 320 C 200 314 200 304 200 296 C 200.7 292.0 202.7 282.0 204.0 272.0 C 205.3 262.0 207.2 247.0 208.0 236.0 C 208.8 225.0 208.3 218.7 209.0 206.0 C 209.7 193.3 210.8 173.7 212.0 160.0 C 213.2 146.3 214.7 131.0 216.0 124.0 C 217.3 117.0 218.7 118.0 220.0 118.0 C 221.3 118.0 222.7 117.0 224.0 124.0 C 225.3 131.0 226.8 146.3 228.0 160.0 C 229.2 173.7 230.3 193.3 231.0 206.0 C 231.7 218.7 231.2 225.0 232.0 236.0 C 232.8 247.0 234.7 262.0 236.0 272.0 C 237.3 282.0 239.3 292.0 240.0 296.0 C 240 304 240 314 242 320 L 250 320 C 254 316 256 306 256 296 C 257.3 292.0 261.7 282.0 264.0 272.0 C 266.3 262.0 269.0 247.0 270.0 236.0 C 271.0 225.0 268.7 218.7 270.0 206.0 C 271.3 193.3 275.7 176.0 278.0 160.0 C 280.3 144.0 282.7 125.3 284.0 110.0 C 285.3 94.7 287.0 80.7 286.0 68.0 C 285.0 55.3 280.7 44.7 278.0 34.0 C 275.3 23.3 271.3 9.0 270.0 4.0 Z" fill="#f4dccb" stroke="#b88a6e" stroke-linejoin="round" stroke-width="1.1"></path><path d="M 170 4 L 270 4" stroke="#b88a6e" stroke-width="1.1"></path><path d="M 172.0 202.0 C 175.0 202.7 184.3 206.0 190.0 206.0 C 195.7 206.0 203.3 202.7 206.0 202.0" fill="none" opacity="0.7" stroke="#c9997c" stroke-width="0.8"></path><path d="M 268.0 202.0 C 265.0 202.7 255.7 206.0 250.0 206.0 C 244.3 206.0 236.7 202.7 234.0 202.0" fill="none" opacity="0.7" stroke="#c9997c" stroke-width="0.8"></path><path d="M 218 6 L 218 46 M 222 6 L 222 46" opacity=".7" stroke="#b9a88a" stroke-width=".8"></path><path d="M 216 10 L 224 10" opacity=".7" stroke="#b9a88a" stroke-width=".8"></path><path d="M 216 20 L 224 20" opacity=".7" stroke="#b9a88a" stroke-width=".8"></path><path d="M 216 30 L 224 30" opacity=".7" stroke="#b9a88a" stroke-width=".8"></path><path d="M 216 40 L 224 40" opacity=".7" stroke="#b9a88a" stroke-width=".8"></path><path d="M 206 48 L 234 48 L 220 78 Z" fill="#f7f1e3" opacity=".8" stroke="#b9a88a" stroke-width=".9"></path><path d="M 220.0 78.0 C 220.0 83.7 220.0 106.3 220.0 112.0" fill="none" opacity="1" stroke="#b88a6e" stroke-width="1"></path><path d="M 208.0 30.0 C 203.3 29.3 187.3 25.3 180.0 26.0 C 172.7 26.7 166.7 32.7 164.0 34.0" fill="none" opacity="0.7" stroke="#b9a88a" stroke-width="1"></path><path d="M 217.0 84.0 C 213.8 88.7 205.5 107.0 198.0 112.0 C 190.5 117.0 178.7 116.3 172.0 114.0 C 165.3 111.7 160.3 100.7 158.0 98.0" fill="none" opacity="1" stroke="#c9997c" stroke-width="1"></path><path d="M 190.0 240.0 C 189.3 243.7 186.0 254.7 186.0 262.0 C 186.0 269.3 189.3 280.3 190.0 284.0" fill="none" opacity="0.6" stroke="#c9997c" stroke-width="0.7"></path><path d="M 232.0 30.0 C 236.7 29.3 252.7 25.3 260.0 26.0 C 267.3 26.7 273.3 32.7 276.0 34.0" fill="none" opacity="0.7" stroke="#b9a88a" stroke-width="1"></path><path d="M 223.0 84.0 C 226.2 88.7 234.5 107.0 242.0 112.0 C 249.5 117.0 261.3 116.3 268.0 114.0 C 274.7 111.7 279.7 100.7 282.0 98.0" fill="none" opacity="1" stroke="#c9997c" stroke-width="1"></path><path d="M 250.0 240.0 C 250.7 243.7 254.0 254.7 254.0 262.0 C 254.0 269.3 250.7 280.3 250.0 284.0" fill="none" opacity="0.6" stroke="#c9997c" stroke-width="0.7"></path><ellipse cx="220.0" cy="24.0" fill="#64748b" fill-opacity="0.3" rx="9" ry="16" stroke="#64748b" stroke-width="1.1" transform="rotate(0 220.0 24.0)"></ellipse><ellipse cx="204.0" cy="54.0" fill="#2563eb" fill-opacity="0.5" rx="6" ry="10" stroke="#2563eb" stroke-width="1.1" transform="rotate(-15 204.0 54.0)"></ellipse><ellipse cx="220.0" cy="100.0" fill="#dc2626" fill-opacity="0.28" rx="9" ry="12" stroke="#dc2626" stroke-dasharray="3 2" stroke-width="1.1" transform="rotate(0 220.0 100.0)"></ellipse><ellipse cx="256.0" cy="180.0" fill="#0d9488" fill-opacity="0.22" rx="11" ry="62" stroke="#0d9488" stroke-dasharray="3 2" stroke-width="1.1" transform="rotate(2 256.0 180.0)"></ellipse><ellipse cx="250.0" cy="312.0" fill="#0d9488" fill-opacity="0.45" rx="8" ry="6" stroke="#0d9488" stroke-width="1.1" transform="rotate(0 250.0 312.0)"></ellipse><ellipse cx="184.0" cy="256.0" fill="#ca8a04" fill-opacity="0.35" rx="10" ry="24" stroke="#ca8a04" stroke-width="1.1" transform="rotate(0 184.0 256.0)"></ellipse><text fill="#475569" font-size="11.2" font-weight="800" text-anchor="start" x="8" y="22.0">Central / paraspinal</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="start" x="8" y="32.6">non-specific · discogenic</text><path d="M 135.5 18.4 L 212.0 24.0" fill="none" stroke="#475569" stroke-width=".9"></path><circle cx="135.5" cy="18.4" fill="#475569" r="1.5"></circle><circle cx="212.0" cy="24.0" fill="#fff" r="2" stroke="#475569" stroke-width="1.2"></circle><text fill="#1d4ed8" font-size="11.2" font-weight="800" text-anchor="start" x="8" y="82.0">SIJ</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="start" x="8" y="92.6">buttock pain · SIJ cluster</text><path d="M 140.4 78.4 L 202.0 56.0" fill="none" stroke="#1d4ed8" stroke-width=".9"></path><circle cx="140.4" cy="78.4" fill="#1d4ed8" r="1.5"></circle><circle cx="202.0" cy="56.0" fill="#fff" r="2" stroke="#1d4ed8" stroke-width="1.2"></circle><text fill="#a16207" font-size="11.2" font-weight="800" text-anchor="start" x="8" y="232.0">Calf pain on walking</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="start" x="8" y="242.6">stenosis vs vascular</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="start" x="8" y="253.2">claudication</text><path d="M 133.0 228.4 L 180.0 254.0" fill="none" stroke="#a16207" stroke-width=".9"></path><circle cx="133.0" cy="228.4" fill="#a16207" r="1.5"></circle><circle cx="180.0" cy="254.0" fill="#fff" r="2" stroke="#a16207" stroke-width="1.2"></circle><text fill="#b91c1c" font-size="11.2" font-weight="800" text-anchor="end" x="432" y="70.0">Saddle anaesthesia</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="end" x="432" y="80.6">+ bladder / bowel change —</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="end" x="432" y="91.2">CAUDA EQUINA RED FLAG</text><path d="M 299.6 66.4 L 226.0 102.0" fill="none" stroke="#b91c1c" stroke-width=".9"></path><circle cx="299.6" cy="66.4" fill="#b91c1c" r="1.5"></circle><circle cx="226.0" cy="102.0" fill="#fff" r="2" stroke="#b91c1c" stroke-width="1.2"></circle><text fill="#0f766e" font-size="11.2" font-weight="800" text-anchor="end" x="432" y="170.0">S1 (posterior)</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="end" x="432" y="180.6">buttock · thigh · calf</text><path d="M 319.2 166.4 L 262.0 180.0" fill="none" stroke="#0f766e" stroke-width=".9"></path><circle cx="319.2" cy="166.4" fill="#0f766e" r="1.5"></circle><circle cx="262.0" cy="180.0" fill="#fff" r="2" stroke="#0f766e" stroke-width="1.2"></circle><text fill="#0f766e" font-size="11.2" font-weight="800" text-anchor="end" x="432" y="270.0">S1 — lateral foot / heel</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="end" x="432" y="280.6">ankle jerk · toe walking</text><path d="M 283.0 266.4 L 254.0 312.0" fill="none" stroke="#0f766e" stroke-width=".9"></path><circle cx="283.0" cy="266.4" fill="#0f766e" r="1.5"></circle><circle cx="254.0" cy="312.0" fill="#fff" r="2" stroke="#0f766e" stroke-width="1.2"></circle><path d="M 610 4 C 608.7 9.0 604.7 23.3 602.0 34.0 C 599.3 44.7 595.0 55.3 594.0 68.0 C 593.0 80.7 594.7 94.7 596.0 110.0 C 597.3 125.3 599.7 144.0 602.0 160.0 C 604.3 176.0 608.7 193.3 610.0 206.0 C 611.3 218.7 609.0 225.0 610.0 236.0 C 611.0 247.0 613.7 262.0 616.0 272.0 C 618.3 282.0 622.7 292.0 624.0 296.0 C 622 306 616 316 618 320 L 646 320 C 646 314 642 304 640 296 C 640.7 292.0 642.7 282.0 644.0 272.0 C 645.3 262.0 647.2 247.0 648.0 236.0 C 648.8 225.0 648.3 218.7 649.0 206.0 C 649.7 193.3 650.8 173.7 652.0 160.0 C 653.2 146.3 654.7 131.0 656.0 124.0 C 657.3 117.0 658.7 118.0 660.0 118.0 C 661.3 118.0 662.7 117.0 664.0 124.0 C 665.3 131.0 666.8 146.3 668.0 160.0 C 669.2 173.7 670.3 193.3 671.0 206.0 C 671.7 218.7 671.2 225.0 672.0 236.0 C 672.8 247.0 674.7 262.0 676.0 272.0 C 677.3 282.0 679.3 292.0 680.0 296.0 C 678 304 674 314 674 320 L 702 320 C 704 316 698 306 696 296 C 697.3 292.0 701.7 282.0 704.0 272.0 C 706.3 262.0 709.0 247.0 710.0 236.0 C 711.0 225.0 708.7 218.7 710.0 206.0 C 711.3 193.3 715.7 176.0 718.0 160.0 C 720.3 144.0 722.7 125.3 724.0 110.0 C 725.3 94.7 727.0 80.7 726.0 68.0 C 725.0 55.3 720.7 44.7 718.0 34.0 C 715.3 23.3 711.3 9.0 710.0 4.0 Z" fill="#f4dccb" stroke="#b88a6e" stroke-linejoin="round" stroke-width="1.1"></path><path d="M 610 4 L 710 4" stroke="#b88a6e" stroke-width="1.1"></path><path d="M 612.0 202.0 C 615.0 202.7 624.3 206.0 630.0 206.0 C 635.7 206.0 643.3 202.7 646.0 202.0" fill="none" opacity="0.7" stroke="#c9997c" stroke-width="0.8"></path><path d="M 708.0 202.0 C 705.0 202.7 695.7 206.0 690.0 206.0 C 684.3 206.0 676.7 202.7 674.0 202.0" fill="none" opacity="0.7" stroke="#c9997c" stroke-width="0.8"></path><circle cx="660" cy="20" fill="none" r="2.2" stroke="#c9997c" stroke-width=".9"></circle><path d="M 610.0 42.0 C 613.3 48.3 623.0 69.7 630.0 80.0 C 637.0 90.3 648.3 100.0 652.0 104.0" fill="none" opacity="1" stroke="#c9997c" stroke-width="0.9"></path><ellipse cx="630" cy="196" fill="#f7f1e3" opacity=".8" rx="8" ry="9" stroke="#b9a88a" stroke-width=".8"></ellipse><path d="M 636.0 214.0 C 636.3 220.0 638.0 237.3 638.0 250.0 C 638.0 262.7 636.3 283.3 636.0 290.0" fill="none" opacity="0.6" stroke="#b9a88a" stroke-width="0.8"></path><path d="M 710.0 42.0 C 706.7 48.3 697.0 69.7 690.0 80.0 C 683.0 90.3 671.7 100.0 668.0 104.0" fill="none" opacity="1" stroke="#c9997c" stroke-width="0.9"></path><ellipse cx="690" cy="196" fill="#f7f1e3" opacity=".8" rx="8" ry="9" stroke="#b9a88a" stroke-width=".8"></ellipse><path d="M 684.0 214.0 C 683.7 220.0 682.0 237.3 682.0 250.0 C 682.0 262.7 683.7 283.3 684.0 290.0" fill="none" opacity="0.6" stroke="#b9a88a" stroke-width="0.8"></path><ellipse cx="686.0" cy="30.0" fill="#dc2626" fill-opacity="0.26" rx="14" ry="14" stroke="#dc2626" stroke-dasharray="3 2" stroke-width="1.1" transform="rotate(0 686.0 30.0)"></ellipse><ellipse cx="624.0" cy="150.0" fill="#64748b" fill-opacity="0.26" rx="12" ry="34" stroke="#64748b" stroke-dasharray="3 2" stroke-width="1.1" transform="rotate(0 624.0 150.0)"></ellipse><ellipse cx="622.0" cy="262.0" fill="#16a34a" fill-opacity="0.32" rx="8" ry="28" stroke="#16a34a" stroke-dasharray="3 2" stroke-width="1.1" transform="rotate(6 622.0 262.0)"></ellipse><ellipse cx="632.0" cy="312.0" fill="#16a34a" fill-opacity="0.5" rx="9" ry="6" stroke="#16a34a" stroke-width="1.1" transform="rotate(0 632.0 312.0)"></ellipse><ellipse cx="680.0" cy="256.0" fill="#7c3aed" fill-opacity="0.3" rx="7" ry="26" stroke="#7c3aed" stroke-dasharray="3 2" stroke-width="1.1" transform="rotate(-4 680.0 256.0)"></ellipse><text fill="#475569" font-size="11.2" font-weight="800" text-anchor="start" x="448" y="110.0">Anterior thigh</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="start" x="448" y="120.6">L2–L4 · femoral nerve</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="start" x="448" y="131.2">stretch test</text><path d="M 555.9 106.4 L 620.0 150.0" fill="none" stroke="#475569" stroke-width=".9"></path><circle cx="555.9" cy="106.4" fill="#475569" r="1.5"></circle><circle cx="620.0" cy="150.0" fill="#fff" r="2" stroke="#475569" stroke-width="1.2"></circle><text fill="#15803d" font-size="11.2" font-weight="800" text-anchor="start" x="448" y="240.0">L5 — lateral leg</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="start" x="448" y="250.6">dorsum foot · big toe</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="start" x="448" y="261.2">extension weakness</text><path d="M 555.9 236.4 L 616.0 262.0" fill="none" stroke="#15803d" stroke-width=".9"></path><circle cx="555.9" cy="236.4" fill="#15803d" r="1.5"></circle><circle cx="616.0" cy="262.0" fill="#fff" r="2" stroke="#15803d" stroke-width="1.2"></circle><text fill="#b91c1c" font-size="11.2" font-weight="800" text-anchor="end" x="872" y="36.0">Abdomen / flank pain</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="end" x="872" y="46.6">pulsatile mass — AAA,</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="end" x="872" y="57.2">renal — RED FLAG</text><path d="M 747.0 32.4 L 690.0 30.0" fill="none" stroke="#b91c1c" stroke-width=".9"></path><circle cx="747.0" cy="32.4" fill="#b91c1c" r="1.5"></circle><circle cx="690.0" cy="30.0" fill="#fff" r="2" stroke="#b91c1c" stroke-width="1.2"></circle><text fill="#6d28d9" font-size="11.2" font-weight="800" text-anchor="end" x="872" y="230.0">L4 — medial leg</text><text fill="#334155" font-size="9.6" font-weight="500" text-anchor="end" x="872" y="240.6">knee jerk · ankle DF</text><path d="M 769.0 226.4 L 682.0 256.0" fill="none" stroke="#6d28d9" stroke-width=".9"></path><circle cx="769.0" cy="226.4" fill="#6d28d9" r="1.5"></circle><circle cx="682.0" cy="256.0" fill="#fff" r="2" stroke="#6d28d9" stroke-width="1.2"></circle><text fill="#475569" font-size="10.5" font-weight="800" letter-spacing="1" text-anchor="middle" x="220" y="328">POSTERIOR</text><text fill="#64748b" font-size="9" font-weight="800" text-anchor="middle" x="110" y="316">L</text><text fill="#64748b" font-size="9" font-weight="800" text-anchor="middle" x="330" y="316">R</text><text fill="#475569" font-size="10.5" font-weight="800" letter-spacing="1" text-anchor="middle" x="660" y="328">ANTERIOR</text><text fill="#64748b" font-size="9" font-weight="800" text-anchor="middle" x="550" y="316">R</text><text fill="#64748b" font-size="9" font-weight="800" text-anchor="middle" x="770" y="316">L</text><line stroke="#e2e8f0" stroke-width="1" x1="440" x2="440" y1="6" y2="316"></line></svg>
 </div>
-<div class="grid grid-cols-4 gap-1 text-[7.2px] mt-[1px]">
-<div class="mini flex flex-col justify-between" style="padding:0.8mm;">
-<div class="lb">Gait &amp; Posture</div>
-<div class="fr"><span class="cio"><span class="cb sm"></span>Normal</span><span class="cio"><span class="cb sm r"></span>Shift/Antalgic</span></div>
+<div class="grid grid-cols-12 gap-[1.5mm] mt-auto">
+<div class="col-span-7 mini">
+<div class="sh"><span>Mechanical Aggravators &amp; Easing Factors</span><span class="stat">Behaviour</span></div>
+<div class="flex flex-wrap xs" style="row-gap:1px">
+<span class="cio"><span class="cb"></span>Sitting / flexion / lifting (discogenic / radicular)</span><span class="cio"><span class="cb"></span>Standing / walking / extension (stenosis / facet / pars)</span><span class="cio"><span class="cb"></span>Cough / sneeze / Valsalva (dural / root)</span><span class="cio"><span class="cb"></span>Sit-to-stand / rolling (instability / SIJ)</span><span class="cio"><span class="cb"></span>Seated flexion relieves leg symptoms (claudication)</span>
 </div>
-<div class="mini flex flex-col justify-between" style="padding:0.8mm;">
-<div class="lb">Repeated Movements</div>
-<div class="fr"><span class="cio"><span class="cb sm g"></span>Centralises</span><span class="cio"><span class="cb sm r"></span>Peripheralises</span></div>
 </div>
-<div class="mini flex flex-col justify-between" style="padding:0.8mm;">
-<div class="lb">Heel / Toe Walk</div>
-<div class="fr"><span class="cio"><span class="cb sm"></span>Intact</span><span class="cio"><span class="cb sm r"></span>Weakness</span></div>
+<div class="col-span-5 mini">
+<div class="sh"><span>Patient Goals — <a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#psfs" rel="noopener" target="_blank">PSFS</a> (0–10)</span><span class="eb eb-l">L</span></div>
+<div class="grid grid-cols-3 gap-1 xs">
+<div class="fr"><span class="lb nav">1.</span><span class="fl"></span><span class="lb">/10</span></div>
+<div class="fr"><span class="lb nav">2.</span><span class="fl"></span><span class="lb">/10</span></div>
+<div class="fr"><span class="lb nav">3.</span><span class="fl"></span><span class="lb">/10</span></div>
 </div>
-<div class="mini flex flex-col justify-between" style="padding:0.8mm;">
-<div class="lb">SLR / Slump Screen</div>
-<div class="fr"><span class="cio"><span class="cb sm"></span>Negative</span><span class="cio"><span class="cb sm r"></span>Positive</span></div>
 </div>
 </div>
 </div>
 </section>
-<!-- D : Subjective & Pain Map -->
-<section class="card flex flex-col" id="p1-subjective">
-<div class="card-h"><span>D · Subjective History, Symptom Behaviour &amp; Lumbosacral Pain Mapping</span><span class="tag">SUBJECTIVE</span></div>
-<div class="card-b grid grid-cols-12 gap-2" style="padding:.6mm 1.2mm;">
-<div class="col-span-7 flex flex-col gap-[1.5px]">
-<div class="sh" style="margin:0 0 1px;"><span>Symptom Location &amp; Clinical Pattern</span><span class="stat">Clinical Signpost</span></div>
-<div class="ci"><span class="cb"></span><div><b>Central / Paraspinal Lumbar Ache:</b> localized across lumbosacral segments → <span class="nav b">Non-specific mechanical / discogenic / facet</span></div></div>
-<div class="ci"><span class="cb"></span><div><b>Distal Dermatomal Leg Pain &gt; Back Pain:</b> lancinating radiation with paresthesia → <span class="nav b">Radiculopathy / disc herniation (p4)</span></div></div>
-<div class="ci"><span class="cb"></span><div><b>Bilateral Leg Cramping on Walking, Relieved by Sitting:</b> shopping-cart sign → <span class="nav b">Lumbar spinal stenosis / claudication (p2)</span></div></div>
-<div class="ci"><span class="cb"></span><div><b>Unilateral PSIS / Buttock Pain (Fortin area):</b> transitional sit-to-stand pain → <span class="nav b">Sacroiliac joint provocation cluster (p2)</span></div></div>
-<div class="ci"><span class="cb"></span><div><b>Alternating Buttock Pain &amp; Morning Stiffness Relieved by Movement:</b> insidious onset → <span class="nav b">Axial spondyloarthritis screen (p1/p2)</span></div></div>
-<div class="sh" style="margin:.8mm 0 1px;"><span>Mechanical Aggravators &amp; Easing Factors</span><span class="stat">Behaviour</span></div>
-<div class="grid grid-cols-2 gap-x-2 text-[7.2px]">
-<div>
-<div>• <b>Sustained flexion / sitting / lifting:</b> Discogenic / radicular</div>
-<div>• <b>Sustained standing / walking / extension:</b> Stenosis / facet / pars</div>
-<div>• <b>Cough / sneeze / Valsalva impulse:</b> Dural / disc root irritation</div>
-</div>
-<div>
-<div>• <b>Sit-to-stand / rolling in bed:</b> Segmental instability / SIJ</div>
-<div>• <b>Walking / gentle movement eases pain:</b> Mechanical / inflammatory</div>
-<div>• <b>Seated flexion relieves leg symptoms:</b> Neurogenic claudication</div>
-</div>
-</div>
-</div>
-<div class="col-span-5 flex flex-col items-center justify-center border-l border-slate-200 pl-2">
-<div class="text-[7px] font-bold text-slate-700 uppercase tracking-wider mb-0.5">Lumbosacral &amp; Radicular Pain Map</div>
-<svg aria-label="Lumbar spine pain map" class="w-full h-auto" style="max-height:25mm;" viewbox="0 0 180 135">
-<!-- Trunk & Pelvis Outline -->
-<path d="M 62,8 L 118,8 L 122,48 C 132,56 134,72 126,84 L 122,130 L 95,130 L 92,88 L 88,88 L 85,130 L 58,130 L 54,84 C 46,72 48,56 58,48 Z" fill="#f8fafc" stroke="#64748b" stroke-width="1.2"></path>
-<!-- Lumbar Vertebrae Midline -->
-<line stroke="#94a3b8" stroke-dasharray="3,2" stroke-width="2" x1="90" x2="90" y1="12" y2="58"></line>
-<!-- Central Lumbar Belt Zone -->
-<ellipse cx="90" cy="40" fill="rgba(30,58,138,0.22)" rx="22" ry="9" stroke="#1e3a8a" stroke-width="1.1"></ellipse>
-<text fill="#1e3a8a" font-size="4.8" font-weight="800" text-anchor="middle" x="90" y="42">LUMBAR</text>
-<!-- Left SIJ / Buttock -->
-<ellipse cx="73" cy="62" fill="rgba(16,185,129,0.25)" rx="9" ry="7" stroke="#047857" stroke-width="1"></ellipse>
-<text fill="#047857" font-size="4.5" font-weight="800" text-anchor="middle" x="73" y="64">SIJ</text>
-<!-- Saddle / Perineal Emergency Zone -->
-<ellipse cx="90" cy="76" fill="rgba(185,28,28,0.28)" rx="8" ry="5" stroke="#991b1b" stroke-width="1.1"></ellipse>
-<text fill="#991b1b" font-size="4.3" font-weight="800" text-anchor="middle" x="90" y="78">SADDLE</text>
-<!-- Right Sciatic / Radicular Tract -->
-<path d="M 102,56 Q 112,85 110,126" fill="none" opacity="0.45" stroke="#c2410c" stroke-linecap="round" stroke-width="3.5"></path>
-<text fill="#c2410c" font-size="4.6" font-weight="800" text-anchor="middle" x="112" y="106">RADICULAR</text>
-</svg>
-<div class="flex flex-wrap justify-center gap-x-2 text-[6.5px] font-bold mt-0.5">
-<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full" style="background:#1e3a8a"></span>Axial</span>
-<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full" style="background:#047857"></span>SIJ/Gluteal</span>
-<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full" style="background:#c2410c"></span>Radicular</span>
-<span class="flex items-center gap-1"><span class="w-1.5 h-1.5 rounded-full" style="background:#991b1b"></span>Saddle (CES)</span>
-</div>
-</div>
-</div>
-</section>
-<div class="dots fill" id="p1-notes"><span class="dots-l">Subjective History · Goals (PSFS) · Patient Expectations</span></div>
 
   </main>
   <footer class="pg-ftr">
@@ -644,7 +583,7 @@ body{
 </tr>
 </tbody>
 </table>
-<div class="xs mt-[1px]"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#fritz-instability-predictors" rel="noopener" target="_blank"><b>Radiographic instability predictors</b></a> (Fritz 2005 Eur Spine J) <span class="eb eb-l">L</span>: <b class="nav">lumbar flexion ≥ 53° OR no hypomobility on segmental testing → LR+ 4.3 (1.8–10.6)</b>.</div>
+<div class="xs mt-[1px]"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#schober-rom-reliability" rel="noopener" target="_blank"><b>Modified-modified Schober</b></a> (<a class="guide-badge" href="https://doi.org/10.1080/09638280400018411" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Tousignant 2005</a>) <span class="eb eb-m">M</span>: <b class="nav">intra ICC 0.95 (0.89–0.97); inter ICC 0.91 (0.83–0.96); minimum detectable change 1 cm; validity r = 0.67</b> • trained raters interrater ICC 0.942 (<a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9023132/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Johnson 2021</a>) <span class="eb eb-l">L</span> • more reliable than double inclinometry; different metrics (<a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4209501/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>MacDermid 2014</a>) <span class="eb eb-l">L</span> • occiput-to-wall: reference value of 0 (<a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4146670/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Assassi 2014</a>) <span class="eb eb-m">M</span> — MMS: <span class="fl s"></span> cm • OWD: <span class="fl s"></span> cm</div>
 </div>
 </section>
 <!-- 2 : Lower-Limb Neurological Grid L2–S1 -->
@@ -752,7 +691,30 @@ body{
 </div>
 </section>
 </div>
-<div class="dots fill" id="p3-notes"><span class="dots-l">Objective Examination Notes · Palpation · Motor Control Observations</span></div>
+<!-- 6 : HHD Strength Table -->
+<section class="card" id="p3-hhd">
+<div class="card-h"><span>6 · Hand-Held Dynamometry (HHD) Strength &amp; Limb Symmetry <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#hhd-strength" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a> <a class="calc-badge" href="https://azhry-x.github.io/lumbar-atlas/#hhd-strength" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><rect fill="none" height="8.8" rx="1.4" stroke="currentColor" stroke-width="1.1" width="8.8" x=".6" y=".6"></rect><rect fill="currentColor" height="1.7" rx=".3" width="5.6" x="2.2" y="2.1"></rect><circle cx="2.9" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="5.6" fill="currentColor" r=".62"></circle><circle cx="2.9" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="5" cy="7.6" fill="currentColor" r=".62"></circle><circle cx="7.1" cy="7.6" fill="currentColor" r=".62"></circle></svg>Calc</a></span><span class="tag">WRITE-IN · SAME DEVICE / POSITION</span></div>
+<div class="card-b" style="padding:.6mm 1.2mm;">
+<table class="t dense">
+<thead>
+<tr>
+<th style="width:24%">Movement</th>
+<th class="c" style="width:14%">Lever arm (cm)</th>
+<th class="c" style="width:22%">Force (N) inv / uninv</th>
+<th class="c" style="width:20%">Torque (N·m) = N × cm ÷ 100</th>
+<th class="c" style="width:20%">LSI % = inv ÷ uninv × 100</th>
+</tr>
+</thead>
+<tbody>
+<tr><td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#hhd-strength" rel="noopener" target="_blank">Hip abduction</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#hhd-strength" rel="noopener" target="_blank">Hip extension</a></td><td></td><td></td><td></td><td></td></tr>
+<tr><td class="k"><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#hhd-strength" rel="noopener" target="_blank">Trunk extension</a></td><td></td><td></td><td></td><td></td></tr>
+</tbody>
+</table>
+<div class="xxs mt-[1px]"><b>Method</b> <span class="eb eb-m">M</span>: belt-stabilised HHD vs isokinetic r = 0.60–0.90 but absolute values not concordant — the two devices cannot be interchanged (<a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5634229/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Martins 2017</a>); hip peak torque ICC 0.848–0.899 (belt) and 0.848–0.942 (tension) (<a class="guide-badge" href="https://doi.org/10.1016/j.ptsp.2024.07.004" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Batista 2024</a>) • same device, same position, same strap / lever-arm point and same tester at every visit; compare with the other side <span class="eb eb-e">E</span></div>
+</div>
+</section>
+<div class="dots fill" id="p3-notes" style="min-height:6mm"><span class="dots-l">Objective Examination Notes · Palpation · Motor Control Observations</span></div>
 
   </main>
   <footer class="pg-ftr">
@@ -1034,7 +996,31 @@ body{
 </div>
 </div>
 </section>
-<div class="dots fill" id="p5-notes"><span class="dots-l">Operative Notes · Surgeon-Directed Restrictions · Post-Surgical Rehabilitation Plan</span></div>
+<!-- 6 : Post-Op Progression Evidence & Criteria to Progress -->
+<div class="grid grid-cols-12 gap-[1.5mm]">
+<section class="card col-span-7" id="p5-progression-evidence">
+<div class="card-h"><span>6 · Post-Op Progression Evidence <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#post-op-progression-criteria" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">SURGEON-DIRECTED</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.6mm 1.2mm;">
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#post-op-progression-criteria" rel="noopener" target="_blank"><b>Disc surgery — active rehab</b></a> (<a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7138272/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Oosterhuis 2014</a>) <span class="eb eb-m">M</span>: no trial reported an increase in reoperation rate; supervised vs home exercise: no differences</div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#post-op-progression-criteria" rel="noopener" target="_blank"><b>Fusion — physiotherapy</b></a> (<a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC4400578/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Rushton 2012</a>) <span class="eb eb-l">L</span>: pooled SMD 0.72 (−0.25 to 1.69) at 6 months, 0.52 (−0.45 to 1.49) long term — not significant</div></div>
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#post-op-progression-criteria" rel="noopener" target="_blank"><b>Fusion — complex rehab</b></a> (<a class="guide-badge" href="https://doi.org/10.1097/brs.0000000000001132" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Greenwood 2016</a>) <span class="eb eb-l">L</span>: 40 % have significant disability 12 months after fusion; fear avoidance −1.07 and −1.40 (low quality)</div></div>
+</div>
+</section>
+<section class="card green col-span-5" id="p5-criteria">
+<div class="card-h"><span>7 · Criteria to Progress</span><span class="tag">E · TICK ALL</span></div>
+<div class="card-b grid grid-cols-2 gap-x-1 xs" style="padding:.6mm 1.2mm;row-gap:1px">
+<span class="cio"><span class="cb sm g"></span>Surgeon clearance</span>
+<span class="cio"><span class="cb sm g"></span>Wound healed</span>
+<span class="cio"><span class="cb sm g"></span>Pain zone OK (p8)</span>
+<span class="cio"><span class="cb sm g"></span>ROM vs other side</span>
+<span class="cio"><span class="cb sm g"></span>Strength LSI on p3</span>
+<span class="cio"><span class="cb sm g"></span>Movement quality</span>
+<span class="cio"><span class="cb sm g"></span>Patient confidence</span>
+<span class="eb eb-e" style="justify-self:start">E</span>
+</div>
+</section>
+</div>
+<div class="dots fill" id="p5-notes" style="min-height:6mm"><span class="dots-l">Operative Notes · Surgeon-Directed Restrictions · Post-Surgical Rehabilitation Plan</span></div>
 
   </main>
   <footer class="pg-ftr">
@@ -1115,6 +1101,15 @@ body{
 </tr>
 </tbody>
 </table>
+</div>
+</section>
+<!-- 1b : Traction — time-limited trial of an adjunct (sits next to the NICE statement; does not replace it) -->
+<section class="card" id="p6-traction-trial">
+<div class="card-h"><span>1b · Traction: time-limited trial of an adjunct <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#traction-trial" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">NICE NG59 1.2.6 STILL APPLIES</span></div>
+<div class="card-b flex flex-col gap-[1px]" style="padding:.6mm 1.2mm;">
+<div class="ci"><span class="cb"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#traction-trial" rel="noopener" target="_blank"><b>Subgroup RCT</b></a> (<a class="guide-badge" href="https://doi.org/10.1097/brs.0b013e31815d001a" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Fritz 2007</a>) <span class="eb eb-l">L</span>: added traction — Oswestry 7.2 points better at 2 weeks, no difference at 6 weeks; subgroup = leg symptoms + nerve-root signs + peripheralisation with extension or crossed SLR</div></div>
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#traction-trial" rel="noopener" target="_blank"><b>Subgroup tested (RCT, n = 120)</b></a> (<a class="guide-badge" href="https://doi.org/10.2519/jospt.2016.6238" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>Thackeray 2016</a>) <span class="eb eb-m">M</span>: no differences in pain or disability; no subgroup interaction • <a class="guide-badge" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10508241/" rel="noopener" target="_blank"><svg aria-hidden="true" class="badge-ico" viewbox="0 0 10 10"><path d="M2 .7h4.2L8.3 2.8V9.3H2z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1.05"></path><path d="M6.1.8v2.1h2.1" fill="none" stroke="currentColor" stroke-width="1"></path><path d="M3.3 5h3.5M3.3 6.6h3.5M3.3 8.1h2.2" stroke="currentColor" stroke-width=".85"></path></svg>George 2021</a> JOSPT CPG: <b class="crim">“Physical therapists should not use mechanical traction for patients with chronic LBP with leg pain”</b></div></div>
+<div class="row xs"><div class="fr"><span class="lb">Start date</span><span class="fl"></span></div><div class="fr"><span class="lb">Review date</span><span class="fl"></span></div><div class="fr"><span class="cio"><span class="cb sm r"></span>Stop if no change</span></div></div>
 </div>
 </section>
 <!-- 2 : Cochrane Evidence on Traction & Ultrasound -->
@@ -1249,10 +1244,10 @@ body{
 </tr>
 </thead>
 <tbody>
-<tr style="height:6mm;"><td class="c"><span class="cb sm"></span></td><td class="k">Lumbopelvic thrust manipulation (HVLA)</td><td></td><td></td><td></td></tr>
-<tr style="height:6mm;"><td class="c"><span class="cb sm"></span></td><td class="k">Lumbar PA / rotational mobilisation</td><td></td><td></td><td></td></tr>
-<tr style="height:6mm;"><td class="c"><span class="cb sm"></span></td><td class="k">Thoracic / hip joint mobilisation adjunct</td><td></td><td></td><td></td></tr>
-<tr style="height:6mm;"><td class="c"><span class="cb sm"></span></td><td class="k">Soft-tissue massage (Furlan 2015)</td><td></td><td></td><td></td></tr>
+<tr style="height:5mm;"><td class="c"><span class="cb sm"></span></td><td class="k">Lumbopelvic thrust manipulation (HVLA)</td><td></td><td></td><td></td></tr>
+<tr style="height:5mm;"><td class="c"><span class="cb sm"></span></td><td class="k">Lumbar PA / rotational mobilisation</td><td></td><td></td><td></td></tr>
+<tr style="height:5mm;"><td class="c"><span class="cb sm"></span></td><td class="k">Thoracic / hip joint mobilisation adjunct</td><td></td><td></td><td></td></tr>
+<tr style="height:5mm;"><td class="c"><span class="cb sm"></span></td><td class="k">Soft-tissue massage (Furlan 2015)</td><td></td><td></td><td></td></tr>
 </tbody>
 </table>
 </div>
@@ -1273,18 +1268,28 @@ body{
 </div>
 </div>
 </section>
+<!-- 6 : Needling Safety -->
+<section class="card red" id="p7-needling">
+<div class="card-h"><span>6 · Dry Needling Safety &amp; Anatomical Danger Zones <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#needling-safety" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">SAFETY SCREEN</span></div>
+<div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
+<div class="ci"><span class="cb r"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#needling-safety" rel="noopener" target="_blank"><b>Adverse event rates:</b></a> Brady 2014 <span class="eb eb-m">M</span>: mild AEs 19.18 %; upper risk rate for significant AEs ≤ 0.04 %; bruising 7.55 %, bleeding 4.65 % • Boyce 2020 <span class="eb eb-m">M</span>: minor AE 36.7 %; major AE &lt; .1 % (prolonged symptom aggravation .03 %, fainting .02 %, forgotten needles .01 %; major AEs most often with gluteal, lumbar paraspinal, suboccipital and upper trapezius needling)</div></div>
+<div class="ci"><span class="cb r"></span><div><b>Serious risks &amp; screening:</b> Halle 2016 <span class="eb eb-e">E</span>: pneumothorax, cardiac tamponade, haematoma, infection, CNS injury; filament needles 32–36 gauge (.25–.20 mm) • Kearns 2019 <span class="eb eb-e">E</span>: anticoagulants / coagulopathy — caution — possible increased incidence or severity of haematoma and bruising</div></div>
+<div class="ci"><span class="cb r"></span><div><b>Lumbar / pelvic danger zones:</b> Valera-Calero 2024 <span class="eb eb-l">L</span>: piriformis over the sciatic nerve — deeper fascia depth 7.0 ± 1.3 cm • Halle 2016 <span class="eb eb-e">E</span>: quadratus lumborum — the kidney lies towards the lateral portion of quadratus lumborum</div></div>
+</div>
+</section>
 <!-- Consent Block -->
-<div class="box r flex flex-wrap items-center xs" style="padding:.7mm 1.6mm;">
+<div class="box r flex flex-wrap items-center xs" style="padding:.6mm 1.4mm;">
 <b class="crim mr-2">CONSENT OBTAINED FOR:</b>
 <span class="cio"><span class="cb r"></span>Spinal manipulation</span>
 <span class="cio"><span class="cb r"></span>Spinal mobilisation</span>
 <span class="cio"><span class="cb r"></span>Soft-tissue massage</span>
+<span class="cio"><span class="cb r"></span>Dry needling</span>
 <span class="mut mr-1">|</span><span class="cio"><span class="cb r"></span>Risks &amp; alternatives discussed</span>
 <span class="cio"><span class="cb r"></span>Part of exercise package (1.2.7)</span>
 <span class="cio"><span class="cb r"></span>Patient may decline</span>
 <span class="lr" style="margin-left:auto">Signature <span class="fl l"></span></span>
 </div>
-<div class="dots fill" id="p7-notes"><span class="dots-l">Manual Therapy Clinical Reasoning · Immediate Re-Test · Exercise Integration</span></div>
+<div class="dots" id="p7-notes" style="min-height:5mm;height:5mm;"><span class="dots-l">Manual Therapy Clinical Reasoning · Immediate Re-Test · Exercise Integration</span></div>
 
   </main>
   <footer class="pg-ftr">
@@ -1365,15 +1370,38 @@ body{
 </div>
 </section>
 <section class="card green" id="p8-spondylolysis">
-<div class="card-h"><span>5 · Adolescent Spondylolysis RTS (Sweeney 2026) <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#spondylolysis-rts-sweeney" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">ATHLETE PARS RTS</span></div>
+<div class="card-h"><span>5 · Spondylolysis Return to Sport <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#spondylolysis-rts" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">PARS RTS</span></div>
 <div class="card-b flex flex-col gap-[1.5px]" style="padding:.8mm 1.2mm;">
-<div class="ci"><span class="cb g"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#spondylolysis-rts-sweeney" rel="noopener" target="_blank"><b>Spondylolysis (adolescent athletes, n = 53)</b></a> (Sweeney (Selhorst group) 2026 OJSM) <span class="eb eb-l">L</span>: <b class="emer">immediate PT did not worsen healing; 81% healed on MRI at 3 months; healed → 7.3% recurrence vs 50%</b></div></div>
+<div class="ci"><span class="cb g"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#spondylolysis-rts" rel="noopener" target="_blank"><b>Active spondylolysis (RCT):</b></a> Selhorst 2026 <span class="eb eb-h">H</span>: <b class="emer">immediate physical therapy: greater early improvement, quicker return to sport and lower LBP recurrence than rest before PT</b></div></div>
+<div class="ci"><span class="cb g"></span><div><b>RTS timelines:</b> Panteliadis 2016 <span class="eb eb-m">M</span>: conservative 3.7 months, surgical repair 7.9 months (weighted means) • Grazina 2019 <span class="eb eb-m">M</span>: return to sports at 6.8 months • Bouras 2015 <span class="eb eb-l">L</span>: return to play 6 to 12 months; collision sports prohibited</div></div>
 </div>
 </section>
 </div>
-<!-- 4 : 12-Week Loading Log (Blank Write-In Fields) -->
+<!-- 4 : Pain Monitoring Model & Activity Guidance -->
+<section class="card" id="p8-pain-monitoring">
+<div class="card-h"><span>6 · Pain-Monitoring Model &amp; Activity Modification <a aria-label="Open Atlas info card" class="info-icon" href="https://azhry-x.github.io/lumbar-atlas/#pain-monitoring-model" rel="noopener" target="_blank"><svg aria-hidden="true" class="info-svg" viewbox="0 0 24 24"><circle cx="12" cy="12" fill="none" r="10" stroke="currentColor" stroke-width="2.2"></circle><line stroke="currentColor" stroke-width="2.4" x1="12" x2="12" y1="16.5" y2="10.5"></line><circle cx="12" cy="7.3" fill="currentColor" r="1.4"></circle></svg></a></span><span class="tag">TRAFFIC LIGHT</span></div>
+<div class="card-b grid grid-cols-12 gap-2" style="padding:.8mm 1.2mm;">
+<div class="col-span-7 flex flex-col gap-[1.5px]">
+<div class="ci"><span class="cb g"></span><div><a class="test-link" href="https://azhry-x.github.io/lumbar-atlas/#pain-monitoring-model" rel="noopener" target="_blank"><b>Pain-monitoring model:</b></a> Sprague 2021 <span class="eb eb-e">E</span>: <b class="emer">pain should not exceed 5/10 on the NPRS during or immediately after activity and should return to pre-activity levels by the following morning</b> • Silbernagel 2007 <span class="eb eb-m">M</span>: continued tendon loading with a pain-monitoring model showed no negative effects</div></div>
+<div class="ci"><span class="cb"></span><div><b>Origin of the zones:</b> Cavaggion 2024 <span class="eb eb-e">E</span>: low (0–2), acceptable (2–5) and high (5–10) risk zones were based on clinical experience</div></div>
+<div class="flex items-center gap-1 xs mt-[1px]">
+<span class="badge badge-green">Low 0–2 (Safe)</span>
+<span class="badge badge-amber">Acceptable 2–5 (Monitor)</span>
+<span class="badge badge-red">High 5–10 (Excessive)</span>
+</div>
+</div>
+<div class="col-span-5">
+<div class="xs b mb-[1px]">Activity Guidance (E):</div>
+<table class="t dense">
+<thead><tr><th style="width:33%">Avoid</th><th style="width:33%">Modify</th><th style="width:34%">OK</th></tr></thead>
+<tbody><tr style="height:5.5mm;"><td></td><td></td><td></td></tr></tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- 5 : 12-Week Loading Log (Blank Write-In Fields) -->
 <section class="card" id="p8-loading-log">
-<div class="card-h"><span>6 · 12-Week Exercise &amp; Functional Loading Progression Log</span><span class="tag">12-WEEK LOG</span></div>
+<div class="card-h"><span>7 · 12-Week Exercise &amp; Functional Loading Progression Log</span><span class="tag">12-WEEK LOG</span></div>
 <div class="card-b" style="padding:.8mm 1.2mm;">
 <div class="flex flex-wrap xs mb-[2px]" style="row-gap:1px">
 <span class="lb mr-1">Primary Programme Ticked:</span>
@@ -1397,16 +1425,16 @@ body{
 </tr>
 </thead>
 <tbody>
-<tr style="height:6.5mm;"><td class="k">1 · Primary Exercise / DP</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr style="height:6.5mm;"><td class="k">2 · Trunk / Hip Conditioning</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr style="height:6.5mm;"><td class="k">3 · Functional Lifting / Control</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr style="height:6.5mm;"><td class="k">4 · Walking / Aerobic Volume</td><td></td><td></td><td></td><td></td><td></td></tr>
-<tr style="height:6.5mm;"><td class="k">5 · Symptom Response (NPRS)</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:5mm;"><td class="k">1 · Primary Exercise / DP</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:5mm;"><td class="k">2 · Trunk / Hip Conditioning</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:5mm;"><td class="k">3 · Functional Lifting / Control</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:5mm;"><td class="k">4 · Walking / Aerobic Volume</td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr style="height:5mm;"><td class="k">5 · Symptom Response (NPRS)</td><td></td><td></td><td></td><td></td><td></td></tr>
 </tbody>
 </table>
 </div>
 </section>
-<div class="dots fill" id="p8-notes"><span class="dots-l">Exercise Prescription Details · Shared Decision-Making (“Encourage the Exercise They Enjoy”) · Prevention Plan</span></div>
+<div class="dots" id="p8-notes" style="min-height:5mm;height:5mm;"><span class="dots-l">Exercise Prescription Details · Shared Decision-Making (“Encourage the Exercise They Enjoy”) · Prevention Plan</span></div>
 
   </main>
   <footer class="pg-ftr">
@@ -1449,115 +1477,116 @@ body{
  <table class="t flow slate" id="p9-flowsheet" style="table-layout:fixed;">
 <thead>
 <tr>
-<th class="c" style="width:3.5%">#</th>
-<th style="width:7%">Date</th>
-<th style="width:6.5%">NPRS</th>
-<th style="width:7.5%">DP / Centr.</th>
-<th style="width:7.5%">Neuro / SLR</th>
-<th style="width:6.5%">ROM</th>
-<th style="width:24%">Exercise &amp; CFT delivered</th>
-<th style="width:17.5%">Manual &amp; adjuncts</th>
-<th style="width:8.5%">Progression</th>
-<th style="width:7.5%">Adherence</th>
+<th class="c" style="width:3%">#</th>
+<th style="width:6%">Date</th>
+<th style="width:5%">NPRS</th>
+<th style="width:6.5%">DP / Centr.</th>
+<th style="width:6.5%">Neuro / SLR</th>
+<th style="width:5.5%">ROM</th>
+<th style="width:22%">Exercise &amp; CFT delivered</th>
+<th style="width:16.5%">Manual &amp; adjuncts</th>
+<th style="width:8%">Progression</th>
+<th style="width:7%">Adherence</th>
+<th style="width:10%;font-size:5.2pt;white-space:nowrap;">Patient signature</th>
 <th class="c" style="width:4%">Init</th>
 </tr>
 </thead>
 <tbody>
-<tr style="height:12.6mm;">
+<tr style="height:11.2mm;">
 <td class="vnum">1</td>
 <td></td><td></td><td></td><td></td><td></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
-<td></td><td></td>
+<td></td><td></td><td></td>
 </tr>
-<tr style="height:12.6mm;">
+<tr style="height:11.2mm;">
 <td class="vnum">2</td>
 <td></td><td></td><td></td><td></td><td></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
-<td></td><td></td>
+<td></td><td></td><td></td>
 </tr>
-<tr style="height:12.6mm;">
+<tr style="height:11.2mm;">
 <td class="vnum">3</td>
 <td></td><td></td><td></td><td></td><td></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
-<td></td><td></td>
+<td></td><td></td><td></td>
 </tr>
-<tr style="height:12.6mm;">
+<tr style="height:11.2mm;">
 <td class="vnum">4</td>
 <td></td><td></td><td></td><td></td><td></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
-<td></td><td></td>
+<td></td><td></td><td></td>
 </tr>
-<tr style="height:12.6mm;">
+<tr style="height:11.2mm;">
 <td class="vnum">5</td>
 <td></td><td></td><td></td><td></td><td></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
-<td></td><td></td>
+<td></td><td></td><td></td>
 </tr>
-<tr style="height:12.6mm;">
+<tr style="height:11.2mm;">
 <td class="vnum">6</td>
 <td></td><td></td><td></td><td></td><td></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
-<td></td><td></td>
+<td></td><td></td><td></td>
 </tr>
-<tr style="height:12.6mm;">
+<tr style="height:11.2mm;">
 <td class="vnum">7</td>
 <td></td><td></td><td></td><td></td><td></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
-<td></td><td></td>
+<td></td><td></td><td></td>
 </tr>
-<tr style="height:12.6mm;">
+<tr style="height:11.2mm;">
 <td class="vnum">8</td>
 <td></td><td></td><td></td><td></td><td></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
-<td></td><td></td>
+<td></td><td></td><td></td>
 </tr>
-<tr style="height:12.6mm;">
+<tr style="height:11.2mm;">
 <td class="vnum">9</td>
 <td></td><td></td><td></td><td></td><td></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
-<td></td><td></td>
+<td></td><td></td><td></td>
 </tr>
-<tr style="height:12.6mm;">
+<tr style="height:11.2mm;">
 <td class="vnum">10</td>
 <td></td><td></td><td></td><td></td><td></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
-<td></td><td></td>
+<td></td><td></td><td></td>
 </tr>
-<tr style="height:12.6mm;">
+<tr style="height:11.2mm;">
 <td class="vnum">11</td>
 <td></td><td></td><td></td><td></td><td></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
-<td></td><td></td>
+<td></td><td></td><td></td>
 </tr>
-<tr style="height:12.6mm;">
+<tr style="height:11.2mm;">
 <td class="vnum">12</td>
 <td></td><td></td><td></td><td></td><td></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">DP | Pilates | MCE | Func | CFT | Walk | Group</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">SMT | Mob | Massage | Heat | Neuro</div></td>
 <td style="vertical-align:bottom;padding-bottom:1.2px;"><div class="p">Low | Mod | High</div></td>
-<td></td><td></td>
+<td></td><td></td><td></td>
 </tr>
 </tbody>
 </table>
@@ -1597,7 +1626,11 @@ body{
 </div>
 </section>
 </div>
-<div class="dots fill" id="p9-notes" style="min-height:8mm"><span class="dots-l">Home Programme · WalkBack Prevention Plan · Discharge Summary</span></div>
+<div class="box amber xs flex flex-wrap items-center" style="padding:.7mm 1.5mm;margin-top:1mm;">
+<b class="mr-2">Session 6 checkpoint:</b>
+<span>Re-score the main PROM against the MCID / MDC already on the sheet. If there is no change, re-assess the diagnosis, the dose or referral (E).</span>
+</div>
+<div class="dots" id="p9-notes" style="min-height:5mm;height:5mm;"><span class="dots-l">Home Programme · WalkBack Prevention Plan · Discharge Summary</span></div>
 <div class="fr xs" style="gap:2mm"><span class="lb">Physician follow-up / sign-off</span><span class="fl"></span><span class="lb">Signature</span><span class="fl"></span><span class="lb">Date</span><span class="fl m"></span></div>
 
   </main>

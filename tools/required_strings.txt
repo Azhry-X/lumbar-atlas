@@ -9,3 +9,5 @@ POST-OP RESTRICTIONS ARE SURGEON-DIRECTED
 Do not offer traction
 NICE NG59
 CONSENT OBTAINED FOR:
+Patient signature
+Session 6 checkpoint
