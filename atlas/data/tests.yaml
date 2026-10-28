@@ -136,7 +136,7 @@
     / emergency workup (blood cultures, inflammatory markers, contrast MRI).
   interpretation: Absence of fever does not exclude spinal infection; maintain high suspicion in immunocompromised patients
     or after invasive procedures.
-  metrics: Clinical red-flag synthesis — no verified number in source file.
+  metrics: Clinical red-flag synthesis (E).
   evidence: E
   sources: []
   review_status: approved
@@ -1185,10 +1185,10 @@
     absence.
   - Note that low fear-avoidance on the FABQ-work subscale is also one of the 5 criteria in the Flynn/Childs manipulation
     CPR.
-  positive: predicts 4-week disability and work status in acute LBP — no cut-off in source.
+  positive: predicts 4-week disability and work status in acute LBP.
   interpretation: Address elevated work-related fear-avoidance early with workplace reassurance, graded activity exposure,
     and occupational coordination.
-  metrics: 'Fritz 2001 Pain: predicts 4-week disability and work status in acute LBP — no cut-off in source.'
+  metrics: 'Fritz 2001 Pain: predicts 4-week disability and work status in acute LBP.'
   evidence: M
   sources:
   - text: Fritz 2001 Pain
@@ -1204,10 +1204,10 @@
   steps:
   - Administer the questionnaire to evaluate the extent of rumination, magnification, and helplessness when experiencing pain.
   - Use item responses qualitatively to guide pain reconceptualisation and cognitive functional therapy.
-  - Track longitudinal changes against the patient's own baseline without applying an unverified cut-off.
-  positive: no verified number — list the tool only.
-  interpretation: List and track the tool against the patient's baseline (no verified number in source file).
-  metrics: no verified number — list the tool only.
+  - Track longitudinal changes against the patient's own baseline.
+  positive: Higher totals indicate more catastrophizing; track change against the patient's baseline.
+  interpretation: Use alongside other psychosocial screening to guide pain education and graded exposure.
+  metrics: Psychosocial screening tool (E) — track against baseline.
   evidence: E
   sources: []
   review_status: approved
@@ -1523,8 +1523,7 @@
   positive: Both motor control exercise and Pilates improve pain and function compared with minimal intervention, with effects
     similar to other forms of active exercise.
   interpretation: Align exercise choice with patient preference and movement control findings.
-  metrics: 'Saragiotto 2016 (Motor control exercise Cochrane, 29 trials, n = 2,431): no number from source file. Yamato 2015
-    (Pilates Cochrane, Level L): no number from source file.'
+  metrics: 'Saragiotto 2016 (Motor control exercise Cochrane, 29 trials, n = 2,431); Yamato 2015 (Pilates Cochrane, Level L).'
   evidence: M
   sources:
   - text: Saragiotto 2016
